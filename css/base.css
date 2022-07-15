@@ -254,6 +254,7 @@ nav ul{display:flex;align-items:center;justify-content:center;column-gap:15px;}
 nav li a{color:#2886A2;padding:5px 10px;border-radius: 5px;overflow:hidden;}
 nav li a:hover,nav li.act a{background-color: #2886A2;color:#fff;}
 @media (max-width:767px){
+    .countdown .box{padding:5px 100px;}
     .head{padding:10px 15px;}
     nav{overflow-x:auto;}
     nav::-webkit-scrollbar{width:0;height:0;}
@@ -366,7 +367,7 @@ main .vision .owl-dots{display:none!important;}
 /* 錨點 ed*/
 /* 標題 */
 .title_box{width:max-content;margin: 0 auto 30px;}
-.title_box h2{color:#2886A2; border-bottom: #2886A2 4px solid;font-size:24px;padding-bottom:3px;}
+.title_box h2{width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:24px;padding-bottom:3px;}
 /* 標題 ed*/
 
 /* 六都選情 */
@@ -779,7 +780,7 @@ main .vision .owl-dots{display:none!important;}
 /* 共用文章4則 ed*/
 /*main ed*/
 /*footer*/
-footer{width:100%;padding:20px 0;background-color:#2886A2;overflow:hidden;color:#fff;text-align:center;}
+footer{margin-top: 50px;width:100%;padding:20px 0;background-color:#2886A2;overflow:hidden;color:#fff;text-align:center;}
 footer small{}
 footer .logo_box{margin-bottom:5px;}
 footer .logo_box li{width:30px;display:inline-block;vertical-align:top;padding-top:5px;margin-right:5px;}
