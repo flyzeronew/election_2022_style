@@ -779,6 +779,332 @@ main .vision .owl-dots{display:none!important;}
 
 /* 共用文章4則 ed*/
 /*main ed*/
+
+
+/* 影音頁 */
+
+.video_area{
+    background-color: #000;
+}
+.video_area .main_video{
+    padding-top: 45px;
+    width: 1060px;
+    margin: 0 auto;
+}
+.video_area .choose_video{
+    width: 1060px;
+    margin: 0 auto;
+}
+.video_area .txt{
+    color: #fff;
+    font-size: 18px;
+}
+.video_area .time{
+    color: #fff;
+    font-size: 15px;
+    text-align: right;
+}
+.video_area .choose_video{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.video_area .choose_video{
+    position: relative;
+}
+.video_area .choose_video ul{
+    display: flex;
+    column-gap:47px;
+}
+.choose_video .video_arraw_l{
+    display: none;
+}
+.choose_video .video_arraw_r{
+    display: none;
+}
+@media (max-width:1250px) {
+    .video_area .main_video .list_play{
+        background-size:120px;
+    }
+    .video_area .main_video{
+        width:100%;
+        margin:0 auto;
+    }
+    .video_area .choose_video{
+        width:100%;
+        margin:0 auto;
+    }
+}
+
+@media (max-width:767px) {
+    /* .video_area{
+        padding: 0 15px;
+    } */
+    .video_area .main_video .list_play{
+        background-size:60px;
+    }
+    .video_area .choose_video ul{
+        column-gap:16px;
+
+        overflow-y: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 0px;
+    }
+
+    .video_area .choose_video ul li{
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        width: 48%;
+        width: 60%;
+
+    }
+    .choose_video{
+        /* padding: 0 15px; */
+    }
+    .choose_video .video_arraw_l{
+        position: absolute;
+        background-color: #2886A2;
+        /* margin: 0;
+        padding:0!important; */
+        padding-bottom: 0;
+        margin-bottom: 0;
+        z-index: 2;
+        top:34%;
+        left:0%;
+        left:-2%;
+        display: block;
+        width: 37px;
+        height:37px;
+    }
+    .choose_video .video_arraw_l img{
+        display:block;
+    }
+    .choose_video .video_arraw_r{
+        position: absolute;
+        background-color: #2886A2;
+        z-index: 2;
+        top:34%;
+        right:0%;
+        right:-2%;
+        display: block;
+        width: 37px;
+        height:37px;
+    }
+    .choose_video .video_arraw_r img{
+        display:block;
+    }
+
+    .video_area .txt{
+        font-size: 16px;
+    }
+    .video_area .time{
+        font-size: 12px;
+    }
+    
+}
+@media (max-width:435px) {
+    .choose_video .video_arraw_l{
+        left:0%;
+    }
+    .choose_video .video_arraw_r{
+        right:0%;
+    }
+}
+@media (max-width:411px) {
+    .video_area{
+        padding: 0 15px;
+    }
+    .choose_video .video_arraw_l{
+        left:-3%;
+    }
+    .choose_video .video_arraw_r{
+        right:-3%;
+    }
+}
+@media (max-width:338px) {
+    .choose_video .video_arraw_l{
+        left:-5%;
+    }
+    .choose_video .video_arraw_r{
+        right:-5%;
+    }
+}
+
+.playlist_area{
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.playlist_box{
+    background-color: #fff;
+    /* padding:30px 0; */
+     /* margin-bottom: 30px; */
+    }
+
+
+.playlist_box .title_box h2{
+     border-bottom: 0px;
+    font-size:16px;
+    
+ }
+
+
+/*  影音頁playlist 4則  */
+.playlist_box .article_box {overflow: hidden;}
+.playlist_box .article_box a .img img {
+    transform: scale(1);
+    transition: 0.3s;
+}
+.playlist_box .article_box a:hover .img img {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.playlist_box .article_box .time {
+    padding: 0;
+    width: 100%;
+    font-weight: normal;
+    text-align: right;
+    color: #7F7F7F;
+    font-size: 12px;
+    overflow: hidden;
+}
+.playlist_box .article_box .img {
+    line-height: 0;
+    margin-bottom:8px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.playlist_box .article_box .img img{
+    transform: scale(1);
+    transition: 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.playlist_box .article_box .txt_box {
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist_box .article_box h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.playlist_box .article_box .txt {
+    color:#220A26;
+    font-size: 18px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 26px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+.playlist_box .article_box .title {
+    font-size: 24px;
+    padding: 10px 15px 10px;
+    font-weight: bold;
+}
+.playlist_box .article_box ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap:30px;
+    row-gap:30px;
+    margin-bottom: 15px;
+}
+.playlist_box .article_box li {
+    width: calc((100% - 90px)/4);
+    overflow: hidden;
+}
+.playlist_box .article_box li a:hover {
+    transition: 0.3s;
+}
+@media (max-width:1023px) {
+    .playlist_box .article_box .txt {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+    .playlist_box .article_box ul {        
+        column-gap:20px;
+        row-gap:20px;
+    }
+    .playlist_box .article_box li {
+        width: calc((100% - 60px)/4);
+    }
+}
+
+@media (max-width:767px) {  
+     /* 手機板左右滑動scrollbar隱藏 */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+        display: none;
+    }  
+    .playlist_box .article_box {
+        padding: 0 15px;
+    }
+    .playlist_box .article_box ul {
+        display:flex;
+        column-gap:13px;
+        row-gap:0px;
+
+        overflow-y: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 0px;
+
+    }
+    .playlist_box .article_box li {
+        width: 48%;
+        margin-bottom: 15px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+    .playlist_box .article_box li a{
+        display:block;
+        column-gap:10px;
+    }
+    .playlist_box .article_box li .img{
+    position: relative;
+        padding-bottom:56.25%;
+        margin-bottom:0;
+    }
+    .playlist_box .article_box li .img img{
+        position: absolute;
+    }
+    .playlist_box .article_box li .txt_box{
+        width: auto;
+    }
+    .article_box li:nth-child(4n+1) .list_play{
+        background-size: 40px;
+    }
+    .playlist_box .article_box .list_play{
+        background-size: 40px;
+    }
+}
+
+/* 影音頁playlist 4則 ed*/
+
+
+
+
 /*footer*/
 footer{margin-top: 50px;width:100%;padding:20px 0;background-color:#2886A2;overflow:hidden;color:#fff;text-align:center;}
 footer small{}
