@@ -25,6 +25,7 @@
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/jquery.syotimer.js"></script>
 <!--外掛 js Link ed-->
 
 <!--js Link-->
@@ -108,6 +109,20 @@ $(document).ready(function(){
         $(".video_light_box").removeClass("click_main_video");
 
     });
+
+    //倒數計時
+    /* Simple Timer. The countdown to 20:30 2100.05.09
+    --------------------------------------------------------- */
+    $('.countdown .day').syotimer({
+            year: 2022,
+            month:11,
+            day: 26,
+            hour:0,
+            minute:0,
+        });
+
+    /* Timer with Head and Foot. Countdown is over 
+    --------------------------------------------------------- */
     
 });
 
@@ -159,7 +174,7 @@ $(document).ready(function(){
     </div>
     <div class="countdown">
         <div class="box">
-            <span>倒數</span><span class="day">100</span><span>天</span>
+            <span>倒數</span><span class="day">100</span>
         </div>
     </div>
     <div class="head_bg pc"><img src="images/election_pc.jpg" alt="view"/></div>
