@@ -366,12 +366,14 @@ main .vision .owl-dots{display:none!important;}
 }
 
 /* 主視覺ed*//* 錨點 */
-.anchor_point{margin-bottom:30px;padding:30px 0;z-index:5;background-color:#f2f2f7;width:100%;top:0;}
+.anchor_point_box{z-index:5;top:0;width:100%;overflow:hidden;margin-bottom:30px;padding:0 15px;box-sizing: border-box;background-color:#f2f2f7;}
+.anchor_point{padding:30px 0;width:100%;}
 .anchor_point ul{display:flex;align-items:center;justify-content:center;column-gap:15px;}
 .anchor_point li a{color:#2886A2;padding:8px 15px;border-radius: 5px;overflow:hidden;border:1px solid #2886A2;}
 .anchor_point li a:hover,.anchor_point li.act a{background-color: #2886A2;color:#fff;}
 @media (max-width:767px){
-    .anchor_point{overflow-x:auto;padding:15px;margin-bottom:20px;}
+    .anchor_point_box{margin-bottom:20px;}
+    .anchor_point{overflow-x:auto;padding:15px 0;}
     .anchor_point::-webkit-scrollbar{width:0;height:0;}
     .anchor_point ul{width: max-content;margin: 0 auto;}
     .anchor_point li a{padding:4px 10px;}
