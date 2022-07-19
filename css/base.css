@@ -911,22 +911,44 @@ main .vision .owl-dots{display:none!important;}
     
 }
 @media (max-width:435px) {
+    .video_area .main_video {
+        width: 95%;
+    }
+    .video_area{
+        /* padding: 0 15px; */
+        margin: 0 auto;
+    }
     .choose_video .video_arraw_l{
         left:0%;
+        /* left:-1%; */
     }
     .choose_video .video_arraw_r{
         right:0%;
+        /* right:-1%; */
+    }
+    .choose_video ul{
+        width: 95%;
+        /* padding-left: 15px; */
+        margin-left: 15px;
     }
 }
 @media (max-width:411px) {
+    .video_area .main_video {
+        width: 100%;
+    }
     .video_area{
         padding: 0 15px;
+        
     }
     .choose_video .video_arraw_l{
-        left:-3%;
+        left:-4%;
     }
     .choose_video .video_arraw_r{
-        right:-3%;
+        right:-4%;
+    }
+    .choose_video ul{
+        width: 100%;
+        margin-left: 0px;
     }
 }
 @media (max-width:338px) {
