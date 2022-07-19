@@ -39,6 +39,7 @@
 <!--本頁js-->	
 <script type="text/javascript">
 $(document).ready(function(){
+
 // 輪播-頭條
     $('.vision ul').owlCarousel({
         center: true,
@@ -161,13 +162,14 @@ $(document).ready(function(){
             <li class="act"><a href="##">六都選情</a></li>
             <li><a href="##">議題包名稱</a></li>
             <li><a href="##">選情焦點</a></li>
+            <li><a href="##">影音專區</a></li>
             <li><a href="##">評論專區</a></li>
         </ul>
     </div>
     <!-- 錨點 ed-->
 
     <!-- 標題 -->
-    <div class="title_box">
+    <div class="title_box scroll1">
        <h2>六都選情</h2>
     </div>
     <!-- 標題 ed-->
@@ -392,7 +394,7 @@ $(document).ready(function(){
     <!-- 六都選情 ed-->
 
     <!-- 標題 -->
-    <div class="title_box">
+    <div class="title_box scroll1">
         <h2>議題包名稱</h2>
     </div>
     <!-- 標題 ed-->
@@ -417,7 +419,7 @@ $(document).ready(function(){
     <!-- 議題包 ed-->
 
     <!-- 標題 -->
-    <div class="title_box">
+    <div class="title_box scroll1">
         <h2>選情焦點</h2>
     </div>
     <!-- 標題 ed-->
@@ -531,7 +533,7 @@ $(document).ready(function(){
     <!-- 選情焦點 ed-->
 
     <!-- 標題 -->
-    <div class="title_box">
+    <div class="title_box scroll1">
         <h2>影音專區</h2>
     </div>
     <!-- 標題 ed-->
@@ -584,7 +586,7 @@ $(document).ready(function(){
     <!-- 影音專區 ed-->
 
     <!-- 標題 -->
-    <div class="title_box">
+    <div class="title_box scroll1">
         <h2>評論專區</h2>
     </div>
     <!-- 標題 ed-->
@@ -659,5 +661,58 @@ $(document).ready(function(){
 </div>
 <!--container主架構ed-->
 </div>
+<script type="text/javascript">
+ $(document).ready(function(){
+    function scroll(){
+    // 錨點位置
+    var $anchor_point_top=$('.anchor_point').offset().top;
+    var lastScrollTop = 0;
+        $(window).scroll(function(){         
+            $('.anchor_point').show();
+            if ($(window).scrollTop()>$anchor_point_top){
+                $('.anchor_point').css({position:'fixed',margin:0,padding:'20px 0'});
+            }else{
+                $('.anchor_point').css({position:'relative',margin:'0 0 30px',padding:'20px 0'});
+            }
+        });
+
+    //錨點滑動//
+    var $el = $(scrollableElement('html', 'body'));
+        var speed = 550;
+        var anchor_point_h=$('.anchor_point').outerHeight(true);
+        $('.scroll1').each(function(i) {
+            var $scroll_top=$(this).offset().top;
+            $('.anchor_point ul li').eq(i).click(function() {
+                event.preventDefault();
+                $el.stop().animate({ scrollTop: $scroll_top -anchor_point_h -80 }, speed); 
+            });
+        });
+    
+            function scrollableElement() {
+            var i, len, el, $el, scrollable;
+            for (i = 0, len = arguments.length; i < len; i++) {
+                el = arguments[i];
+                $el = $(el);
+                if ($el.scrollTop() > 0) {
+    
+                    return el;
+                } else {
+                    $el.scrollTop(1);
+                    scrollable = $el.scrollTop() > 0;
+                    $el.scrollTop(0);
+                    if (scrollable) {
+                        return el;
+                    }
+                }
+            }
+            return []; 
+        }
+    //錨點滑動//
+     }
+     setTimeout(function(){
+        scroll()
+        },500);
+    });    
+    </script>
 </body>
 </html>
