@@ -424,7 +424,7 @@ main .vision .owl-dots{display:none!important;}
     display: -webkit-box;
 }
 .issue_pack .pack a{display:flex;color:#fff;column-gap:30px;}
-.issue_pack .pack a:hover .txt{color: #fff;}
+.issue_pack .pack a:hover .txt,.issue_pack .pack a:hover .title{color: #fff;}
 @media (max-width:1023px){
     .issue_pack .pack a{display:block;}
     .issue_pack .pack .img{width:100%;padding-bottom: 56.25%;margin-bottom:15px;}
