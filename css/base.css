@@ -472,7 +472,7 @@ main .vision .owl-dots{display:none!important;}
     object-position: top;
 }
 .video_box .video a{color:#fff;position: relative;}
-.video_box .video a:hover .txt{color: #e62320;}
+.video_box .video a:hover .txt{color: #fff;}
 .video_box .video .list_play{background-size:150px;}
 .video_box .video .txt{
     overflow:hidden;
