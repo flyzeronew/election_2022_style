@@ -11,7 +11,6 @@
 <!--共用CSS-->
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" type="text/css" href="css/base.css" media="screen">
-<link rel="stylesheet" type="text/css" href="css/playlist.css" media="screen">
 <!--共用CSSed-->
 
 <!--外掛CSS Link-->
@@ -34,7 +33,9 @@
 
 <!--本頁樣式-->
 <style>
-    
+    footer{
+    margin-top: 0px!important;
+}
 </style>
 <!--本頁樣式ed-->
 <!--本頁js-->	
@@ -98,6 +99,15 @@ $(document).ready(function(){
             $scroll-=0;   
         }
     });
+    //影音lightbox
+    $(".main_video").click(function(){
+        $(".video_light_box").addClass("click_main_video");
+
+    });
+    $(".video_light_box .xx").click(function(){
+        $(".video_light_box").removeClass("click_main_video");
+
+    });
     
 });
 
@@ -119,6 +129,23 @@ $(document).ready(function(){
     <h1 style="display: none;">2022九合一大選</h1>
 <!--header -->
 <header>
+     <!-- 影音light_box -->
+      <div class="video_light_box">
+        <div class="video_content">
+            <div class="logo">
+                <a href="https://news.tvbs.com.tw/" target="_blank" ><img src="images/tvbs_logo.png" alt="logo"/></a>
+            </div>
+            <div class="xx"><img src="images/icon-close2.svg" alt="close"></div>
+            <div class="main_video_inside">
+                <iframe src="https://www.youtube.com/embed/MnODaP-1JaE" frameborder="0"></iframe>
+            </div>
+            <div class="txt_box">
+                <h2>55直播</h2>
+                <p>2021/12/15 11:31</p>
+            </div>
+        </div>
+      </div>
+     <!-- 影音light_box end-->
     <div class="head">
         <div class="logo">
             <a href="https://news.tvbs.com.tw/" target="_blank" ><img src="images/tvbs_logo.png" alt="logo"/></a>
@@ -147,6 +174,7 @@ $(document).ready(function(){
     </ul>
 </nav>
 <!--header ed-->
+
 <!--main-->
 <main>
     <!-- 標題 -->
@@ -155,8 +183,13 @@ $(document).ready(function(){
     </div>
     <!-- 標題 ed-->
 
+
+
+
+
     <!-- 影音專區 -->   
     <div class="video_area">
+
         <div class="frame_box"> 
                 <div class="main_video">
                     <a href="##">
