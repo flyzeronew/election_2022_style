@@ -1174,6 +1174,12 @@ display: none;
         scroll-snap-align: start;
         scroll-snap-stop: always;
     }
+    .playlist_box .article_box li:nth-child(3) {
+        display: none;
+    }
+    .playlist_box .article_box li:nth-child(4) {
+        display: none;
+    }
     .playlist_box .article_box li a{
         display:block;
         column-gap:10px;
