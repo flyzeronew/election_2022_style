@@ -363,7 +363,8 @@ main .vision .owl-dots{display:none!important;}
 .anchor_point li a{color:#2886A2;padding:8px 15px;border-radius: 5px;overflow:hidden;border:1px solid #2886A2;}
 .anchor_point li a:hover,.anchor_point li.act a{background-color: #2886A2;color:#fff;}
 @media (max-width:767px){
-    .anchor_point{overflow-x:auto;padding:15px 0;margin-bottom:20px;}
+    .anchor_point_box{margin-bottom:20px;}
+    .anchor_point{overflow-x:auto;padding:15px 0;}
     .anchor_point::-webkit-scrollbar{width:0;height:0;}
     .anchor_point ul{width: max-content;margin: 0 auto;}
     .anchor_point li a{padding:4px 10px;}

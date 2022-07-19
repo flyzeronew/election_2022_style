@@ -684,8 +684,9 @@ $(document).ready(function(){
     // 錨點位置
     var $anchor_point_top=$('.anchor_point').offset().top;
     var lastScrollTop = 0;
-        $(window).scroll(function(){        
-    
+    var bottom_h='';
+        $(window).scroll(function(){
+
             if ($(window).scrollTop()>$anchor_point_top){
                 $('.anchor_point_box').css({
                     position:'fixed',              
