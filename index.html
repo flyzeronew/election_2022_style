@@ -670,9 +670,18 @@ $(document).ready(function(){
         $(window).scroll(function(){         
             $('.anchor_point').show();
             if ($(window).scrollTop()>$anchor_point_top){
-                $('.anchor_point').css({position:'fixed',margin:0,padding:'20px 0'});
+                $('.anchor_point').css({
+                    position:'fixed',
+                    margin:0,padding:'20px 0',
+                    'box-shadow':'rgba(0,0,0,.1) 0px 2px 3px',
+                });
             }else{
-                $('.anchor_point').css({position:'relative',margin:'0 0 30px',padding:'20px 0'});
+                $('.anchor_point').css({
+                    position:'relative',
+                    margin:'0 0 30px',
+                    padding:'20px 0',
+                    'box-shadow':'rgba(0,0,0,0) 0px 2px 3px',                
+                });
             }
         });
 
