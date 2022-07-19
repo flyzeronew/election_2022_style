@@ -1237,7 +1237,7 @@ display: none;
 
 
 /*footer*/
-footer{margin-top: 50px;width:100%;padding:20px 0;background-color:#2886A2;overflow:hidden;color:#fff;text-align:center;}
+footer{margin-top: 50px;width:100%;padding:20px 15px;background-color:#2886A2;overflow:hidden;color:#fff;text-align:center;box-sizing: border-box;}
 footer small{}
 footer .logo_box{margin-bottom:5px;}
 footer .logo_box li{width:30px;display:inline-block;vertical-align:top;padding-top:5px;margin-right:5px;}
