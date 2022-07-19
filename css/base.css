@@ -120,10 +120,10 @@ a{
 a:hover {
     text-decoration: none;
     transition:0.3s;
-    color: #e62320;
+    color: #2886A2;
 }
 a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
-    color: #e62320;
+    color: #2886A2;
     transition:0.3s;
 }
 /*文字圖片效果 ed*/
@@ -140,7 +140,7 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
     color:#2886A2;
 }
 .more_box a:hover {
-    color: #e62320;
+    color: #195a92;
 }
 /* more ed*/
 /* pc & mo */
@@ -245,8 +245,7 @@ header{position: relative;}
 .countdown span,.countdown .tab-val{margin-right:5px;}
 .countdown .day{display:flex;align-items:center;}
 .countdown .hour,.countdown .minute,.countdown .second{display:none;}
-.countdown .box{
-    
+.countdown .box{    
     font-size: 20px;
     width:max-content;
     margin:0 auto;
@@ -381,7 +380,7 @@ main .vision .owl-dots{display:none!important;}
 /* 錨點 ed*/
 /* 標題 */
 .title_box{width:max-content;margin: 0 auto 30px;}
-.title_box h2{width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:24px;padding-bottom:3px;padding-top:18px;}
+.title_box h2{width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
 /* 標題 ed*/
 
 /* 六都選情 */
@@ -563,9 +562,15 @@ main .vision .owl-dots{display:none!important;}
     transform: scale(1);
     transition: 0.3s;
 }
+.comment a:hover .txt {
+    color: #f0e331;
+}
 .comment a:hover .img img {
     transform: scale(1.1);
     transition: 0.3s;
+}
+.comment a:hover {
+
 }
 .comment .time {
     padding: 0;
@@ -643,6 +648,7 @@ main .vision .owl-dots{display:none!important;}
 
 @media (max-width:1023px) {
     .comment .txt {
+        width: 88%;
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 5px;
@@ -656,16 +662,12 @@ main .vision .owl-dots{display:none!important;}
         width: calc((100% - 60px)/4);
     }
 }
-@media (device-width: 768px){
-    .comment .txt_box{
-    width: 88%;
-    }
-    }
+
 @media (max-width:767px) {
     .comment{overflow-x:auto;padding:0 15px;}
     .comment ul{width:280%;column-gap:15px;}
     .comment .txt_box {
-        /* width: 100%; */
+        width: 100%;
         box-sizing: border-box;
         margin: 0 auto;
         padding:5px 10px;
