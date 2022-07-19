@@ -242,9 +242,13 @@ header{position: relative;}
 .head .community li{width:35px;height:35px;margin-right:10px;}
 .head .community li:last-child{margin-right:0;}
 .countdown{position:absolute;bottom:15px;width:100%;}
+.countdown span,.countdown .tab-val{margin-right:5px;}
+.countdown .day{display:flex;align-items:center;}
+.countdown .hour,.countdown .minute,.countdown .second{display:none;}
 .countdown .box{
+    
     font-size: 16px;
-    width:max-content;margin:0 auto;display:block;color: #fff;
+    width:max-content;margin:0 auto;display:flex;color: #fff;align-items: center;
     background-color: #F28C17;padding:5px 120px;border: 2px #fff solid;
     border-radius:60px;
 }
