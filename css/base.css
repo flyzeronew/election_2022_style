@@ -156,7 +156,7 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
 #back {
     text-align: center;
     position: fixed;
-    z-index: 3;
+    z-index: 6;
     right: 20px;
     bottom: 20px;
     transition: 0.5s;
