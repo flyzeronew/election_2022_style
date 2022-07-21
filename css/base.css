@@ -906,7 +906,8 @@ main .vision .owl-dots{display:none!important;}
         padding-bottom: 0;
         margin-bottom: 0;
         z-index: 2;
-        top:34%;
+        /* top:34%; */
+        top:20%;
         left:0%;
         left:-2%;
         display: block;
@@ -920,7 +921,8 @@ main .vision .owl-dots{display:none!important;}
         position: absolute;
         background-color: #2886A2;
         z-index: 2;
-        top:34%;
+        /* top:34%; */
+        top:20%;
         right:0%;
         right:-2%;
         display: block;
