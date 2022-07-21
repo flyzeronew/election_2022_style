@@ -474,7 +474,9 @@ main .vision .owl-dots{display:none!important;}
 .video_box .video a{color:#fff;position: relative;}
 .video_box .video a:hover .txt{color: #fff;}
 .video_box .video .list_play{background-size:150px;}
+.video_box .video h3{font-size:18px;}
 .video_box .video .txt{
+    font-size:18px;
     font-weight: normal;
     overflow:hidden;
     -webkit-line-clamp: 1;
