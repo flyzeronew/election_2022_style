@@ -365,7 +365,7 @@ main .vision .owl-dots{display:none!important;}
 }
 
 /* 主視覺ed*//* 錨點 */
-.anchor_point_box{z-index:5;top:0;width:100%;overflow:hidden;margin-bottom:30px;box-sizing: border-box;background-color:#f2f2f7;}
+.anchor_point_box{z-index:5;top:0;width:100%;overflow:hidden;margin-bottom:30px;box-sizing: border-box;background-color:rgba(242,242,247,0.7);backdrop-filter: blur(20px);}
 .anchor_point{padding:30px 15px;width:100%;box-sizing: border-box;}
 .anchor_point ul{display:flex;align-items:center;justify-content:center;column-gap:15px;}
 .anchor_point li a{color:#2886A2;padding:8px 15px;border-radius: 5px;overflow:hidden;border:1px solid #2886A2;}
