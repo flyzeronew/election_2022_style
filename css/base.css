@@ -1003,14 +1003,7 @@ display: none;
 }
 
 
-.video_light_box .xx{
-    width: 22px;
-    margin: 5px;
-    position: absolute;
-    top:30px;
-    right:30px;
-    cursor: pointer;
-}
+
 .video_light_box .logo{
     width: 100px;
     /* margin: 5px; */
@@ -1021,8 +1014,16 @@ display: none;
     margin:0 auto;
 }
 .video_light_box .main_video_inside{
-   height: 596px;
+    position: relative;
    height: 560px;
+}
+.video_light_box .xx{
+    width: 22px;
+    margin: 5px;
+    position: absolute;
+    top:-30px;
+    right:0px;
+    cursor: pointer;
 }
 .video_light_box .main_video_inside iframe{
     /* width: 1060px;
