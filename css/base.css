@@ -820,6 +820,7 @@ main .vision .owl-dots{display:none!important;}
 }
 .video_area .main_video{
     padding-top: 45px;
+    padding-bottom: 45px;
     width: 1060px;
     margin: 0 auto;
 }
@@ -837,7 +838,7 @@ main .vision .owl-dots{display:none!important;}
     text-align: right;
 }
 .video_area .choose_video{
-    padding-top: 45px;
+    /* padding-top: 45px; */
     padding-bottom: 45px;
 }
 .video_area .choose_video{
@@ -905,7 +906,8 @@ main .vision .owl-dots{display:none!important;}
         padding-bottom: 0;
         margin-bottom: 0;
         z-index: 2;
-        top:34%;
+        /* top:34%; */
+        top:20%;
         left:0%;
         left:-2%;
         display: block;
@@ -919,7 +921,8 @@ main .vision .owl-dots{display:none!important;}
         position: absolute;
         background-color: #2886A2;
         z-index: 2;
-        top:34%;
+        /* top:34%; */
+        top:20%;
         right:0%;
         right:-2%;
         display: block;
@@ -993,21 +996,14 @@ display: none;
     display: block;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
-    z-index: 3;
+    z-index: 7;
     transition:0.3s;
 }
 
 
-.video_light_box .xx{
-    width: 22px;
-    margin: 5px;
-    position: absolute;
-    top:30px;
-    right:30px;
-    cursor: pointer;
-}
+
 .video_light_box .logo{
     width: 100px;
     /* margin: 5px; */
@@ -1018,8 +1014,17 @@ display: none;
     margin:0 auto;
 }
 .video_light_box .main_video_inside{
-   height: 596px;
+    position: relative;
    height: 560px;
+   z-index: 8;
+}
+.video_light_box .xx{
+    width: 22px;
+    margin: 5px;
+    position: absolute;
+    top:-30px;
+    right:0px;
+    cursor: pointer;
 }
 .video_light_box .main_video_inside iframe{
     /* width: 1060px;
@@ -1032,6 +1037,7 @@ display: none;
     color:#fff;
 }
 .video_light_box .txt_box h2{
+    padding-top: 15px;
     font-size: 18px;
 }
 .video_light_box .txt_box p{
@@ -1061,14 +1067,19 @@ display: none;
     }
     .video_light_box .main_video_inside{
         height:216px;
+        z-index: 8;
     }
     .video_light_box .txt_box h2{
         font-size: 20px;
     }
+    
 }
 @media (max-width:411px) {
     .video_light_box .main_video_inside{
         height:194px;
+    }
+    .video_light_box .txt_box h2{
+        padding-top: 8px;
     }
 }
 @media (max-width:374px) {
@@ -1097,7 +1108,7 @@ display: none;
 
 .playlist_box .title_box h2{
      border-bottom: 0px;
-    font-size:16px;
+    font-size:20px;
     
  }
 
@@ -1181,6 +1192,7 @@ display: none;
     transition: 0.3s;
 }
 @media (max-width:1023px) {
+
     .playlist_box .article_box .txt {
         font-size: 16px;
         line-height: 24px;
@@ -1254,7 +1266,12 @@ display: none;
         background-size: 40px;
     }
 }
-
+@media (max-width:411px) {  
+.playlist_box .title_box h2{
+   font-size:18px;
+   
+}
+}
 /* 影音頁playlist 4則 ed*/
 
 
