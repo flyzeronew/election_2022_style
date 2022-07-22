@@ -103,11 +103,11 @@ $(document).ready(function(){
     //影音lightbox
     $(".playlist_area .playlist_box .frame_box .article_box ul li").click(function(){
         $(".video_light_box").addClass("click_main_video");
-
+        $("body").css("overflow","hidden");
     });
     $(".video_light_box .xx").click(function(){
         $(".video_light_box").removeClass("click_main_video");
-
+        $("body").css("overflow","auto");
     });
 
     //倒數計時
