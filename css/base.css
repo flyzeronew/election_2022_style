@@ -1067,10 +1067,12 @@ display: none;
     }
     .video_light_box .main_video_inside{
         height:216px;
+        z-index: 8;
     }
     .video_light_box .txt_box h2{
         font-size: 20px;
     }
+    
 }
 @media (max-width:411px) {
     .video_light_box .main_video_inside{
