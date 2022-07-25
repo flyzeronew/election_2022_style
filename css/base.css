@@ -845,6 +845,7 @@ main .vision .owl-dots{display:none!important;}
 .video_area .txt{
     color: #fff;
     font-size: 18px;
+    height:50px;
     line-height: 26px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
