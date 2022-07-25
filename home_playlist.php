@@ -13,23 +13,8 @@
 <link rel="stylesheet" type="text/css" href="css/base.css" media="screen">
 <!--共用CSSed-->
 
-<!--外掛CSS Link-->
-<link rel="stylesheet" href="css/owlcarousel/owl.carousel.css">
-<link rel="stylesheet" href="css/owlcarousel/owl.theme.css">
-<link rel="stylesheet" href="css/owlcarousel/demo.css">
-<!--外掛CSS Link ed-->
-
-<!--外掛 js Link-->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="js/owl.carousel.js"></script>
-<script type="text/javascript" src="js/jquery-ui.js"></script>
-<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="js/jquery.syotimer.js"></script>
-<!--外掛 js Link ed-->
-
-<!--js Link-->
-<script type="text/javascript" src="js/js01.js"></script>
+<link rel="stylesheet" href="https://cc.tvbs.com.tw/events/st/events/election2022/css/election2022_v01.css">
+<script type="text/javascript" src="https://cc.tvbs.com.tw/events/st/events/election2022/js/election2022_v01.js"></script>
 <!--js Link ed-->
 
 <!--本頁樣式-->
@@ -89,67 +74,6 @@ $(document).ready(function(){
 
     /* Timer with Head and Foot. Countdown is over 
     --------------------------------------------------------- */
-
-
-    function scroll(){
-    // 錨點位置
-    var $anchor_point_top=$('.anchor_point').offset().top;
-    var lastScrollTop = 0;
-    var bottom_h='';
-        $(window).scroll(function(){
-
-            if ($(window).scrollTop()>$anchor_point_top){
-                $('.anchor_point_box').css({
-                    position:'fixed',              
-                    'box-shadow':'rgba(0,0,0,.1) 0px 2px 3px',
-                    
-                });
-                $('.anchor_point').css({padding:'20px 15px'});
-            }else{
-                $('.anchor_point_box').css({
-                    position:'relative',
-                    'box-shadow':'rgba(0,0,0,0) 0px 2px 3px',
-                });
-                $('.anchor_point').css({padding:'20px 15px'});
-            }
-        });
-
-    //錨點滑動//
-    var $el = $(scrollableElement('html', 'body'));
-        var speed = 550;
-        var anchor_point_h=$('.anchor_point').outerHeight(true);
-        $('.scroll1').each(function(i) {
-            var $scroll_top=$(this).offset().top;
-            $('.anchor_point ul li').eq(i).click(function() {
-                event.preventDefault();
-                $el.stop().animate({ scrollTop: $scroll_top -anchor_point_h -80 }, speed); 
-            });
-        });
-    
-            function scrollableElement() {
-            var i, len, el, $el, scrollable;
-            for (i = 0, len = arguments.length; i < len; i++) {
-                el = arguments[i];
-                $el = $(el);
-                if ($el.scrollTop() > 0) {
-    
-                    return el;
-                } else {
-                    $el.scrollTop(1);
-                    scrollable = $el.scrollTop() > 0;
-                    $el.scrollTop(0);
-                    if (scrollable) {
-                        return el;
-                    }
-                }
-            }
-            return []; 
-        }
-    //錨點滑動//
-     }
-     setTimeout(function(){
-        scroll()
-        },500);
 });
 
 </script>
@@ -718,5 +642,68 @@ $(document).ready(function(){
 </div>
 <!--container主架構ed-->
 </div>
+<script type="text/javascript">
+ $(document).ready(function(){
+    function scroll(){
+    // 錨點位置
+    var $anchor_point_top=$('.anchor_point').offset().top;
+    var lastScrollTop = 0;
+    var bottom_h='';
+        $(window).scroll(function(){
+
+            if ($(window).scrollTop()>$anchor_point_top){
+                $('.anchor_point_box').css({
+                    position:'fixed',              
+                    'box-shadow':'rgba(0,0,0,.1) 0px 2px 3px',
+                    
+                });
+                $('.anchor_point').css({padding:'20px 15px'});
+            }else{
+                $('.anchor_point_box').css({
+                    position:'relative',
+                    'box-shadow':'rgba(0,0,0,0) 0px 2px 3px',
+                });
+                $('.anchor_point').css({padding:'20px 15px'});
+            }
+        });
+
+    //錨點滑動//
+    var $el = $(scrollableElement('html', 'body'));
+        var speed = 550;
+        var anchor_point_h=$('.anchor_point').outerHeight(true);
+        $('.scroll1').each(function(i) {
+            var $scroll_top=$(this).offset().top;
+            $('.anchor_point ul li').eq(i).click(function() {
+                event.preventDefault();
+                $el.stop().animate({ scrollTop: $scroll_top -anchor_point_h -80 }, speed); 
+            });
+        });
+    
+            function scrollableElement() {
+            var i, len, el, $el, scrollable;
+            for (i = 0, len = arguments.length; i < len; i++) {
+                el = arguments[i];
+                $el = $(el);
+                if ($el.scrollTop() > 0) {
+    
+                    return el;
+                } else {
+                    $el.scrollTop(1);
+                    scrollable = $el.scrollTop() > 0;
+                    $el.scrollTop(0);
+                    if (scrollable) {
+                        return el;
+                    }
+                }
+            }
+            return []; 
+        }
+    //錨點滑動//
+     }
+     setTimeout(function(){
+        scroll()
+        },500);
+    });    
+    </script>
 </body>
 </html>

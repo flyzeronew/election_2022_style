@@ -101,13 +101,16 @@ $(document).ready(function(){
         }
     });
     //影音lightbox
-    $(".playlist_area .playlist_box .frame_box .article_box ul li").click(function(){
-        $(".video_light_box").addClass("click_main_video");
-
+    $(".article_box li").each(function(){
+        $(this).click(function(){
+            $(".video_light_box").addClass("click_main_video");
+            $('html').css({ 'overflow-y': 'hidden' });
+        });
     });
+
     $(".video_light_box .xx").click(function(){
         $(".video_light_box").removeClass("click_main_video");
-
+        $('html').css({ 'overflow-y': 'auto' });
     });
 
     //倒數計時
@@ -197,10 +200,6 @@ $(document).ready(function(){
         <h2>影音專區</h2>
     </div>
     <!-- 標題 ed-->
-
-
-
-
 
     <!-- 影音專區 -->   
     <div class="video_area">
@@ -393,7 +392,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
         <!-- playlist ed-->
 
 
