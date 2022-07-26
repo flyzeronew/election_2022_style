@@ -1084,7 +1084,7 @@ display: none;
 }
 .video_light_box .txt_box h2{
     padding-top: 15px;
-    font-size: 18px;
+    font-size: 20px;
 }
 .video_light_box .txt_box p{
     text-align: right;
@@ -1105,7 +1105,7 @@ display: none;
         padding: 20px 10px;
     }
     .video_light_box .txt_box h2{
-        font-size: 20px;
+        font-size: 18px;
     }
     
 }

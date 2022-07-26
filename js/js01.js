@@ -9,10 +9,10 @@ $(function() {
         var $bottom_ad_h=$('.flexd_bottom_ad').outerHeight();
 
         if ($(window).scrollTop()>50){
-            $("#back").show();
+            $("#back").fadeIn(200);
             $(".flexd_bottom_ad").show();
         }else{
-            $("#back").hide();
+            $("#back").fadeOut(200);
             $(".flexd_bottom_ad").hide();
         }
 
@@ -26,11 +26,11 @@ $(function() {
         }else{
             if($all_h > $foot_top) {
                 //alert("near bottom!");
-                $("#back").css({"bottom":$obj_h+$bottom_ad_h+10,"transition":"0s"});
+                $("#back").css({"bottom":$obj_h+$bottom_ad_h+10,"transition":"0.3s"});
                 $(".flexd_bottom_ad").css({"bottom":$obj_h});
 
             }else{
-                $("#back").css({"bottom":$bottom_ad_h+21,"transition":"0s"});
+                $("#back").css({"bottom":$bottom_ad_h+21,"transition":"0.3s"});
                 $(".flexd_bottom_ad").css({"bottom":"11px"});
             }
         }
