@@ -836,7 +836,6 @@ main .vision .owl-dots{display:none!important;}
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     object-position: top;
 }
 .video_area .choose_video{
