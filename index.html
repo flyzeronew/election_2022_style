@@ -154,12 +154,8 @@ $(document).ready(function(){
 
         var getUrlString = location.href;
         var url = new URL(getUrlString);
-        var urlcode = url.searchParams.get('six');
-      
+        var urlcode = url.searchParams.get('six');      
         console.log(urlcode);
-
-
-
 
 });
 
@@ -168,7 +164,6 @@ $(document).ready(function(){
 <!--本頁js ed-->		
 </head>
 <body>
-    <div id="back"></div>
 <!--container主架構-->
 <!--GO~Top-->
 <div id="back"> 
@@ -176,7 +171,13 @@ $(document).ready(function(){
 </div>
 <!--GO~Top end-->
 <div class="container">
+
+    <!--floating banner 滑動置底-->
+    <div class="flexd_bottom_ad"><a href="##" target="_blank"><img src="images/bottom320.jpg"></a></div> 
+    <!--floating banner 滑動置底 ed-->
+
     <h1 style="display: none;">2022九合一大選</h1>
+    
 <!--header -->
 <header>
     <div class="head">
@@ -198,6 +199,14 @@ $(document).ready(function(){
     <div class="head_bg pc"><img src="images/election_pc.jpg" alt="view"/></div>
     <div class="head_bg mo"><img src="images/election_m.jpg" alt="view"/></div>
 </header>
+
+         <!-- 廣告欄位 -->       
+            <div class="ad_box ad970 top40">
+                <div class="ad970"><img src="images/970x250.jpg" alt="ad"/></div>
+                <div class="ad320"><img src="images/320x100.jpg" alt="ad"/></div>
+            </div>
+         <!-- 廣告欄位 ed-->
+
 <nav>
     <ul>
         <li class="act"><a href="index.html">選戰新聞</a></li>
@@ -483,6 +492,22 @@ $(document).ready(function(){
                 <div class="more_box"><a href="##">看更多</a></div>
             </div>
         </div>
+
+            <!-- 廣告欄位 視覺差效果-->       
+            <div class="ad_box ad970 top40 mo">
+                <div class="ad320_fly">
+                    <div class="fly_outbox">
+                        <div class="fly_inbox">
+                          <div class="fly_ad">
+                            <div class="img"><img src="images/320x480.jpg" alt="fly_ad"/></div>                            
+                          </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 廣告欄位 視覺差效果 ed-->
+
     </div>
     <!-- 六都選情 ed-->
 
@@ -621,7 +646,15 @@ $(document).ready(function(){
                 </ul> 
                 <div class="more_box"><a href="##">看更多</a></div>
             </div>
-        </div>
+        </div>        
+
+    <!-- 廣告欄位 -->       
+    <div class="ad_box ad970 top40">
+        <div class="ad970"><img src="images/970x250.jpg" alt="ad"/></div>
+        <div class="ad300"><img src="images/ad_300x250.jpg" alt="ad"/></div>
+    </div>
+    <!-- 廣告欄位 ed-->
+
     </div>
     <!-- 選情焦點 ed-->
 

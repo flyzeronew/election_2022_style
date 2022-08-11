@@ -9,14 +9,13 @@ $(function() {
         var $bottom_ad_h=$('.flexd_bottom_ad').outerHeight();
 
         if ($(window).scrollTop()>50){
-            $("#back").fadeIn(200);
-            $(".flexd_bottom_ad").show();
+            $("#back").fadeIn(200);            
         }else{
-            $("#back").fadeOut(200);
-            $(".flexd_bottom_ad").hide();
+            $("#back").fadeOut(200);            
         }
 
         if ($(window).width()>767){
+            $(".flexd_bottom_ad").hide();
             if($all_h > $foot_top) {
                 //alert("near bottom!");
                 $("#back").css({"bottom":$obj_h});
@@ -24,14 +23,19 @@ $(function() {
                 $("#back").css({"bottom":"20px"});
             }
         }else{
+            if ($(window).scrollTop()>50){
+                $(".flexd_bottom_ad").show();
+            }else{
+                $(".flexd_bottom_ad").hide();
+            }
             if($all_h > $foot_top) {
                 //alert("near bottom!");
-                $("#back").css({"bottom":$obj_h+$bottom_ad_h+10,"transition":"0.3s"});
-                $(".flexd_bottom_ad").css({"bottom":$obj_h});
+                $("#back").css({"bottom":$obj_h+$bottom_ad_h-5,"transition":"0.3s"});
+                $(".flexd_bottom_ad").css({"bottom":$obj_h-10});
 
             }else{
-                $("#back").css({"bottom":$bottom_ad_h+21,"transition":"0.3s"});
-                $(".flexd_bottom_ad").css({"bottom":"11px"});
+                $("#back").css({"bottom":$bottom_ad_h+5,"transition":"0.3s"});
+                $(".flexd_bottom_ad").css({"bottom":"0px"});
             }
         }
      });
