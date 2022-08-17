@@ -1322,12 +1322,12 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 /*footer ed*/
 
 /* 廣告欄位 */
-.ad_box{}
+.ad_box{text-align: center;}
 .ad_box.mo{display:none;}
 .ad_box.top20{margin:20px 0;}
 .ad_box.top40{margin:40px 0;}
 .ad_box .ad970{width:970px;height:250px;margin:0 auto;}
-.ad_box .ad970_90{width:970px;height:90px;margin:0 auto;text-align: center;}
+.ad_box .ad970_90{width:970px;height:90px;margin:0 auto;}
 .ad_box .ad300{width:300px;height:250px;margin:0 auto;display:none;}
 .ad_box .ad320{width:320px;height:100px;margin:0 auto;display:none;}
 .ad_box .ad320_480{width:320px;height:480px;margin:0 auto;display:none;}
