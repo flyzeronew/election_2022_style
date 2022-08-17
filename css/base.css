@@ -1042,7 +1042,8 @@ display: none;
     padding: 20px 10px;
 }
 .video_light_box .video_content{
-    width: 1060px;
+    /* width: 1060px; */
+    width: 750px;
     margin:0 auto;
 }
 .video_light_box .main_video_inside{
@@ -1093,7 +1094,8 @@ display: none;
 /* @media (max-width:1199px) { */
 @media (max-width:1061px) {
     .video_light_box .video_content{
-        width: calc(100% - 30px);
+        /* width: calc(100% - 30px); */
+        width: calc(60% - 30px);
         margin:0 auto;
     }
 
