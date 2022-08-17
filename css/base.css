@@ -1102,6 +1102,9 @@ display: none;
 }
 
 @media (max-width:767px) {
+    .video_light_box .video_content{
+        width: calc(80% - 30px);
+    }
     .video_light_box .logo{
         width: 64px;
         padding: 20px 10px;
@@ -1112,6 +1115,9 @@ display: none;
     
 }
 @media (max-width:411px) {
+    .video_light_box .video_content{
+        width: calc(100% - 30px);
+    }
     .video_light_box .txt_box h2{
         padding-top: 8px;
     }
