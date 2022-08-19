@@ -1319,7 +1319,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .ad_box.top20{margin:20px 0;}
 .ad_box.top40{margin:40px 0;}
 .ad_box .ad970{width:970px;height:250px;margin:0 auto;}
-.ad_box .ad970_90{width:970px;height:90px;margin:0 auto;}
+.ad_box .ad728_90{width:728px;height:90px;margin:0 auto;}
 .ad_box .ad300{width:300px;height:250px;margin:0 auto;display:none;}
 .ad_box .ad320{width:320px;height:100px;margin:0 auto;display:none;}
 .ad_box .ad320_480{width:320px;height:480px;margin:0 auto;display:none;}
@@ -1376,7 +1376,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 @media(max-width:1023px) {
     .fly_outbox{
         width: 100%;
-        height: 420px;
+        height: 480px;
         position: relative!important;
         visibility: visible!important;
         overflow: hidden!important;
@@ -1406,7 +1406,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 }
 /* underlay end */
 @media (max-width:1023px) {
-    .ad_box .ad970,.ad_box .ad970_90{display:none;}    
+    .ad_box .ad970,.ad_box .ad728_90{display:none;}    
     .ad_box.mo,.ad_box .ad300,.ad_box .ad320,.ad_box .ad320_480,.ad_box .ad320_fly{display:block;}
 }
 @media (max-width:767px) {

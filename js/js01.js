@@ -1,17 +1,18 @@
 $(function() {
-    
+//  蓋板關閉
+$('.lightbox_ad .xx').click(function(){$('.lightbox_ad').hide();}); 
     $(window).scroll(function(){
         var $all_h=$(window).scrollTop() + $(window).height();
         var $obj_h=$('footer').outerHeight()+10;
         var $header_h=$('header').outerHeight();
         var $main_h=$('main').outerHeight();
-        var $foot_top= $header_h+$main_h;
+        var $foot_top= $('footer').offset().top;
         var $bottom_ad_h=$('.flexd_bottom_ad').outerHeight();
 
         if ($(window).scrollTop()>50){
-            $("#back").fadeIn(200);            
+            $("#back").fadeIn(200);
         }else{
-            $("#back").fadeOut(200);            
+            $("#back").fadeOut(200);
         }
 
         if ($(window).width()>767){
