@@ -460,6 +460,12 @@ main .vision .owl-dots{display:none!important;}
         line-height: 26px;
     }
 }
+
+/* 議題包 new */
+.packnews_box{background-color: #fff;padding:30px 0;}
+.packnews_box .more_box{margin-bottom:30px;}
+
+/* 議題包 new end */
 /* 議題包 ed*/
 
 /* 選情焦點 */
