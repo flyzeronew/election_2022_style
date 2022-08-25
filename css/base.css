@@ -241,6 +241,11 @@ header{position: relative;}
 .head .community ul{display:flex;align-items:center;}
 .head .community li{width:35px;height:35px;margin-right:10px;}
 .head .community li:last-child{margin-right:0;}
+/* search icon暫時 */
+/*.head .community li:last-child{
+   background-color: #2886A1;
+   border-radius: 50%;
+}*/
 .countdown{position:absolute;bottom:15px;width:100%;}
 .countdown span,.countdown .tab-val{margin-right:5px;}
 .countdown .day{display:flex;align-items:center;}
