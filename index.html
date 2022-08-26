@@ -96,6 +96,14 @@ $(document).ready(function(){
     var lastScrollTop = 0;
     var bottom_h='';
         $(window).scroll(function(){
+            
+            $('.scroll1').each(function(i) {
+                var $scroll1_top=$(this).offset().top;
+                if ($(window).scrollTop()>$scroll1_top){
+                    $('.anchor_point ul li').removeClass('act');
+                    $('.anchor_point ul li').eq(i+1).addClass('act');
+                }
+            });
 
             if ($(window).scrollTop()>$anchor_point_top){
                 $('.anchor_point_box').css({
@@ -211,18 +219,17 @@ $(document).ready(function(){
     <div class="head_bg pc"><img src="images/election_pc.jpg" alt="view"/></div>
     <div class="head_bg mo"><img src="images/election_m.jpg" alt="view"/></div>
 </header>
-
-<nav>
     <!-- 廣告欄位 -->       
-        <div class="ad_box top40">
-            <div class="ad970"><img src="images/970x250.jpg" alt="ad"/></div>
-            <div class="ad320"><img src="images/320x100.jpg" alt="ad"/></div>
-        </div>
-    <!-- 廣告欄位 ed-->
-
+    <div class="ad_box top40">
+        <div class="ad970"><img src="images/970x250.jpg" alt="ad"/></div>
+        <div class="ad320"><img src="images/320x100.jpg" alt="ad"/></div>
+    </div>
+<!-- 廣告欄位 ed-->
+<nav>
     <ul>
         <li class="act"><a href="index.html">選戰新聞</a></li>
         <li><a href="playlist.html">影音專區</a></li>
+        <li><a href="candidate.html">候選人專區</a></li>
         <li><a href="https://news.tvbs.com.tw/pack/packdetail/598" target="_blank">TVBS民調</a></li>
         <li><a href="https://play.google.com/store/apps/details?id=com.tvbs.news" target="_blank">APP下載</a></li>
     </ul>

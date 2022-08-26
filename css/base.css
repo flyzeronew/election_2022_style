@@ -196,6 +196,10 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
     width: 1400px;
     margin: 0 auto;
 }
+.frame_box2 {
+    width: 1000px;
+    margin: 0 auto;
+}
 @media (max-width:1450px) {
     .frame_box {
         width: 1200px;
@@ -207,25 +211,41 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
         width: 980px;
         margin: 0 auto;
     }
+    .frame_box2 {
+        width: 980px;
+        margin: 0 auto;
+    }
 }
 @media (max-width:1023px) {
     .frame_box {
         width:728px;
         margin: 0 auto;
     }
+    .frame_box2 {
+        width: 728px;
+        margin: 0 auto;
+    }
 }
 @media (max-width:767px) {
-.frame_box {
-    width:414px;
-    margin: 0 auto;
-}
+    .frame_box {
+        width:414px;
+        margin: 0 auto;
+    }
+    .frame_box2 {
+        width:414px;
+        margin: 0 auto;
+    }
 }
 @media (max-width:414px) {
     .frame_box {
         width:100%;
         margin: 0 auto;
     }
+    .frame_box2 {
+        width:100%;
+        margin: 0 auto;
     }
+}
 /*外框*/
 
 .container{background-color: #f2f2f7;}
@@ -1311,13 +1331,162 @@ display: none;
 @media (max-width:411px) {  
 .playlist_box .title_box h2{
    font-size:18px;
-   
 }
 }
 /* 影音頁playlist 4則 ed*/
 
+/* 候選人專區 */
+.candidate_area{background-color: #fff;}
+.candidate_area .frame_box{width:1024px;}
+/* 選單 */
+.candidate_area .city_menu_box{    
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    overflow: hidden;
+}
+.candidate_area .city_menu,.candidate_area .city_menu_child{margin:0 auto;}
+.candidate_area .city_menu{    
+    padding:10px;
+    overflow: hidden;
+    display:flex;align-items: center;justify-content:space-between;
 
+}
+.candidate_area .city_menu ul{
+    width:90%;
+    display:flex;align-items: center;
+    justify-content:space-between;
+}
+.candidate_area .city_menu li a {
+    color: #2886A2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.candidate_area .city_menu li a:hover, .candidate_area .city_menu li.act a {
+    background-color: #2886A2;
+    color: #fff;
+}
+.candidate_area .city_menu .arraw{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+@media (max-width:767px) {    
+    .candidate_area .city_menu li:nth-child(n+4){
+        display:none;
+    }
+}
+/* 選單 ed*/
+/* 子選單 */
+.candidate_area .city_menu_child_box{position: relative;}
+.candidate_area .city_menu_child{ 
+    z-index: 2;  
+    display:none;
+    top:0;
+    width:100%;
+    position: absolute;  
+    padding:15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #dadada;
+    box-shadow:0 1px 4px rgba(0,0,0,0.1);
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f4f4f4+0,ffffff+7,ffffff+100 */
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f4f4f4 0%, #ffffff 7%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f4f4f4 0%,#ffffff 7%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f4f4f4 0%,#ffffff 7%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.candidate_area .city_menu_child1{margin:0 auto;}
+.candidate_area .city_menu_child1 ul{ 
+     
+    display:flex;align-items:center;flex-wrap: wrap;  
+    column-gap: 18px; 
+    row-gap: 20px;
+}
+.candidate_area .city_menu_child1 li a{
+    color: #000;padding: 5px 10px;
+}
+.candidate_area .city_menu_child1 li a:hover{
+    background-color: #54AAC4;color:#fff;
+    border-radius:5px;
+}
+/* 子選單 ed*/
+/* 候選人 */
+.candidate{overflow:hidden;padding:30px 0;}
+.candidate .ex{text-align:right;font-size:12px;width:100%;}
+.candidate .title_box .s1{font-size:20px;}
+.candidate .title_box .c1{color:#F28C17;}
+.candidate .cheng_btn{margin-bottom:10px;}
+.candidate .cheng_btn ul{display:flex;justify-content: center;align-items: center;}
+.candidate .cheng_btn li:first-child a{border-radius:5px 0 0 5px;}
+.candidate .cheng_btn li:last-child a{border-radius:0 5px 5px 0;}
+.candidate .cheng_btn li a{
+    color: #2886A2;
+    padding: 5px 10px;   
+    overflow: hidden;
+    border:1px solid #2886A2;
+}
+.candidate .cheng_btn li a:hover,.candidate .cheng_btn li.act a{
+    background-color:#2886A2 ;
+    color: #fff;
+}
+.candidate .pro_box{display:flex;justify-content:space-between;align-items:center;}
+.candidate .pro_box .peo_box{width:35%;display:flex;justify-content:space-between;column-gap:40px;align-items:center;}
+.candidate .pro_box .txt_box{width:65%;}
 
+.candidate .pro_box .img_box{width:50%;position: relative;}
+.candidate .pro_box .profile_box{width:50%;}
+
+.candidate .pro_box .img_box .party{width:35px;height:35px;position:absolute;z-index:1;bottom:15px;left:10px;}
+
+.candidate .pro_box .profile_box .num{
+    width:35px;height:35px;display:flex;justify-content:center;align-items:center;
+    background-color:#000;color:#fff;border-radius:360px;margin-bottom:5px;
+    }
+.candidate .pro_box .profile_box .name{font-size:20px;font-weight:bold;margin-bottom:5px;}
+.candidate .pro_box .profile_box .party_name,.candidate .pro_box .profile_box .birthday{
+    font-size:14px;color:#464646;margin-bottom:5px;
+}
+
+.candidate .pro_box .txt_box .txt{font-size:14px;line-height:25px;}
+.candidate .city .box{margin-bottom:30px;padding-bottom:30px;border-bottom: 1px solid #dadada;}
+.candidate .city li{display:none;}
+.candidate .city li:first-child{display:block;}
+.candidate .city li .box:last-child{border-bottom: 0px solid #dadada;margin-bottom:0px;padding-bottom:0px;}
+.candidate .news{padding-left:35%;}
+.candidate .news .title_box{margin-bottom:15px;}
+.candidate .news .news_list a::before{content:"•";margin-right:10px;}
+.candidate .news .news_list a{
+    color: #000;font-size:16px;
+    font-weight: bold;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    margin-bottom: 5px;
+}
+.candidate .news .news_list a:hover{color: #2886A2;}
+.candidate .mayor,.candidate .councillor{margin-bottom:30px;}
+.candidate .councillor{display:none;}
+
+@media (max-width:1023px) {
+    .candidate .pro_box{align-items:flex-start;}
+    .candidate .pro_box .peo_box{width:45%;column-gap:30px;}
+    .candidate .pro_box .txt_box{width:65%;}
+    .candidate .news {padding-left:41%;}
+}
+@media (max-width:767px) {
+    .candidate {padding: 30px 15px;}
+    .candidate .pro_box{display:block;}
+    .candidate .pro_box .peo_box{width:100%;column-gap:30px;margin-bottom: 20px;}
+    .candidate .pro_box .txt_box{width:100%;}
+    .candidate .news {padding-left:0;}
+    .candidate_area .city_menu_child1 ul{justify-content:center; column-gap: 40px;}
+
+}
+/* 候選人 ed*/
+/* 候選人專區 ed*/
 
 /*footer*/
 footer{margin-top:50px;width:100%;padding:20px 15px;background-color:#2886A2;overflow:hidden;color:#fff;text-align:center;box-sizing: border-box;}
