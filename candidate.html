@@ -189,24 +189,12 @@ $('.cheng_btn li').eq(1).click(function(){
             $(this).click(function(){    
                 $('.city_menu li').removeClass('act');     
                 switch (i) {
-                    case 0:
-                        $('.city_menu li').eq(0).addClass('act');
-                    break;
-                    case 1:
-                        $('.city_menu li').eq(1).addClass('act');
-                    break;
-                    case 4:
-                        $('.city_menu li').eq(2).addClass('act');
-                    break;
-                    case 7:
-                        $('.city_menu li').eq(3).addClass('act');
-                    break;
-                    case 12:
-                        $('.city_menu li').eq(4).addClass('act');
-                    break;
-                    case 13:
-                        $('.city_menu li').eq(5).addClass('act');
-                    break;
+                    case 0:  $('.city_menu li').eq(0).addClass('act'); break;
+                    case 1:  $('.city_menu li').eq(1).addClass('act'); break;
+                    case 4:  $('.city_menu li').eq(2).addClass('act'); break;
+                    case 7:  $('.city_menu li').eq(3).addClass('act'); break;
+                    case 12: $('.city_menu li').eq(4).addClass('act'); break;
+                    case 13: $('.city_menu li').eq(5).addClass('act'); break;
                 } 
                 $('.candidate .city li').hide();
                 $('.candidate .mayor .city li').eq(i).show();
