@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">	
+<title>2022九合一大選-候選人專區</title>
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<link rel="icon" href="" type="image/icon">
+
+<!--共用CSS-->
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/base.css" media="screen">
+<!--共用CSSed-->
+
+<!--外掛CSS Link-->
+<link rel="stylesheet" href="css/owlcarousel/owl.carousel.css">
+<link rel="stylesheet" href="css/owlcarousel/owl.theme.css">
+<link rel="stylesheet" href="css/owlcarousel/demo.css">
+<!--外掛CSS Link ed-->
+
+<!--外掛 js Link-->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/jquery.syotimer.js"></script>
+<!--外掛 js Link ed-->
+
+<!--js Link-->
+<script type="text/javascript" src="js/js01.js"></script>
+<!--js Link ed-->
+
+<!--本頁樣式-->
+<style>
+    
+</style>
+<!--本頁樣式ed-->
+<!--本頁js-->	
+<script type="text/javascript">
+$(document).ready(function(){
+   
+    //倒數計時
+    /* Simple Timer. The countdown to 20:30 2100.05.09
+    --------------------------------------------------------- */
+    $('.countdown .day').syotimer({
+            year: 2022,
+            month:11,
+            day: 27,
+            hour:0,
+            minute:0,
+        });
+
+    /* Timer with Head and Foot. Countdown is over 
+    --------------------------------------------------------- */
+// 候選人專區 用
+$('.city_menu .arraw').click(function(){
+    $(this).toggleClass('open');
+    if($(this).hasClass('open')){
+        $('.city_menu_child').slideDown();
+        $(this).css({'transform':'rotate(180deg)',transition:'0.3s'});
+    }else{
+        $('.city_menu_child').slideUp();
+        $(this).css({'transform':'rotate(0deg)',transition:'0.3s'});
+    }
+});
+// 市長議員切換
+$('.cheng_btn li').eq(0).click(function(){
+    $('.cheng_btn li').removeClass('act');
+    $(this).addClass('act');      
+        $('.mayor').show();
+        $('.councillor').hide();
+});
+$('.cheng_btn li').eq(1).click(function(){
+    $('.cheng_btn li').removeClass('act');
+    $(this).addClass('act');      
+        $('.mayor').hide();
+        $('.councillor').show();
+});
+// 候選人專區 用 ed
+});
+
+</script>
+
+<!--本頁js ed-->		
+</head>
+<body>
+<!--container主架構-->
+<!--GO~Top-->
+<div id="back"> 
+<div id="back-img1"><img src="images/navigate_top.svg" alt="top"></div>
+</div>
+<!--GO~Top end-->
+<div class="container">
+
+    <!--floating banner 滑動置底-->
+    <div class="flexd_bottom_ad"><a href="##" target="_blank"><img src="images/bottom320.jpg"></a></div> 
+    <!--floating banner 滑動置底 ed-->
+
+    <!--蓋版廣告-->
+    <div class="lightbox_ad">
+        <div class="box">
+            <div class="img">
+                <div class="xx"><img src="images/idle_xx.png"/></div>
+                <img src="images/360x540.jpg"/>
+            </div>
+        </div>
+    </div>
+    <!--蓋版廣告-->
+
+    <h1 style="display: none;">2022九合一大選</h1>
+    
+<!--header -->
+<header>
+    <div class="head">
+        <div class="logo">
+            <a href="https://news.tvbs.com.tw/" target="_blank" ><img src="images/tvbs_logo.png" alt="logo"/></a>
+        </div>
+        <div class="community">
+            <ul class="flex">
+                <li><a href="##"><img src="images/fb.svg" alt="fb"/></a></li>
+                <li><a href="##"><img src="images/line.svg" alt="line"/></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="countdown">
+        <div class="box">
+            <span>倒數</span><span class="day">100</span>
+        </div>
+    </div>
+    <div class="head_bg pc"><img src="images/election_pc.jpg" alt="view"/></div>
+    <div class="head_bg mo"><img src="images/election_m.jpg" alt="view"/></div>
+</header>
+    <!-- 廣告欄位 -->       
+    <div class="ad_box top40">
+        <div class="ad970"><img src="images/970x250.jpg" alt="ad"/></div>
+        <div class="ad320"><img src="images/320x100.jpg" alt="ad"/></div>
+    </div>
+   <!-- 廣告欄位 ed-->
+<nav>
+
+    <ul>
+        <li><a href="index.html">選戰新聞</a></li>
+        <li><a href="playlist.html">影音專區</a></li>
+        <li class="act"><a href="candidate.html">候選人專區</a></li>
+        <li><a href="https://news.tvbs.com.tw/pack/packdetail/598" target="_blank">TVBS民調</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.tvbs.news" target="_blank">APP下載</a></li>
+    </ul>
+</nav>
+<!--header ed-->
+<!--main-->
+<main>
+<!-- 候選人專區 -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        var six_city=['臺北市','新北市','桃園市','臺中市','臺南市','高雄市'];
+        var six_city_place=[0,1,4,7,12,13];
+        var all_city=['臺北市','新北市','基隆市','新竹市','桃園市','新竹縣','苗栗縣','臺中市','南投縣','雲林縣','嘉義市',
+                      '嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+        var six_city_len=six_city.length;     
+        var all_city_len=all_city.length;  
+        for(var i=0; i<six_city_len; i++){
+            $('.city_menu ul').append("<li><a href='##'>"+six_city[i]+"</a></li>");            
+        }
+        for(var i=0; i<all_city_len; i++){
+            $('.city_menu_child1 ul').append("<li><a href='##'>"+all_city[i]+"</a></li>");
+        }
+        // 主選單
+        $('.city_menu li').each(function(i){
+            $(this).click(function(){
+                // 關閉子選單
+                $('.city_menu_child').hide();
+                if($('.city_menu .arraw').hasClass('open')){                    
+                    $('.city_menu .arraw').removeClass('open');
+                    $('.city_menu .arraw').css({'transform':'rotate(0deg)',transition:'0'});
+                } 
+                // 關閉子選單ed
+                $('.city_menu li').removeClass('act');
+                $(this).addClass('act');
+                $('.candidate .city li').hide();
+                $('.candidate .mayor .city li').eq(six_city_place[i]).show();
+                $('.candidate .councillor .city li').eq(six_city_place[i]).show();
+            });
+        });
+        // 主選單ed
+        //子選單
+        $('.city_menu_child1 li').each(function(i){
+            $(this).click(function(){    
+                $('.city_menu li').removeClass('act');     
+                switch (i) {
+                    case 0:
+                        $('.city_menu li').eq(0).addClass('act');
+                    break;
+                    case 1:
+                        $('.city_menu li').eq(1).addClass('act');
+                    break;
+                    case 4:
+                        $('.city_menu li').eq(2).addClass('act');
+                    break;
+                    case 7:
+                        $('.city_menu li').eq(3).addClass('act');
+                    break;
+                    case 12:
+                        $('.city_menu li').eq(4).addClass('act');
+                    break;
+                    case 13:
+                        $('.city_menu li').eq(5).addClass('act');
+                    break;
+                } 
+                $('.candidate .city li').hide();
+                $('.candidate .mayor .city li').eq(i).show();
+                $('.candidate .councillor .city li').eq(i).show();
+                $('.city_menu_child').hide();
+                $('.city_menu .arraw').removeClass('open');
+                $('.city_menu .arraw').css({'transform':'rotate(0deg)',transition:'0'});
+            });            
+            $('.mayor .city li').eq(i).find('.title_box.t1').append("<h2 class='s1'><span class='c1'>"+all_city[i]+"長</span>候選人名單</h2>");
+            $('.councillor .city li').eq(i).find('.title_box.t1').append("<h2 class='s1'><span class='c1'>"+all_city[i]+"議員</span>候選人名單</h2>");
+        });
+         //子選單 ed
+        $('.city_menu li').eq(0).addClass('act');
+    });
+</script>
+    <div class="candidate_area">
+        <!-- 選單 -->
+        <div class="city_menu_box">
+            <div class="frame_box2">
+                <div class="city_menu">
+                    <ul><!-- 插入六都陣列 --></ul>
+                    <div class="arraw">
+                        <img src="images/expand_more.svg" alt="arraw"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="city_menu_child_box">            
+            <div class="city_menu_child">
+                <div class="frame_box2">
+                    <div class="city_menu_child1">
+                        <ul><!-- 插入所有城市陣列 --></ul>
+                    </div>
+                </div> 
+            </div>
+        </div>        
+        <!-- 選單 ed-->
+        <!-- 候選人 -->
+        <div class="candidate">
+            <div class="frame_box2">
+                <div class="cheng_btn">
+                    <ul>
+                        <li class="act"><a href="##">縣市首長</a></li>
+                        <li><a href="##">縣市議員</a></li>
+                    </ul>
+                </div>
+
+                <!-- 市長 -->
+                <div class="mayor">
+                    <div class="city">
+                        <ul>
+                            <li>
+                                <!-- 標題 -->
+                                <div class="title_box t1"><!-- 插入所有城市陣列 --></div>
+                                <!-- 標題 ed-->
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>1</p></div>
+                                                <div class="name">市長朱立倫</div>
+                                                <div class="party_name">中國國民黨</div>
+                                                <div class="birthday">1961年6月7日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                朱立倫，臺灣政治人物、學者、會計學博士，中國國民黨籍，生於桃園市八德區，外省第二代，籍貫浙江省義烏縣，現任中國國民黨主席、東吳大學法學院講座教授、國立臺灣大學會計學系兼任教授，曾任新北市市長、行政院副院長、行政院消費者保護會主任委員、桃園縣... 維基百科 出生資訊： 1961 年 6 月 7 日（61歲），八德區 目前任職： Alcalde de Nuevo Taipéi開始於 2010 年 政黨： 中國國民黨 學歷： 史登商學院， 紐約大學， 臺灣大學， 臺北市立建國高級中學 獲獎記錄： Order of Francisco Morazán 先前任職單位： 新北市市長 (2016 年–2018 年)， 更多 子女： 朱約嬡， 朱宣宇
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>2</p></div>
+                                                <div class="name">市長蔡英文</div>
+                                                <div class="party_name">民主進步黨</div>
+                                                <div class="birthday">1956年8月31日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                蔡英文，中華民國政治人物，民主進步黨籍，現任中華民國總統、民主進步黨主席及中華文化總會會長，亦為法律學者與律師，曾擔任過行政院副院長、立法委員、大陸委員會主任委員、國家安全會議諮詢委員等職務。 生於臺北市中山區，本籍屏東縣枋山鄉楓港村 ，是客家人和臺灣原住民族排灣族之後裔。 維基百科 出生資訊： 1956 年 8 月 31 日（65歲），台北馬偕紀念醫院 目前任職： 中華民國總統開始於 2016 年 政黨： 民主進步黨 總統任期： 2016 年 5 月 20 日 – 學歷： 倫敦政治經濟學院 (1980 年–1984 年)， 康乃爾法學院 (1978 年–1980 年)， 臺灣大學 (1978 年)， 臺北市立中山女子高級中學 創立的機構： 小英教育基金會 先前任職單位： 行政院副院長 (2006 年–2007 年)， 更多
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- 標題 -->
+                                <div class="title_box t1"><!-- 插入所有城市陣列 --></div>
+                                <!-- 標題 ed-->
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>1</p></div>
+                                                <div class="name">市長朱立倫</div>
+                                                <div class="party_name">中國國民黨</div>
+                                                <div class="birthday">1961年6月7日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                朱立倫，臺灣政治人物、學者、會計學博士，中國國民黨籍，生於桃園市八德區，外省第二代，籍貫浙江省義烏縣，現任中國國民黨主席、東吳大學法學院講座教授、國立臺灣大學會計學系兼任教授，曾任新北市市長、行政院副院長、行政院消費者保護會主任委員、桃園縣... 維基百科 出生資訊： 1961 年 6 月 7 日（61歲），八德區 目前任職： Alcalde de Nuevo Taipéi開始於 2010 年 政黨： 中國國民黨 學歷： 史登商學院， 紐約大學， 臺灣大學， 臺北市立建國高級中學 獲獎記錄： Order of Francisco Morazán 先前任職單位： 新北市市長 (2016 年–2018 年)， 更多 子女： 朱約嬡， 朱宣宇
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>2</p></div>
+                                                <div class="name">市長蔡英文</div>
+                                                <div class="party_name">民主進步黨</div>
+                                                <div class="birthday">1956年8月31日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                蔡英文，中華民國政治人物，民主進步黨籍，現任中華民國總統、民主進步黨主席及中華文化總會會長，亦為法律學者與律師，曾擔任過行政院副院長、立法委員、大陸委員會主任委員、國家安全會議諮詢委員等職務。 生於臺北市中山區，本籍屏東縣枋山鄉楓港村 ，是客家人和臺灣原住民族排灣族之後裔。 維基百科 出生資訊： 1956 年 8 月 31 日（65歲），台北馬偕紀念醫院 目前任職： 中華民國總統開始於 2016 年 政黨： 民主進步黨 總統任期： 2016 年 5 月 20 日 – 學歷： 倫敦政治經濟學院 (1980 年–1984 年)， 康乃爾法學院 (1978 年–1980 年)， 臺灣大學 (1978 年)， 臺北市立中山女子高級中學 創立的機構： 小英教育基金會 先前任職單位： 行政院副院長 (2006 年–2007 年)， 更多
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 議員 -->
+                <div class="councillor">
+                    <div class="city">
+                        <ul>
+                            <li>
+                                <!-- 標題 -->
+                                <div class="title_box t1"><!-- 插入所有城市陣列 --></div>
+                                <!-- 標題 ed-->
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>1</p></div>
+                                                <div class="name">市長朱立倫</div>
+                                                <div class="party_name">中國國民黨</div>
+                                                <div class="birthday">1961年6月7日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                朱立倫，臺灣政治人物、學者、會計學博士，中國國民黨籍，生於桃園市八德區，外省第二代，籍貫浙江省義烏縣，現任中國國民黨主席、東吳大學法學院講座教授、國立臺灣大學會計學系兼任教授，曾任新北市市長、行政院副院長、行政院消費者保護會主任委員、桃園縣... 維基百科 出生資訊： 1961 年 6 月 7 日（61歲），八德區 目前任職： Alcalde de Nuevo Taipéi開始於 2010 年 政黨： 中國國民黨 學歷： 史登商學院， 紐約大學， 臺灣大學， 臺北市立建國高級中學 獲獎記錄： Order of Francisco Morazán 先前任職單位： 新北市市長 (2016 年–2018 年)， 更多 子女： 朱約嬡， 朱宣宇
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>2</p></div>
+                                                <div class="name">市長蔡英文</div>
+                                                <div class="party_name">民主進步黨</div>
+                                                <div class="birthday">1956年8月31日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                蔡英文，中華民國政治人物，民主進步黨籍，現任中華民國總統、民主進步黨主席及中華文化總會會長，亦為法律學者與律師，曾擔任過行政院副院長、立法委員、大陸委員會主任委員、國家安全會議諮詢委員等職務。 生於臺北市中山區，本籍屏東縣枋山鄉楓港村 ，是客家人和臺灣原住民族排灣族之後裔。 維基百科 出生資訊： 1956 年 8 月 31 日（65歲），台北馬偕紀念醫院 目前任職： 中華民國總統開始於 2016 年 政黨： 民主進步黨 總統任期： 2016 年 5 月 20 日 – 學歷： 倫敦政治經濟學院 (1980 年–1984 年)， 康乃爾法學院 (1978 年–1980 年)， 臺灣大學 (1978 年)， 臺北市立中山女子高級中學 創立的機構： 小英教育基金會 先前任職單位： 行政院副院長 (2006 年–2007 年)， 更多
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- 標題 -->
+                                <div class="title_box t1"><!-- 插入所有城市陣列 --></div>
+                                <!-- 標題 ed-->
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>1</p></div>
+                                                <div class="name">市長朱立倫</div>
+                                                <div class="party_name">中國國民黨</div>
+                                                <div class="birthday">1961年6月7日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                朱立倫，臺灣政治人物、學者、會計學博士，中國國民黨籍，生於桃園市八德區，外省第二代，籍貫浙江省義烏縣，現任中國國民黨主席、東吳大學法學院講座教授、國立臺灣大學會計學系兼任教授，曾任新北市市長、行政院副院長、行政院消費者保護會主任委員、桃園縣... 維基百科 出生資訊： 1961 年 6 月 7 日（61歲），八德區 目前任職： Alcalde de Nuevo Taipéi開始於 2010 年 政黨： 中國國民黨 學歷： 史登商學院， 紐約大學， 臺灣大學， 臺北市立建國高級中學 獲獎記錄： Order of Francisco Morazán 先前任職單位： 新北市市長 (2016 年–2018 年)， 更多 子女： 朱約嬡， 朱宣宇
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="pro_box">
+                                        <div class="peo_box">
+                                            <div class="img_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
+                                            </div>
+                                            <div class="profile_box">
+                                                <div class="num"><p>2</p></div>
+                                                <div class="name">市長蔡英文</div>
+                                                <div class="party_name">民主進步黨</div>
+                                                <div class="birthday">1956年8月31日</div>
+                                            </div>
+                                        </div>
+                                        <div class="txt_box">
+                                            <div class="txt">
+                                                蔡英文，中華民國政治人物，民主進步黨籍，現任中華民國總統、民主進步黨主席及中華文化總會會長，亦為法律學者與律師，曾擔任過行政院副院長、立法委員、大陸委員會主任委員、國家安全會議諮詢委員等職務。 生於臺北市中山區，本籍屏東縣枋山鄉楓港村 ，是客家人和臺灣原住民族排灣族之後裔。 維基百科 出生資訊： 1956 年 8 月 31 日（65歲），台北馬偕紀念醫院 目前任職： 中華民國總統開始於 2016 年 政黨： 民主進步黨 總統任期： 2016 年 5 月 20 日 – 學歷： 倫敦政治經濟學院 (1980 年–1984 年)， 康乃爾法學院 (1978 年–1980 年)， 臺灣大學 (1978 年)， 臺北市立中山女子高級中學 創立的機構： 小英教育基金會 先前任職單位： 行政院副院長 (2006 年–2007 年)， 更多
+                                            </div>                                        
+                                        </div>                                   
+                                    </div>
+                                    <div class="news">
+                                        <div class="title_box"><h2>相關新聞</h2></div>
+                                        <div class="news_list">
+                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
+                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
+                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 註釋 -->
+                <div class="ex">註：依照選舉人公報順序排序顯示</div>
+                
+            </div>
+        </div>
+        <!-- 候選人 ed-->
+
+        
+    </div>
+  </div>
+<!-- 候選人專區 ed-->    
+</main>
+<!--main ed-->
+<!--footer-->
+<footer>
+    <div class="frame_box">
+        <small> © TVBS Media Inc. All Rights Reserved.<br>台北市內湖區瑞光路451號 | 聯利媒體股份有限公司 </small>
+    </div>    
+</footer>
+<!--footer ed-->
+</div>
+<!--container主架構ed-->
+</div>
+</body>
+</html>
