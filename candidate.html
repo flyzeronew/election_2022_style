@@ -87,17 +87,24 @@ function councillor_open(){
             $(this).toggleClass('op');
             if($(this).hasClass('op')){
                 $(this).find('img').css({'transform':'rotate(180deg)'});
-                $('.candidate .councillor .box').eq(i).find('.show').show();
+                $('.candidate .councillor .box').eq(i).find('.show').slideDown();
             }else{
                 $(this).find('img').css({'transform':'rotate(0deg)'});
                 $('.candidate .councillor .box').eq(i).find('.show').hide();
-                $('.candidate .councillor .box').eq(i).find('.show').eq(0).show();
-                $(this).removeClass('op');
+                $('.candidate .councillor .box').eq(i).find('.show:first-child').show();                
             } 
         });
     });   
 }
  councillor_open();
+ $('html').resize(function(){
+    if($(window).width()>767){   
+        $('.candidate .councillor .box').find('.show').show();  
+    }else{    
+        $('.candidate .councillor .box').find('.show').hide();
+        $('.candidate .councillor .box').find('.show:first-child').show(); 
+    }
+ });
 // 議員手機版展開 ed
 // 選區範圍展開
 $('.scope_box .scope').each(function(i){
@@ -629,82 +636,88 @@ $(this).mouseleave(function(){
                                         </div>
                                     </div>
                                     <div class="pro_box">
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第一選區候選人</div>
-                                                        <div class="name">陳偉杰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第一選區候選人</div>
+                                                            <div class="name">陳偉杰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第一選區候選人</div>
+                                                            <div class="name">陳偉杰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第一選區候選人</div>
+                                                            <div class="name">陳偉杰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第一選區候選人</div>
-                                                        <div class="name">陳偉杰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+
+                                        </div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第一選區候選人</div>
+                                                            <div class="name">鄭宇恩</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第一選區候選人</div>
-                                                        <div class="name">陳偉杰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第一選區候選人</div>
+                                                            <div class="name">鄭宇恩</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第一選區候選人</div>
+                                                            <div class="name">鄭宇恩</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第一選區候選人</div>
-                                                        <div class="name">鄭宇恩</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第一選區候選人</div>
-                                                        <div class="name">鄭宇恩</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第一選區候選人</div>
-                                                        <div class="name">鄭宇恩</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -721,82 +734,87 @@ $(this).mouseleave(function(){
                                         </div>
                                     </div>
                                     <div class="pro_box">
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第二選區候選人</div>
-                                                        <div class="name">陳偉杰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第二選區候選人</div>
+                                                            <div class="name">陳偉杰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第二選區候選人</div>
-                                                        <div class="name">陳偉杰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第二選區候選人</div>
+                                                            <div class="name">陳偉杰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第二選區候選人</div>
-                                                        <div class="name">陳偉杰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第二選區候選人</div>
-                                                        <div class="name">鄭宇恩</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第二選區候選人</div>
-                                                        <div class="name">鄭宇恩</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">新北市 第二選區候選人</div>
-                                                        <div class="name">鄭宇恩</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第二選區候選人</div>
+                                                            <div class="name">陳偉杰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第二選區候選人</div>
+                                                            <div class="name">鄭宇恩</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第二選區候選人</div>
+                                                            <div class="name">鄭宇恩</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">新北市 第二選區候選人</div>
+                                                            <div class="name">鄭宇恩</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </li>
