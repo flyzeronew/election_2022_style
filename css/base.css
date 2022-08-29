@@ -1660,7 +1660,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     padding: 5px 0px;
 }
 .see_more a{
