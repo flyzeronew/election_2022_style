@@ -82,42 +82,22 @@ $('.cheng_btn li').eq(1).click(function(){
 
 function councillor_open(){     
     $('.open_box').each(function(i){
-        if($(window).width()>767){
-            $('.candidate .councillor .box').find('.row').css({display:'flex'});
-        }else{
-            $('.candidate .councillor .box').eq(i).find('.row').css({display:'none'});
-            $('.candidate .councillor .box').eq(i).find('.row').eq(0).css({display:'block'});                        
-        }
-        if($('.candidate .councillor .box').eq(i).find('.row').length<2){
-            $(this).hide();
-        }
+
         $(this).click(function(){   
-            $('.open').toggleClass('op');
-            if($('.open').hasClass('op')){
+            $(this).toggleClass('op');
+            if($(this).hasClass('op')){
                 $(this).find('img').css({'transform':'rotate(180deg)'});
-                $('.candidate .councillor .box').eq(i).find('.row').show();
+                $('.candidate .councillor .box').eq(i).find('.show').show();
             }else{
                 $(this).find('img').css({'transform':'rotate(0deg)'});
-                $('.candidate .councillor .box').eq(i).find('.row').hide();
-                $('.candidate .councillor .box').eq(i).find('.row').eq(0).show();
-                $('.open').removeClass('op');
+                $('.candidate .councillor .box').eq(i).find('.show').hide();
+                $('.candidate .councillor .box').eq(i).find('.show').eq(0).show();
+                $(this).removeClass('op');
             } 
         });
     });   
 }
-function open_remove(){  
-    $('.open').removeClass('op');   
-    $('.open_box .open').each(function(i){
-        if($(window).width()>767){
-            $('.candidate .councillor .box').find('.row').css({display:'flex'});
-        }else{
-            $('.candidate .councillor .box').eq(i).find('.row').css({display:'none'});
-            $('.candidate .councillor .box').eq(i).find('.row').eq(0).css({display:'block'});                        
-        }
-    }); 
-}
-$(window).resize(function(){open_remove();});
-councillor_open();
+ councillor_open();
 // 議員手機版展開 ed
 // 選區範圍展開
 $('.scope_box .scope').each(function(i){
@@ -450,82 +430,87 @@ $(this).mouseleave(function(){
                                         </div>
                                     </div>
                                     <div class="pro_box">
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第一選區候選人</div>
-                                                        <div class="name">汪志冰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第一選區候選人</div>
+                                                            <div class="name">汪志冰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第一選區候選人</div>
+                                                            <div class="name">汪志冰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第一選區候選人</div>
+                                                            <div class="name">汪志冰</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第一選區候選人</div>
-                                                        <div class="name">汪志冰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                        </div>  
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第一選區候選人</div>
+                                                            <div class="name">林世宗</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第一選區候選人</div>
-                                                        <div class="name">汪志冰</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第一選區候選人</div>
+                                                            <div class="name">林世宗</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第一選區候選人</div>
-                                                        <div class="name">林世宗</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第一選區候選人</div>
+                                                            <div class="name">林世宗</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第一選區候選人</div>
-                                                        <div class="name">林世宗</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第一選區候選人</div>
-                                                        <div class="name">林世宗</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>                                        
+                                            </div> 
+                                        </div>  
+                                       
                                     </div>
                                 </div>
 
@@ -542,82 +527,87 @@ $(this).mouseleave(function(){
                                         </div>
                                     </div>
                                     <div class="pro_box">
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第二選區候選人</div>
-                                                        <div class="name">游淑慧</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第二選區候選人</div>
+                                                            <div class="name">游淑慧</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第二選區候選人</div>
-                                                        <div class="name">游淑慧</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第二選區候選人</div>
+                                                            <div class="name">游淑慧</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>1</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第二選區候選人</div>
-                                                        <div class="name">游淑慧</div>
-                                                        <div class="party_name">中國國民黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第二選區候選人</div>
-                                                        <div class="name">李建昌</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第二選區候選人</div>
-                                                        <div class="name">李建昌</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="mp_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="profile_box">
-                                                    <div class="num"><p>2</p></div>
-                                                    <div>
-                                                        <div class="area">台北市 第二選區候選人</div>
-                                                        <div class="name">李建昌</div>
-                                                        <div class="party_name">民主進步黨</div>
-                                                        <div class="more_news">更多新聞 ></div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>1</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第二選區候選人</div>
+                                                            <div class="name">游淑慧</div>
+                                                            <div class="party_name">中國國民黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="show">
+                                            <div class="row">
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第二選區候選人</div>
+                                                            <div class="name">李建昌</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第二選區候選人</div>
+                                                            <div class="name">李建昌</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mp_box">
+                                                    <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                    <div class="profile_box">
+                                                        <div class="num"><p>2</p></div>
+                                                        <div>
+                                                            <div class="area">台北市 第二選區候選人</div>
+                                                            <div class="name">李建昌</div>
+                                                            <div class="party_name">民主進步黨</div>
+                                                            <div class="more_news">更多新聞 ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
 
                                     </div>
                                 </div>

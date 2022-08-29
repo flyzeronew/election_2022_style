@@ -1559,6 +1559,7 @@ display: none;
 }
 .candidate .councillor .pro_box {display:block;}
 .candidate .councillor .pro_box .row{display:flex;justify-content:center;align-items:center;row-gap:30px;}
+.candidate .councillor .pro_box .show{display:block;}
 .mp_box{
     width: calc((100% - 0px)/3);
     display:flex;justify-content:center;align-items:center;
@@ -1581,9 +1582,10 @@ display: none;
         margin-bottom:30px;
     }
     .candidate .mp_box .profile_box{column-gap:20px;}    
+    .candidate .councillor .pro_box .show{display:none;}
+    .candidate .councillor .pro_box .show:first-child{display:block;}
     .candidate .councillor .pro_box .row{display:block;}
-    .candidate .councillor .pro_box .row{display:none;}
-    .candidate .councillor .pro_box .row:first-child{display:block;}
+
 
     .candidate .councillor .city .box {
         margin-bottom: 70px;
