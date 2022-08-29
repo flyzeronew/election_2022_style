@@ -79,42 +79,81 @@ $('.cheng_btn li').eq(1).click(function(){
         $('.councillor').show();
 });
 
-// 議員手機版展開
-function councillor_open(){    
-   if($(window).width()<767){ 
-        $('.open_box').removeClass('op');       
-        $('.candidate .councillor .box').find('.row').css({display:'block'});
-        $('.candidate .councillor .box').find('.row').css({display:'none'});     
-        $('.candidate .councillor .box').each(function(i){            
-            $(this).find('.row').eq(0).show();             
-                if($(this).find('.mp_box').length>3){           
-                    $(this).find('.open_box').show();         
-                        $('.candidate .councillor .box').eq(i).find('.open_box').click(function(){
-                            $('.candidate .councillor .box').eq(i).find('.open_box').toggleClass('op');
-                            if($('.candidate .councillor .box').eq(i).find('.open_box').hasClass('op')){   
-                                $(this).find('img').css({'transform':'rotate(180deg)'});           
-                                $('.candidate .councillor .box').eq(i).find('.row').show();
-                            }else{                              
-                                $(this).find('img').css({'transform':'rotate(0deg)'}); 
-                                $('.candidate .councillor .box').eq(i).find('.row').hide();
-                                $('.candidate .councillor .box').eq(i).find('.row').eq(0).show();
-                                $(this).removeClass('op');                               
-                            }
-                        });
-                    
-                }else{
-                    $(this).find('.open_box').hide();
-                }        
-        });
-   }else{
-        $('.open_box').removeClass('op'); 
-        $('.candidate .councillor .box').find('.row').show();
-        $('.candidate .councillor .box').find('.row').css({display:'flex'});
-   }
-}
 
+function councillor_open(){     
+    $('.open_box').each(function(i){
+        if($(window).width()>767){
+            $('.candidate .councillor .box').find('.row').css({display:'flex'});
+        }else{
+            $('.candidate .councillor .box').eq(i).find('.row').css({display:'none'});
+            $('.candidate .councillor .box').eq(i).find('.row').eq(0).css({display:'block'});                        
+        }
+        if($('.candidate .councillor .box').eq(i).find('.row').length<2){
+            $(this).hide();
+        }
+        $(this).click(function(){   
+            $('.open').toggleClass('op');
+            if($('.open').hasClass('op')){
+                $(this).find('img').css({'transform':'rotate(180deg)'});
+                $('.candidate .councillor .box').eq(i).find('.row').show();
+            }else{
+                $(this).find('img').css({'transform':'rotate(0deg)'});
+                $('.candidate .councillor .box').eq(i).find('.row').hide();
+                $('.candidate .councillor .box').eq(i).find('.row').eq(0).show();
+                $('.open').removeClass('op');
+            } 
+        });
+    });   
+}
+function open_remove(){  
+    $('.open').removeClass('op');   
+    $('.open_box .open').each(function(i){
+        if($(window).width()>767){
+            $('.candidate .councillor .box').find('.row').css({display:'flex'});
+        }else{
+            $('.candidate .councillor .box').eq(i).find('.row').css({display:'none'});
+            $('.candidate .councillor .box').eq(i).find('.row').eq(0).css({display:'block'});                        
+        }
+    }); 
+}
+$(window).resize(function(){open_remove();});
 councillor_open();
-$(window).resize(function(){councillor_open();});
+// function councillor_open(){    
+//    if($(window).width()<767){ 
+//         $('.open_box').removeClass('op');       
+//         $('.candidate .councillor .box').find('.row').css({display:'block'});
+//         $('.candidate .councillor .box').find('.row').css({display:'none'});     
+//         $('.candidate .councillor .box').each(function(i){            
+//             $(this).find('.row').eq(0).show();             
+//                 if($(this).find('.mp_box').length>3){           
+//                     $(this).find('.open_box').show();         
+//                         $('.candidate .councillor .box').eq(i).find('.open_box').click(function(){
+//                             $('.candidate .councillor .box').eq(i).find('.open_box').toggleClass('op');
+//                             if($('.candidate .councillor .box').eq(i).find('.open_box').hasClass('op')){   
+//                                 $(this).find('img').css({'transform':'rotate(180deg)'});           
+//                                 $('.candidate .councillor .box').eq(i).find('.row').show();
+//                             }else{                              
+//                                 $(this).find('img').css({'transform':'rotate(0deg)'}); 
+//                                 $('.candidate .councillor .box').eq(i).find('.row').hide();
+//                                 $('.candidate .councillor .box').eq(i).find('.row').eq(0).show();
+//                                 $(this).removeClass('op');                               
+//                             }
+//                         });
+                    
+//                 }else{
+//                     $(this).find('.open_box').hide();
+//                 }        
+//         });
+//    }else{
+//         $('.open_box').removeClass('op'); 
+//         $('.candidate .councillor .box').find('.row').show();
+//         $('.candidate .councillor .box').find('.row').css({display:'flex'});
+//    }
+// }
+
+// councillor_open();
+// $(window).resize(function(){
+//     councillor_open();});
 // 議員手機版展開 ed
 
 // 選區範圍展開
