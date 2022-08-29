@@ -80,29 +80,31 @@ $('.cheng_btn li').eq(1).click(function(){
 });
 
 
-function councillor_open(){     
-    $('.open_box').each(function(i){
-
-        $(this).click(function(){   
-            $(this).toggleClass('op');
-            if($(this).hasClass('op')){
-                $(this).find('img').css({'transform':'rotate(180deg)'});
-                $('.candidate .councillor .box').eq(i).find('.show').slideDown();
-            }else{
-                $(this).find('img').css({'transform':'rotate(0deg)'});
-                $('.candidate .councillor .box').eq(i).find('.show').hide();
-                $('.candidate .councillor .box').eq(i).find('.show:first-child').show();                
-            } 
-        });
-    });   
+function councillor_open(){ 
+ 
+        $('.open_box').each(function(i){
+            $(this).click(function(){   
+                $(this).toggleClass('op');
+                if($(this).hasClass('op')){
+                    $(this).find('img').css({'transform':'rotate(180deg)'});
+                    $('.candidate .councillor .box').eq(i).find('.show').eq(1).slideDown();
+                }else{
+                    $(this).find('img').css({'transform':'rotate(0deg)'});
+                    $('.candidate .councillor .box').eq(i).find('.show').eq(1).slideUp();              
+                } 
+            });
+        });  
+  
 }
+
  councillor_open();
- $('html').resize(function(){
-    if($(window).width()>767){   
-        $('.candidate .councillor .box').find('.show').show();  
-    }else{    
-        $('.candidate .councillor .box').find('.show').hide();
-        $('.candidate .councillor .box').find('.show:first-child').show(); 
+ $(window).resize(function(){
+    if($(this).width()>767){
+        $('.open_box').removeClass('op');
+        $('.open_box').find('img').css({'transform':'rotate(0deg)'});
+        $('.candidate .councillor .box').find('.show').eq(1).show();
+    }else{
+        $('.candidate .councillor .box').find('.show').eq(1).hide();
     }
  });
 // 議員手機版展開 ed
@@ -118,6 +120,10 @@ $(this).mouseleave(function(){
 // 選區範圍展開 ed
 // 市長議員切換 ed
 // 候選人專區 用 ed
+
+$(window).resize(function(){
+    clean_open();
+ });
 });
 
 </script>
@@ -208,6 +214,7 @@ $(this).mouseleave(function(){
         // 主選單
         $('.city_menu li').each(function(i){
             $(this).click(function(){
+
                 // 關閉子選單
                 $('.city_menu_child').hide();
                 if($('.city_menu .arraw').hasClass('open')){                    
@@ -226,6 +233,7 @@ $(this).mouseleave(function(){
         //子選單
         $('.city_menu_child1 li').each(function(i){
             $(this).click(function(){    
+             
                 $('.city_menu li').removeClass('act');     
                 switch (i) {
                     case 0:  $('.city_menu li').eq(0).addClass('act'); break;
