@@ -32,11 +32,11 @@ $('.lightbox_ad .xx').click(function(){$('.lightbox_ad').hide();});
             if($all_h > $foot_top) {
                 //alert("near bottom!");
                 $("#back").css({"bottom":$obj_h+$bottom_ad_h-5,"transition":"0.3s"});
-                $(".flexd_bottom_ad").css({"bottom":$obj_h-10});
+                $(".flexd_bottom_ad").css({"bottom":$obj_h-10,"transition":"0.3s"});
 
             }else{
                 $("#back").css({"bottom":$bottom_ad_h+5,"transition":"0.3s"});
-                $(".flexd_bottom_ad").css({"bottom":"0px"});
+                $(".flexd_bottom_ad").css({"bottom":"0px","transition":"0.3s"});
             }
         }
      });
