@@ -1369,7 +1369,7 @@ display: none;
 /* 子選單 */
 .candidate_area .city_menu_child_box{position: relative;}
 .candidate_area .city_menu_child{ 
-    z-index: 2;  
+    z-index: 6;  
     display:none;
     top:0;
     width:100%;
@@ -1438,7 +1438,11 @@ display: none;
 }
 
 .candidate .pro_box .txt_box .txt{font-size:14px;line-height:25px;}
-.candidate .city .box{margin-bottom:30px;padding-bottom:30px;border-bottom: 1px solid #dadada;}
+.candidate .city .box{
+    position: relative;
+    margin-bottom:30px;padding-bottom:30px;
+    border-bottom: 1px solid #dadada;
+}
 .candidate .city li{display:none;}
 .candidate .city li:first-child{display:block;}
 .candidate .city li .box:last-child{border-bottom: 0px solid #dadada;margin-bottom:0px;padding-bottom:0px;}
@@ -1474,7 +1478,90 @@ display: none;
     .candidate_area .city_menu_child1 ul{justify-content:center; column-gap: 40px;}
 
 }
-/* 候選人 ed*/
+/* 市長候選人 ed*/
+/* 議員 */
+.candidate .councillor{}
+.candidate .councillor .city .box .open_box{position:absolute;bottom:-39px;text-align: center;width:100%;display:none;}
+.candidate .councillor .city .box .open_box .open{
+    color: #fff;display:inline-block;
+    border-radius:0 0 5px 5px;
+    padding: 5px 10px 5px 25px;
+    overflow: hidden;
+    background-color: #2886A2;    
+}
+.candidate .councillor .city .box .open_box .open p{display:flex;justify-content:center;align-items:center;}
+.candidate .councillor .city .box .open_box .open p img{width:20px;height:20px;padding:0 5px;}
+.candidate .councillor .area_box{font-size:16px;margin-bottom:30px;display:flex;justify-content:center;align-items:center;}
+.candidate .councillor .area{font-weight: bold;margin-right: 10px;position: relative;}
+.candidate .councillor .scope_box{position: relative;}
+.candidate .councillor .scope{
+    cursor: pointer;
+    color:#464646;background: url(../images/navigate_more2.svg) no-repeat right center;
+    padding-right:25px;background-size:25px;
+}
+.candidate .councillor .region_box{
+    width:100%;
+    z-index: 1;
+    position:absolute;
+    top:25px;
+    left:-80%;
+    display:none;
+}
+.candidate .councillor .region_box .arraw{
+    width:15px;height:10px;clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-bottom:-2px;
+    margin-left:100%;
+    background-color:#2886A2;
+}
+.candidate .councillor .region{   
+    width:200px;
+    border-radius: 5px;
+    background-color: #2886A2;
+    color: #fff;
+    padding:10px 15px;
+    font-size: 16px;
+    box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+}
+.candidate .councillor .pro_box {display:block;}
+.candidate .councillor .pro_box .row{display:flex;justify-content:center;align-items:center;row-gap:30px;}
+.mp_box{
+    width: calc((100% - 0px)/3);
+    display:flex;justify-content:center;align-items:center;
+    column-gap: 20px;
+}
+.candidate .mp_box .profile_box{width:auto;display:flex;align-items:center;column-gap:20px;}
+.candidate .mp_box .area{font-size:12px;}
+.candidate .mp_box .more_news{font-size:12px;color:#F28C17;}
+.mp_box .party{width:40px;height:40px;}
+@media (max-width:1023px){
+    .mp_box{column-gap: 15px;}
+    .candidate .mp_box .profile_box{column-gap:15px;}
+}
+@media (max-width:767px) {  
+    .mp_box .party{width:50px;height:50px;}
+    .candidate .councillor .city .box .open_box{display: block;} 
+    .mp_box {
+        width: 100%;
+        column-gap:20px;
+        margin-bottom:30px;
+    }
+    .candidate .mp_box .profile_box{column-gap:20px;}
+    .candidate .councillor .pro_box .row{display:none;}
+    .candidate .councillor .pro_box .row:first-child{display:block;}
+
+    .candidate .councillor .city .box {
+        margin-bottom: 70px;
+        padding-bottom: 0px;
+        border-bottom: 1px solid #dadada;
+    }
+    .candidate .councillor .city .box:last-child {
+        display:block;
+        border-bottom: 1px solid #dadada;
+        margin-bottom: 70px;
+        padding-bottom: 0px;
+    }
+}
+/* 議員 ed*/
 /* 候選人專區 ed*/
 
 /*footer*/
