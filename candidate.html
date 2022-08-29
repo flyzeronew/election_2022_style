@@ -78,6 +78,56 @@ $('.cheng_btn li').eq(1).click(function(){
         $('.mayor').hide();
         $('.councillor').show();
 });
+
+// 議員手機版展開
+function councillor_open(){    
+   if($(window).width()<767){ 
+        $('.open_box').removeClass('op');       
+        $('.candidate .councillor .box').find('.row').css({display:'block'});
+        $('.candidate .councillor .box').find('.row').css({display:'none'});     
+        $('.candidate .councillor .box').each(function(i){            
+            $(this).find('.row').eq(0).show();             
+                if($(this).find('.mp_box').length>3){           
+                    $(this).find('.open_box').show();         
+                        $('.candidate .councillor .box').eq(i).find('.open_box').click(function(){
+                            $('.candidate .councillor .box').eq(i).find('.open_box').toggleClass('op');
+                            if($('.candidate .councillor .box').eq(i).find('.open_box').hasClass('op')){   
+                                $(this).find('img').css({'transform':'rotate(180deg)'});           
+                                $('.candidate .councillor .box').eq(i).find('.row').show();
+                            }else{                              
+                                $(this).find('img').css({'transform':'rotate(0deg)'}); 
+                                $('.candidate .councillor .box').eq(i).find('.row').hide();
+                                $('.candidate .councillor .box').eq(i).find('.row').eq(0).show();
+                                $(this).removeClass('op');                               
+                            }
+                        });
+                    
+                }else{
+                    $(this).find('.open_box').hide();
+                }        
+        });
+   }else{
+        $('.open_box').removeClass('op'); 
+        $('.candidate .councillor .box').find('.row').show();
+        $('.candidate .councillor .box').find('.row').css({display:'flex'});
+   }
+}
+
+councillor_open();
+$(window).resize(function(){councillor_open();});
+// 議員手機版展開 ed
+
+// 選區範圍展開
+$('.scope_box .scope').each(function(i){
+$(this).mouseover(function(){        
+    $('.region_box').eq(i).show();        
+});
+$(this).mouseleave(function(){
+    $('.region_box').hide();
+});
+});
+// 選區範圍展開 ed
+// 市長議員切換 ed
 // 候選人專區 用 ed
 });
 
@@ -98,7 +148,7 @@ $('.cheng_btn li').eq(1).click(function(){
     <div class="flexd_bottom_ad"><a href="##" target="_blank"><img src="images/bottom320.jpg"></a></div> 
     <!--floating banner 滑動置底 ed-->
 
-    <!--蓋版廣告-->
+    <!--蓋版廣告->
     <div class="lightbox_ad">
         <div class="box">
             <div class="img">
@@ -107,7 +157,7 @@ $('.cheng_btn li').eq(1).click(function(){
             </div>
         </div>
     </div>
-    <!--蓋版廣告-->
+    <!--蓋版廣告 ed-->
 
     <h1 style="display: none;">2022九合一大選</h1>
     
@@ -319,11 +369,11 @@ $('.cheng_btn li').eq(1).click(function(){
                                         <div class="peo_box">
                                             <div class="img_box">
                                                 <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor04.jpg" alt="img"/></div>
                                             </div>
                                             <div class="profile_box">
                                                 <div class="num"><p>1</p></div>
-                                                <div class="name">市長朱立倫</div>
+                                                <div class="name">市長侯友宜</div>
                                                 <div class="party_name">中國國民黨</div>
                                                 <div class="birthday">1961年6月7日</div>
                                             </div>
@@ -349,11 +399,11 @@ $('.cheng_btn li').eq(1).click(function(){
                                         <div class="peo_box">
                                             <div class="img_box">
                                                 <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
+                                                <div class="img"><img src="images/mayor03.jpg" alt="img"/></div>
                                             </div>
                                             <div class="profile_box">
                                                 <div class="num"><p>2</p></div>
-                                                <div class="name">市長蔡英文</div>
+                                                <div class="name">市長林佳龍</div>
                                                 <div class="party_name">民主進步黨</div>
                                                 <div class="birthday">1956年8月31日</div>
                                             </div>
@@ -386,62 +436,187 @@ $('.cheng_btn li').eq(1).click(function(){
                                 <div class="title_box t1"><!-- 插入所有城市陣列 --></div>
                                 <!-- 標題 ed-->
                                 <div class="box">
-                                    <div class="pro_box">
-                                        <div class="peo_box">
-                                            <div class="img_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
-                                            </div>
-                                            <div class="profile_box">
-                                                <div class="num"><p>1</p></div>
-                                                <div class="name">市長朱立倫</div>
-                                                <div class="party_name">中國國民黨</div>
-                                                <div class="birthday">1961年6月7日</div>
+                                    <div class="open_box"><div class="open"><p>展開<img src="images/expand_more2.svg" alt="arraw"/></p></div></div>
+                                    <div class="area_box">
+                                        <span class="area">第一選區</span>
+                                        <div class="scope_box">
+                                            <span class="scope">選區範圍</span>
+                                            <div class="region_box">
+                                                <div class="arraw"></div>
+                                                <div class="region">大安區 / 松山區 / 信義區</div>
                                             </div>
                                         </div>
-                                        <div class="txt_box">
-                                            <div class="txt">
-                                                朱立倫，臺灣政治人物、學者、會計學博士，中國國民黨籍，生於桃園市八德區，外省第二代，籍貫浙江省義烏縣，現任中國國民黨主席、東吳大學法學院講座教授、國立臺灣大學會計學系兼任教授，曾任新北市市長、行政院副院長、行政院消費者保護會主任委員、桃園縣... 維基百科 出生資訊： 1961 年 6 月 7 日（61歲），八德區 目前任職： Alcalde de Nuevo Taipéi開始於 2010 年 政黨： 中國國民黨 學歷： 史登商學院， 紐約大學， 臺灣大學， 臺北市立建國高級中學 獲獎記錄： Order of Francisco Morazán 先前任職單位： 新北市市長 (2016 年–2018 年)， 更多 子女： 朱約嬡， 朱宣宇
-                                            </div>                                        
-                                        </div>                                   
                                     </div>
-                                    <div class="news">
-                                        <div class="title_box"><h2>相關新聞</h2></div>
-                                        <div class="news_list">
-                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
-                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
-                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                    <div class="pro_box">
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第一選區候選人</div>
+                                                        <div class="name">汪志冰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第一選區候選人</div>
+                                                        <div class="name">汪志冰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第一選區候選人</div>
+                                                        <div class="name">汪志冰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第一選區候選人</div>
+                                                        <div class="name">林世宗</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第一選區候選人</div>
+                                                        <div class="name">林世宗</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第一選區候選人</div>
+                                                        <div class="name">林世宗</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                        
                                     </div>
                                 </div>
 
                                 <div class="box">
-                                    <div class="pro_box">
-                                        <div class="peo_box">
-                                            <div class="img_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
-                                            </div>
-                                            <div class="profile_box">
-                                                <div class="num"><p>2</p></div>
-                                                <div class="name">市長蔡英文</div>
-                                                <div class="party_name">民主進步黨</div>
-                                                <div class="birthday">1956年8月31日</div>
+                                    <div class="open_box"><div class="open"><p>展開<img src="images/expand_more2.svg" alt="arraw"/></p></div></div>
+                                    <div class="area_box">
+                                        <span class="area">第二選區</span>
+                                        <div class="scope_box">
+                                            <span class="scope">選區範圍</span>
+                                            <div class="region_box">
+                                                <div class="arraw"></div>
+                                                <div class="region">大安區 / 松山區 / 信義區</div>
                                             </div>
                                         </div>
-                                        <div class="txt_box">
-                                            <div class="txt">
-                                                蔡英文，中華民國政治人物，民主進步黨籍，現任中華民國總統、民主進步黨主席及中華文化總會會長，亦為法律學者與律師，曾擔任過行政院副院長、立法委員、大陸委員會主任委員、國家安全會議諮詢委員等職務。 生於臺北市中山區，本籍屏東縣枋山鄉楓港村 ，是客家人和臺灣原住民族排灣族之後裔。 維基百科 出生資訊： 1956 年 8 月 31 日（65歲），台北馬偕紀念醫院 目前任職： 中華民國總統開始於 2016 年 政黨： 民主進步黨 總統任期： 2016 年 5 月 20 日 – 學歷： 倫敦政治經濟學院 (1980 年–1984 年)， 康乃爾法學院 (1978 年–1980 年)， 臺灣大學 (1978 年)， 臺北市立中山女子高級中學 創立的機構： 小英教育基金會 先前任職單位： 行政院副院長 (2006 年–2007 年)， 更多
-                                            </div>                                        
-                                        </div>                                   
                                     </div>
-                                    <div class="news">
-                                        <div class="title_box"><h2>相關新聞</h2></div>
-                                        <div class="news_list">
-                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
-                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
-                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                    <div class="pro_box">
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第二選區候選人</div>
+                                                        <div class="name">游淑慧</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第二選區候選人</div>
+                                                        <div class="name">游淑慧</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第二選區候選人</div>
+                                                        <div class="name">游淑慧</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第二選區候選人</div>
+                                                        <div class="name">李建昌</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第二選區候選人</div>
+                                                        <div class="name">李建昌</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">台北市 第二選區候選人</div>
+                                                        <div class="name">李建昌</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </li>
@@ -450,61 +625,185 @@ $('.cheng_btn li').eq(1).click(function(){
                                 <div class="title_box t1"><!-- 插入所有城市陣列 --></div>
                                 <!-- 標題 ed-->
                                 <div class="box">
-                                    <div class="pro_box">
-                                        <div class="peo_box">
-                                            <div class="img_box">
-                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                                                <div class="img"><img src="images/mayor01.jpg" alt="img"/></div>
-                                            </div>
-                                            <div class="profile_box">
-                                                <div class="num"><p>1</p></div>
-                                                <div class="name">市長朱立倫</div>
-                                                <div class="party_name">中國國民黨</div>
-                                                <div class="birthday">1961年6月7日</div>
+                                    <div class="open_box"><div class="open"><p>展開<img src="images/expand_more2.svg" alt="arraw"/></p></div></div>
+                                    <div class="area_box">
+                                        <span class="area">第一選區</span>
+                                        <div class="scope_box">
+                                            <span class="scope">選區範圍</span>
+                                            <div class="region_box">
+                                                <div class="arraw"></div>
+                                                <div class="region">泰山區、林口區、八里區、淡水區、三芝區、石門區</div>
                                             </div>
                                         </div>
-                                        <div class="txt_box">
-                                            <div class="txt">
-                                                朱立倫，臺灣政治人物、學者、會計學博士，中國國民黨籍，生於桃園市八德區，外省第二代，籍貫浙江省義烏縣，現任中國國民黨主席、東吳大學法學院講座教授、國立臺灣大學會計學系兼任教授，曾任新北市市長、行政院副院長、行政院消費者保護會主任委員、桃園縣... 維基百科 出生資訊： 1961 年 6 月 7 日（61歲），八德區 目前任職： Alcalde de Nuevo Taipéi開始於 2010 年 政黨： 中國國民黨 學歷： 史登商學院， 紐約大學， 臺灣大學， 臺北市立建國高級中學 獲獎記錄： Order of Francisco Morazán 先前任職單位： 新北市市長 (2016 年–2018 年)， 更多 子女： 朱約嬡， 朱宣宇
-                                            </div>                                        
-                                        </div>                                   
                                     </div>
-                                    <div class="news">
-                                        <div class="title_box"><h2>相關新聞</h2></div>
-                                        <div class="news_list">
-                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
-                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
-                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                    <div class="pro_box">
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第一選區候選人</div>
+                                                        <div class="name">陳偉杰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第一選區候選人</div>
+                                                        <div class="name">陳偉杰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第一選區候選人</div>
+                                                        <div class="name">陳偉杰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第一選區候選人</div>
+                                                        <div class="name">鄭宇恩</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第一選區候選人</div>
+                                                        <div class="name">鄭宇恩</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第一選區候選人</div>
+                                                        <div class="name">鄭宇恩</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="box">
-                                    <div class="pro_box">
-                                        <div class="peo_box">
-                                            <div class="img_box">
-                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
-                                                <div class="img"><img src="images/mayor02.jpg" alt="img"/></div>
-                                            </div>
-                                            <div class="profile_box">
-                                                <div class="num"><p>2</p></div>
-                                                <div class="name">市長蔡英文</div>
-                                                <div class="party_name">民主進步黨</div>
-                                                <div class="birthday">1956年8月31日</div>
+                                    <div class="open_box"><div class="open"><p>展開<img src="images/expand_more2.svg" alt="arraw"/></p></div></div>
+                                    <div class="area_box">
+                                        <span class="area">第二選區</span>
+                                        <div class="scope_box">
+                                            <span class="scope">選區範圍</span>
+                                            <div class="region_box">
+                                                <div class="arraw"></div>
+                                                <div class="region">泰山區、林口區、八里區、淡水區、三芝區、石門區</div>
                                             </div>
                                         </div>
-                                        <div class="txt_box">
-                                            <div class="txt">
-                                                蔡英文，中華民國政治人物，民主進步黨籍，現任中華民國總統、民主進步黨主席及中華文化總會會長，亦為法律學者與律師，曾擔任過行政院副院長、立法委員、大陸委員會主任委員、國家安全會議諮詢委員等職務。 生於臺北市中山區，本籍屏東縣枋山鄉楓港村 ，是客家人和臺灣原住民族排灣族之後裔。 維基百科 出生資訊： 1956 年 8 月 31 日（65歲），台北馬偕紀念醫院 目前任職： 中華民國總統開始於 2016 年 政黨： 民主進步黨 總統任期： 2016 年 5 月 20 日 – 學歷： 倫敦政治經濟學院 (1980 年–1984 年)， 康乃爾法學院 (1978 年–1980 年)， 臺灣大學 (1978 年)， 臺北市立中山女子高級中學 創立的機構： 小英教育基金會 先前任職單位： 行政院副院長 (2006 年–2007 年)， 更多
-                                            </div>                                        
-                                        </div>                                   
                                     </div>
-                                    <div class="news">
-                                        <div class="title_box"><h2>相關新聞</h2></div>
-                                        <div class="news_list">
-                                            <a href="#">台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊台北市長選情　柯文哲：不投蔣不投綠就會投黃珊珊</a>
-                                            <a href="#">「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇「絕不姑息抹黑」林智堅反擊！今按鈴告王鴻薇</a>
-                                            <a href="#">恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光恩恩案成侯友宜連任最大變數　錄音檔曝光</a>
+                                    <div class="pro_box">
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第二選區候選人</div>
+                                                        <div class="name">陳偉杰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第二選區候選人</div>
+                                                        <div class="name">陳偉杰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party01.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>1</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第二選區候選人</div>
+                                                        <div class="name">陳偉杰</div>
+                                                        <div class="party_name">中國國民黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第二選區候選人</div>
+                                                        <div class="name">鄭宇恩</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第二選區候選人</div>
+                                                        <div class="name">鄭宇恩</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mp_box">
+                                                <div class="party"><img src="images/party02.png" alt="img"/></div>
+                                                <div class="profile_box">
+                                                    <div class="num"><p>2</p></div>
+                                                    <div>
+                                                        <div class="area">新北市 第二選區候選人</div>
+                                                        <div class="name">鄭宇恩</div>
+                                                        <div class="party_name">民主進步黨</div>
+                                                        <div class="more_news">更多新聞 ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
