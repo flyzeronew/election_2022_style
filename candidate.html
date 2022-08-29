@@ -118,44 +118,7 @@ function open_remove(){
 }
 $(window).resize(function(){open_remove();});
 councillor_open();
-// function councillor_open(){    
-//    if($(window).width()<767){ 
-//         $('.open_box').removeClass('op');       
-//         $('.candidate .councillor .box').find('.row').css({display:'block'});
-//         $('.candidate .councillor .box').find('.row').css({display:'none'});     
-//         $('.candidate .councillor .box').each(function(i){            
-//             $(this).find('.row').eq(0).show();             
-//                 if($(this).find('.mp_box').length>3){           
-//                     $(this).find('.open_box').show();         
-//                         $('.candidate .councillor .box').eq(i).find('.open_box').click(function(){
-//                             $('.candidate .councillor .box').eq(i).find('.open_box').toggleClass('op');
-//                             if($('.candidate .councillor .box').eq(i).find('.open_box').hasClass('op')){   
-//                                 $(this).find('img').css({'transform':'rotate(180deg)'});           
-//                                 $('.candidate .councillor .box').eq(i).find('.row').show();
-//                             }else{                              
-//                                 $(this).find('img').css({'transform':'rotate(0deg)'}); 
-//                                 $('.candidate .councillor .box').eq(i).find('.row').hide();
-//                                 $('.candidate .councillor .box').eq(i).find('.row').eq(0).show();
-//                                 $(this).removeClass('op');                               
-//                             }
-//                         });
-                    
-//                 }else{
-//                     $(this).find('.open_box').hide();
-//                 }        
-//         });
-//    }else{
-//         $('.open_box').removeClass('op'); 
-//         $('.candidate .councillor .box').find('.row').show();
-//         $('.candidate .councillor .box').find('.row').css({display:'flex'});
-//    }
-// }
-
-// councillor_open();
-// $(window).resize(function(){
-//     councillor_open();});
 // 議員手機版展開 ed
-
 // 選區範圍展開
 $('.scope_box .scope').each(function(i){
 $(this).mouseover(function(){        
