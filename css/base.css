@@ -200,8 +200,16 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
     width: 1000px;
     margin: 0 auto;
 }
+.frame_box3 {
+    width: 1278px;
+    margin: 0 auto;
+}
 @media (max-width:1450px) {
     .frame_box {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .frame_box3 {
         width: 1200px;
         margin: 0 auto;
     }
@@ -215,6 +223,10 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
         width: 980px;
         margin: 0 auto;
     }
+    .frame_box3 {
+        width: 980px;
+        margin: 0 auto;
+    }
 }
 @media (max-width:1023px) {
     .frame_box {
@@ -222,6 +234,10 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
         margin: 0 auto;
     }
     .frame_box2 {
+        width: 728px;
+        margin: 0 auto;
+    }
+    .frame_box3 {
         width: 728px;
         margin: 0 auto;
     }
@@ -235,6 +251,10 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
         width:414px;
         margin: 0 auto;
     }
+    .frame_box3 {
+        width:414px;
+        margin: 0 auto;
+    }
 }
 @media (max-width:414px) {
     .frame_box {
@@ -242,6 +262,10 @@ a:hover,a:hover .txt_box .txt,a:hover .txt p,a:hover .title{
         margin: 0 auto;
     }
     .frame_box2 {
+        width:100%;
+        margin: 0 auto;
+    }
+    .frame_box3 {
         width:100%;
         margin: 0 auto;
     }
@@ -1611,3 +1635,49 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 }
 
 /* 廣告欄位 ed*/
+
+/* 候選人內頁 */
+.detail_box .pro_box{
+    display: block;
+}
+.candidate .detail_box .pro_box .txt_box{
+    width: 100%;
+    color:#464646;
+}
+.candidate .detail_box .pro_box .txt_box p{
+    font-size: 12px;
+}
+.detail_box .news{
+    padding-left:0;
+}
+.see_more{
+    padding: 0 auto;
+    width: 100px;
+    height: 25px;
+    background-color:#2886A2;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+.see_more a{
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0px 0px;
+}
+.see_more .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.see_more a img{
+    transform: rotate(180deg);
+    width: 25px;
+    }
