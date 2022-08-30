@@ -725,6 +725,10 @@ main .vision .owl-dots{display:none!important;}
 @media (max-width:767px) {
     .comment{overflow-x:auto;padding:0 15px;}
     .comment ul{width:280%;column-gap:15px;}
+    .comment .txt {
+        width: 100%;
+        
+    }
     .comment .txt_box {
         width: 100%;
         box-sizing: border-box;
