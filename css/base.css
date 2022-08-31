@@ -1465,7 +1465,7 @@ display: none;
 }
 .candidate .pro_box{display:flex;justify-content:space-between;align-items:center;}
 .candidate .pro_box .peo_box{width:35%;display:flex;justify-content:space-between;column-gap:40px;align-items:center;}
-.candidate .pro_box .txt_box{width:65%;}
+.candidate .pro_box .txt_box{width:65%;overflow: hidden;}
 
 .candidate .pro_box .img_box{width:50%;position: relative;}
 .candidate .pro_box .profile_box{width:50%;}
@@ -1481,7 +1481,14 @@ display: none;
     font-size:14px;color:#464646;margin-bottom:5px;
 }
 
-.candidate .pro_box .txt_box .txt{font-size:14px;line-height:25px;}
+.candidate .pro_box .txt_box .txt{
+    font-size:14px;line-height:25px;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
 .candidate .city .box{
     position: relative;
     margin-bottom:30px;padding-bottom:30px;
