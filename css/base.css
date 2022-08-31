@@ -308,7 +308,7 @@ header{position: relative;}
 }
 /* 導覽列 */
 nav{overflow:hidden;padding:15px;background-color: #fff;}
-nav ul{display:flex;align-items:center;justify-content:center;column-gap:15px;}
+nav ul{display:flex;align-items:center;justify-content:center;column-gap:44px;}
 nav li a{color:#2886A2;padding:5px 10px;border-radius: 5px;overflow:hidden;}
 nav li a:hover,nav li.act a{background-color: #2886A2;color:#fff;}
 @media (max-width:767px){
@@ -414,7 +414,12 @@ main .vision .owl-dots{display:none!important;}
 }
 
 /* 主視覺ed*//* 錨點 */
-.anchor_point_box{z-index:5;top:0;width:100%;overflow:hidden;margin-bottom:30px;box-sizing: border-box;background-color:rgba(242,242,247,0.7);backdrop-filter: blur(20px);}
+.anchor_point_box{
+    z-index:5;top:0;width:100%;overflow:hidden;margin-bottom:30px;box-sizing: border-box;
+    background-color:rgba(242,242,247,0.7);
+    backdrop-filter: blur(20px);-moz-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
 .anchor_point{padding:30px 15px;width:100%;box-sizing: border-box;}
 .anchor_point ul{display:flex;align-items:center;justify-content:center;column-gap:15px;}
 .anchor_point li a{color:#2886A2;padding:8px 15px;border-radius: 5px;overflow:hidden;border:1px solid #2886A2;}
@@ -1514,8 +1519,13 @@ display: none;
     .candidate .pro_box .peo_box{width:100%;column-gap:30px;margin-bottom: 20px;}
     .candidate .pro_box .txt_box{width:100%;}
     .candidate .news {padding-left:0;}
-    .candidate_area .city_menu_child1 ul{justify-content:center; column-gap: 40px;}
-
+    .candidate_area .city_menu_child1 ul{width:75%;margin:0 auto;column-gap: 40px;}
+}
+@media (max-width:411px) {
+    .candidate_area .city_menu_child1 ul{width:85%;}
+}
+@media (max-width:359px) {
+    .candidate_area .city_menu_child1 ul{width:90%;column-gap: 30px;}
 }
 /* 市長候選人 ed*/
 /* 議員 */
@@ -1579,7 +1589,8 @@ display: none;
     .candidate .mp_box .profile_box{column-gap:15px;}
 }
 @media (max-width:767px) {  
-    .mp_box .party{width:50px;height:50px;}
+    .mp_box .party{width:35px;height:35px;}
+    .candidate .pro_box .profile_box .num{width:30px;height:30px;}
     .candidate .councillor .city .box .open_box{display: block;} 
     .mp_box {
         width: 100%;
