@@ -435,6 +435,9 @@ main .vision .owl-dots{display:none!important;}
 /* 標題 */
 .title_box{width:max-content;margin: 0 auto 30px;}
 .title_box h2{width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
+.title_box p{
+    font-weight: bold;
+    width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
 /* 標題 ed*/
 
 /* 六都選情 */
@@ -1476,13 +1479,13 @@ display: none;
     width:35px;height:35px;display:flex;justify-content:center;align-items:center;
     background-color:#000;color:#fff;border-radius:360px;margin-bottom:5px;
     }
-.candidate .pro_box .profile_box .name{font-size:20px;font-weight:bold;margin-bottom:5px;}
+.candidate .pro_box .profile_box .name{font-size:22px;font-weight:bold;margin-bottom:5px;}
 .candidate .pro_box .profile_box .party_name,.candidate .pro_box .profile_box .birthday{
     font-size:14px;color:#464646;margin-bottom:5px;
 }
 
 .candidate .pro_box .txt_box .txt{
-    font-size:14px;line-height:25px;
+    font-size:16px;line-height:25px;
     overflow: hidden;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
@@ -1501,7 +1504,7 @@ display: none;
 .candidate .news .title_box{margin-bottom:15px;}
 .candidate .news .news_list a::before{content:"•";margin-right:10px;}
 .candidate .news .news_list a{
-    color: #000;font-size:16px;
+    color: #000;font-size:18px;
     font-weight: bold;
     overflow: hidden;
     -webkit-line-clamp: 1;
