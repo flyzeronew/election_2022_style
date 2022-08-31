@@ -1740,7 +1740,8 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     color:#464646;
 }
 .candidate .detail_box .pro_box .txt_box p{
-    font-size: 12px;
+    padding-top: 10px;
+    font-size: 14px;
 }
 .detail_box .news{
     padding-left:0;
@@ -1775,4 +1776,9 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .see_more a img{
     transform: rotate(180deg);
     width: 25px;
+    }
+    @media (max-width:767px) {
+        .candidate .detail_box .pro_box .txt_box p{
+            padding-top: 0px;
+        }
     }
