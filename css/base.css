@@ -435,6 +435,9 @@ main .vision .owl-dots{display:none!important;}
 /* 標題 */
 .title_box{width:max-content;margin: 0 auto 30px;}
 .title_box h2{width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
+.title_box p{
+    font-weight: bold;
+    width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
 /* 標題 ed*/
 
 /* 六都選情 */
