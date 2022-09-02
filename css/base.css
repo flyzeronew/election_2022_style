@@ -1480,6 +1480,8 @@ display: none;
     background-color:#000;color:#fff;border-radius:360px;margin-bottom:5px;
     }
 .candidate .pro_box .profile_box .name{font-size:22px;font-weight:bold;margin-bottom:5px;}
+.candidate .pro_box .profile_box .name a{color: #000;}
+.candidate .pro_box .txt_box .txt a{color: #464646;}
 .candidate .pro_box .profile_box .party_name,.candidate .pro_box .profile_box .birthday{
     font-size:14px;color:#464646;margin-bottom:5px;
 }
