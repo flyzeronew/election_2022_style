@@ -1584,7 +1584,7 @@ display: none;
     box-shadow:2px 2px 5px rgba(0,0,0,0.2);
 }
 .candidate .councillor .pro_box {display:block;}
-.candidate .councillor .pro_box .row{display:flex;justify-content:center;align-items:center;row-gap:30px;}
+.candidate .councillor .pro_box .row{display:flex;align-items:center;row-gap:30px;}
 .candidate .councillor .pro_box .show{display:block;}  
 .mp_box{
     width: calc((100% - 0px)/3);
