@@ -1503,7 +1503,16 @@ display: none;
 .candidate .city li:first-child{display:block;}
 .candidate .city li .box:last-child{border-bottom: 0px solid #dadada;margin-bottom:0px;padding-bottom:0px;}
 .candidate .news{padding-left:35%;}
-.candidate .news .title_box{margin-bottom:15px;}
+.candidate .news .title_box{margin: 0 0 2px;}
+.candidate .news .title_box p {
+    font-weight: bold;
+    width: 100%;
+    color: #2886A2;
+    border-bottom: #2886A2 0px solid;
+    font-size: 18px;
+    padding-bottom: 3px;
+    padding-top: 18px;
+}
 .candidate .news .news_list a::before{content:"•";margin-right:10px;}
 .candidate .news .news_list a{
     color: #000;font-size:18px;
