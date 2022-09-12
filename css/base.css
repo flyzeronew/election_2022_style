@@ -1416,34 +1416,30 @@ display: none;
 /* 子選單 */
 .candidate_area .city_menu_child_box{position: relative;}
 .candidate_area .city_menu_child{ 
-    z-index: 6;  
-    display:none;
-    top:0;
-    width:100%;
-    position: absolute;  
-    padding:15px 0;
+    width:100%;padding:20px 0;
+    overflow: hidden;position: relative;
     background-color: #fff;
-    border-bottom: 1px solid #dadada;
-    box-shadow:0 1px 4px rgba(0,0,0,0.1);
-      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f4f4f4+0,ffffff+7,ffffff+100 */
-    background: #f4f4f4; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f4f4f4 0%, #ffffff 7%, #ffffff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #f4f4f4 0%,#ffffff 7%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #f4f4f4 0%,#ffffff 7%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    border-top: 1px solid #dadada; 
+    border-bottom: 1px solid #dadada;    
 }
-.candidate_area .city_menu_child1{margin:0 auto;}
-.candidate_area .city_menu_child1 ul{ 
-     
+.candidate_area .city_menu_child1{margin:0 auto;position: relative;}
+.candidate_area .city_menu_child1 ul{      
     display:flex;align-items:center;flex-wrap: wrap;  
-    column-gap: 18px; 
+    column-gap: 18px;
     row-gap: 20px;
+    transition: 0.3s;
+}
+.candidate_area .city_menu_child .arraw{
+    display:none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 .candidate_area .city_menu_child1 li a{
     color: #000;padding: 5px 10px;
 }
-.candidate_area .city_menu_child1 li a:hover{
-    background-color: #54AAC4;color:#fff;
+.candidate_area .city_menu_child1 li a:hover,.candidate_area .city_menu_child1 li a.act{
+    background-color: #2886A2;color:#fff;
     border-radius:5px;
 }
 /* 子選單 ed*/
@@ -1540,13 +1536,21 @@ display: none;
     .candidate .pro_box .peo_box{width:100%;column-gap:30px;margin-bottom: 20px;}
     .candidate .pro_box .txt_box{width:100%;}
     .candidate .news {padding-left:0;}
-    .candidate_area .city_menu_child1 ul{width:75%;margin:0 auto;column-gap: 40px;}
+    .candidate_area .city_menu_child1 ul{
+        width:75%;height:20px;
+        margin:0 auto;
+        column-gap: 30px;    
+    }
+    .candidate_area .city_menu_child .arraw{
+        display:block;position:absolute;top:-5px;right:20px;
+    }
 }
 @media (max-width:411px) {
-    .candidate_area .city_menu_child1 ul{width:85%;}
+    .candidate_area .city_menu_child1 ul{width:85%;}    
 }
 @media (max-width:359px) {
-    .candidate_area .city_menu_child1 ul{width:90%;column-gap: 30px;}
+    .candidate_area .city_menu_child1 ul{width:90%;column-gap: 20px;}
+    .candidate_area .city_menu_child .arraw{right:10px;}
 }
 /* 市長候選人 ed*/
 /* 議員 */
