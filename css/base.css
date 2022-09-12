@@ -1538,7 +1538,7 @@ display: none;
     .candidate .pro_box .txt_box{width:100%;}
     .candidate .news {padding-left:0;}
     .candidate_area .city_menu_child1 ul{
-        width:75%;height:20px;
+        width:75%;height:18px;
         margin:0 auto;
         column-gap: 30px;    
     }
