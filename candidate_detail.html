@@ -61,22 +61,30 @@ $('.city_menu_child .arraw').click(function(){
         $('.city_menu_child1 ul').css({height:'330px',transition:'0.3s'});
         $(this).css({'transform':'rotate(180deg)',transition:'0.3s'});
     }else{
-        $('.city_menu_child1 ul').css({height:'20px',transition:'0.3s'});
+        $('.city_menu_child1 ul').css({height:'18px',transition:'0.3s'});
         $(this).css({'transform':'rotate(0deg)',transition:'0.3s'});
     }
 });
-
-$(window).resize(function(){
-    if($(window).width()>767){
+function reset(){
+if($(window).width()>767){    
         $('.city_menu_child1 ul').css({height:'auto',transition:'0'});
         $('.city_menu_child1 .arraw').removeClass('open');
         $('.city_menu_child1 .arraw').css({'transform':'rotate(0deg)',transition:'0'});
     }else{
-        $('.city_menu_child1 ul').css({height:'20px',transition:'0'});
+        $('.city_menu_child1 li').each(function(i){
+            $(this).click(function(){  
+                $('.city_menu_child1 ul').css({height:'18px',transition:'0'});
+                $('.city_menu_child1 .arraw').removeClass('open');
+                $('.city_menu_child1 .arraw').css({'transform':'rotate(0deg)',transition:'0'});
+            });
+        });
+        $('.city_menu_child1 ul').css({height:'18px',transition:'0'});
         $('.city_menu_child1 .arraw').removeClass('open');
         $('.city_menu_child1 .arraw').css({'transform':'rotate(0deg)',transition:'0'});
     }
-});
+}
+reset();
+$(window).resize(function(){reset();});
 
 // 市長議員切換
 $('.cheng_btn li').eq(0).click(function(){
@@ -181,9 +189,6 @@ $('.cheng_btn li').eq(1).click(function(){
                 $('.candidate .mayor .city li').eq(i).show();
                 $('.candidate .councillor .city li').eq(i).show();
 
-                $('.city_menu_child1 ul').css({height:'20px',transition:'0'});
-                $('.city_menu_child1 .arraw').removeClass('open');
-                $('.city_menu_child1 .arraw').css({'transform':'rotate(0deg)',transition:'0'});
             });            
             $('.mayor .city li').eq(i).find('.title_box.t1').append("<h2 class='s1'><span class='c1'>"+all_city[i]+"長</span>候選人名單</h2>");
             $('.councillor .city li').eq(i).find('.title_box.t1').append("<h2 class='s1'><span class='c1'>"+all_city[i]+"議員</span>候選人名單</h2>");
