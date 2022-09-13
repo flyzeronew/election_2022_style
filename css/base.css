@@ -1627,7 +1627,7 @@ display: none;
     }
     .candidate .mp_box .profile_box{column-gap:20px;} 
     .candidate .councillor .pro_box .show:nth-child(1){display:block;}  
-    .candidate .councillor .pro_box .show:nth-child(2){display:none;}    
+    .candidate .councillor .pro_box .show:nth-child(n+2){display:none;}    
     .candidate .councillor .pro_box .row{display:block;}
 
 
