@@ -176,20 +176,11 @@ $(document).ready(function(){
         $(".search_live_box").hide();
         $(".search_bar").hide();
     });
-    $(".search_img_btn").click(function(){
+    $(".search_img_btn,.search_bar .search_btn a").click(function(){
         let search_text=$(".search_form input").val();
         window.open("https://news.tvbs.com.tw/news/searchresult/"+search_text+"/news");
         $(".search_form input").val("");
     });
-
-    $(".search_bar .search_btn a").click(function(){
-        let search_text=$(".search_form input").val();
-        window.open("https://news.tvbs.com.tw/news/searchresult/"+search_text+"/news");
-        $(".search_form input").val("");
-    });
-
-
-        
 });
 
 </script>
