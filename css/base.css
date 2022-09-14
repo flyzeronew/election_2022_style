@@ -1611,7 +1611,12 @@ display: none;
 .candidate .mp_box .area{font-size:12px;}
 .candidate .mp_box .more_news{font-size:12px;color:#F28C17;}
 .candidate .mp_box .more_news a{color:#F28C17;}
-.mp_box .party{width:40px;height:40px;}
+.mp_box .party{
+    width:40px;height:40px;
+    border: 1px solid #ccc;
+    border-radius: 360px;
+    line-height: 0;
+}
 @media (max-width:1023px){
     .mp_box{column-gap: 15px;}
     .candidate .mp_box .profile_box{column-gap:15px;}
