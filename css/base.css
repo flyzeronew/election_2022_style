@@ -38,31 +38,8 @@ img {
 a:hover .img_mask {
     background-color: rgba(0, 0, 0, 0.3);
 }
-
-input::-ms-clear {
-    display: none;
-}
-
-/*去除input默認樣式*/
-textarea,
-text,
-select,
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    border: 1px #ff9398 solid;
-}
-/*去除 Chrome focus 時外框*/
-input:focus {
-    outline: 0;
-}
-textarea:focus {
-    outline: 0;
-}
-select:focus {
-    outline: 0;
+select:focus { 
+    outline:0; 
 }
 html::-webkit-scrollbar {
     width: 3px;
@@ -435,10 +412,23 @@ main .vision .owl-dots{display:none!important;}
 /* 錨點 ed*/
 /* 標題 */
 .title_box{width:max-content;margin: 0 auto 30px;}
-.title_box h2{width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
+.title_box h2{
+    width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;
+    font-size:18px;padding-bottom:3px;padding-top:18px;
+}
 .title_box p{
-    font-weight: bold;
-    width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;font-size:18px;padding-bottom:3px;padding-top:18px;}
+    font-weight: bold;width:100%;color:#2886A2; border-bottom: #2886A2 4px solid;
+    font-size:18px;padding-bottom:3px;padding-top:18px;
+}
+
+.title_box2{
+    display:flex;align-items:center;justify-content:center;
+    background-color:#2886A2;padding:10px;
+}
+.title_box2 h2,.title_box2 p{
+    color:#fff;font-size:18px;
+}
+
 /* 標題 ed*/
 
 /* 六都選情 */
@@ -1930,3 +1920,127 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
         display: none;
     }
 }
+
+/* 開票專區 */
+.ballots{
+    background-color:#fff;
+    border-top: 1px solid #dadada;
+    padding:30px 15px;
+}
+/* 雙北 */
+/* 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨 */
+.ballots .color0{background-color:#ccc;}
+.ballots .color1{background-color:#3684C5;}
+.ballots .color2{background-color:#369D4E;}
+.ballots .color3{background-color:#0893BC;}
+.ballots .color4{background-color:#6E6E6E;}
+/* 彈出視窗 */
+#popup{
+    display:none;
+    position:absolute;z-index:1;overflow:hidden;
+    top:0;border-radius:10px;
+    padding:10px 15px 15px;background-color: rgba(242,242,247,0.8);
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 5px;
+}
+#popup .area{
+    color:#2886A2;font-weight: bold;
+    margin-bottom:5px;
+}
+#popup .table{font-weight: bold;}
+#popup .table img{width:25px;height:25px;}
+#popup .table table{width:100%;font-size:14px;margin:0;}
+#popup .table table td{padding:5px 10px;background:none;text-align:center;}
+#popup .table table tr{ 
+    color: #fff;
+    background-color: #6EAABC;
+}
+#popup .table table tr:first-child{ 
+    background-color: #4693A5;
+}
+.table .peo{display:flex;align-items:center;column-gap:5px;}
+.table .elected{display:none;}
+/* 彈出視窗 */
+.ballots .two_city{}
+.ballots .two_city .city{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    padding:20px 0;    
+}
+.ballots .two_city .city .map_box{
+    position: relative;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width:50%;
+}
+.ballots .two_city .city .map_box path{
+    cursor: pointer;
+}
+.ballots .party_area{
+   position:absolute;
+   bottom:0;left:0;
+}
+.ballots .party_area li{    
+    display: flex;
+    font-size: 12px;
+    justify-content: center;  
+    align-items: center;
+    margin-bottom:5px;
+}
+.ballots .party_area .color_box{
+    width: 15px; height:15px;
+    margin-right:5px;
+ }
+.ballots .two_city .city .info_box{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width:50%;
+}
+.ballots .two_city .city .info_box .input{
+    display: flex;
+    justify-content:space-between;  
+    align-items: center;
+    background-color:#2886A2;
+    padding:5px 15px;
+}
+.ballots .two_city .city .info_box .input select{
+   padding:3px;font-size:16px;color:#2886A2;
+   border-radius: 5px;
+}
+
+.ballots .two_city .city .info_box .input p{
+    color:#fff;
+}
+
+.ballots .two_city .city .info_box .table{width:60%;font-weight: bold;}
+.ballots .two_city .city .info_box .table img{width:25px;height:25px;}
+.ballots .two_city .city .info_box .table table{width:100%;font-size:14px;margin:0;}
+.ballots .two_city .city .info_box .table table td{padding:5px 10px;background:none;text-align:center;}
+.ballots .two_city .city .info_box .table table tr{color: #fff;background-color: #6EAABC;}
+.ballots .two_city .city .info_box .table table tr:first-child{ background-color: #4693A5;}
+.ballots .two_city .city .info_box .two_city .map svg path{cursor: pointer;}
+@media (max-width:1450px){
+    .ballots .two_city .city .info_box .table{width:80%;}
+}
+@media (max-width:1023px){
+    .ballots .two_city .city .info_box .table{width:100%;}
+    .ballots .two_city .city .map_box svg{
+        width:100%;
+    }
+}
+@media (max-width:767px){
+    .ballots .two_city .city{display: block;padding: 0;margin-bottom: 30px;}
+    .ballots .two_city .city .map_box{
+        width:100%;display: block;
+        margin-bottom:30px;
+    }
+    .ballots .two_city .city .info_box{
+        width:100%;
+    }
+}
+
+/* 雙北 ed*/
+
+/* 開票專區 ed*/
