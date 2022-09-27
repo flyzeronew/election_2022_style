@@ -107,9 +107,9 @@ function councillor_open(){
            var show_len=$('.candidate .councillor .box').eq(i).find('.show').length;
            if($(window).width() < 767){
                 if(show_len > 1){
-                        $('.candidate .councillor .box').eq(i).find('.open_box').show();
+                     $('.candidate .councillor .box').eq(i).find('.open_box').show();
                 }else{
-                        $('.candidate .councillor .box').eq(i).find('.open_box').hide();
+                     $('.candidate .councillor .box').eq(i).find('.open_box').hide();
                 }
            }else{
                 $('.candidate .councillor .box').eq(i).find('.open_box').hide();
@@ -134,12 +134,20 @@ function councillor_open(){
  $(window).resize(function(){    
     var wwidth = $(window).width();
     $('.candidate .councillor .box').each(function(i){  
+        var show_len=$(this).find('.show').length;
         if(dwidth!==wwidth){
+            
             if(wwidth > 767){
                 $('.open_box .open').removeClass('op');
                 $('.open_box .open').find('img').css({'transform':'rotate(0deg)'});             
-                $(this).find('.show').show();
+                $('.candidate .councillor .box .show').show();
+                $(this).find('.open_box').hide();
             }else{
+                if(show_len > 1){
+                    $(this).find('.open_box').show();
+                }else{
+                    $(this).find('.open_box').hide();
+                }
                 $(this).find('.show').hide(); 
                 $(this).find('.show').eq(0).show();              
             }
@@ -221,6 +229,7 @@ $(this).mouseleave(function(){
 <nav>
 
     <ul>
+        <li><a href="ballots.html">九合一開票</a></li>
         <li><a href="index.html">選戰新聞</a></li>
         <li><a href="playlist.html">影音專區</a></li>
         <li class="act"><a href="candidate.html">候選人專區</a></li>
@@ -245,6 +254,7 @@ $(this).mouseleave(function(){
         //子選單
         $('.city_menu_child1 li').each(function(i){
             $(this).click(function(){   
+              
                 $('.city_menu_child1 li a').removeClass('act');     
                 $(this).find('a').addClass('act');  
                 $('.candidate .city li').hide();
@@ -839,8 +849,6 @@ $(this).mouseleave(function(){
         </div>
         <!-- 候選人 ed-->
 
-        
-    </div>
   </div>
 <!-- 候選人專區 ed-->    
 </main>
@@ -852,7 +860,6 @@ $(this).mouseleave(function(){
     </div>    
 </footer>
 <!--footer ed-->
-</div>
 <!--container主架構ed-->
 </div>
 </body>
