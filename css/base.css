@@ -1905,7 +1905,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     .search_icon{
         display: block;
         width: 30px;
-        height: 30px;
+        height: 28px;
         border-bottom:1px solid #ffffff ;
     }
     .search_bar input{
@@ -1915,6 +1915,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
         border: 0;
         border-bottom:1px solid #ffffff ;
         border-radius: 0px;
+        padding: 0;
     }
     .search_img_btn{
         display: none;
