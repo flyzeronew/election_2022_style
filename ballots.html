@@ -38,7 +38,7 @@
 footer{
     margin-top: 0px!important;
 }
-.taipei_pop{display:none;}
+
 </style>
 <!--本頁樣式ed-->
 <!--本頁js-->	
@@ -164,7 +164,7 @@ $(document).ready(function(){
                             $(".pop").eq(0).show();                                         
                             $('#popup').show(); 
                             $('#popup .area').html(taipei_arr[i]);
-                            $("#popup .num").each(function(j){
+                            $("#popup .pop").eq(0).find(".num").each(function(j){
                                 $(this).html('<div id=p1'+j+'>'+taipei_num[i][j][0]+'</div>');  
                                 var demo_p1 = new CountUp('p1'+j, 0,taipei_num[i][j][0], 0,1.5, options);
                                 if(!demo_p1.error){demo_p1.start();}else{console.error(demo_p1.error);}	                         
@@ -172,13 +172,17 @@ $(document).ready(function(){
                             $(this).css({opacity:0.7});
                         });                        
                 }else{
+                    $('#popup').hide();
                     $(this).mouseover(function(){ 
-                        $('#popup').hide();
-                        $(this).css({opacity:1});
+                        $('#popup').hide(); 
+                        $(".pop").hide();
+                        $(this).css({opacity:1});               
                     }); 
                 }
+
                 $(this).mouseleave(function(){
                     $('#popup').hide();
+                    $(".pop").hide();
                     $(this).css({opacity:1});
                 });
         });
@@ -200,17 +204,24 @@ $(document).ready(function(){
                         $(this).css({opacity:0.7});
                     });                        
                 }else{
+                    $('#popup').hide();
                     $(this).mouseover(function(){ 
-                        $('#popup').hide();                        
+                        $('#popup').hide(); 
+                        $(".pop").hide();
+                        $(this).css({opacity:1});               
                     }); 
                 }
                 $(this).mouseleave(function(){
                     $('#popup').hide();
+                    $(".pop").hide();
                     $(this).css({opacity:1});
                 });
         });
     }
-   
+    mapgo();
+    $(window).resize(function(){         
+        mapgo();
+    });
 
   //插入台北市區域
    for(var i=0;i<taipei_arr.length;i++){
@@ -278,12 +289,7 @@ $(document).ready(function(){
    $("#new_taipei").find(".party_area .num").each(function(i){
         $(this).html(par_arr2[i]);
    });
-   mapgo();
-    $(window).resize(function(){         
-        mapgo();  
-        $('#popup').hide();
-        $("#taipei").find("path").css({opacity:1});     
-    });
+
    //雙北市地圖資料ed
 });
 </script>
@@ -358,8 +364,8 @@ $(document).ready(function(){
             <span>倒數</span><span class="day">100</span>
         </div>
     </div>
-    <div class="head_bg pc"><img src="images/election_pc.jpg" alt="view"/></div>
-    <div class="head_bg mo"><img src="images/election_m.jpg" alt="view"/></div>
+    <div class="head_bg pc"><img src="images/election_pc2.jpg" alt="view"/></div>
+    <div class="head_bg mo"><img src="images/election_m2.jpg" alt="view"/></div>
 </header>
     <!-- 廣告欄位 -->       
     <div class="ad_box top40">

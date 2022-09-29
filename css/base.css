@@ -1463,7 +1463,8 @@ display: none;
 .candidate .pro_box .img_box .party{width:35px;height:35px;position:absolute;z-index:1;bottom:15px;left:10px;}
 
 .candidate .pro_box .profile_box .num{
-    width:25px;height:25px;display:flex;justify-content:center;align-items:center;
+    font-size:20px;
+    width:30px;height:30px;display:flex;justify-content:center;align-items:center;
     background-color:#000;color:#fff;border-radius:360px;margin-bottom:5px;
     }
 .candidate .pro_box .profile_box .name{font-size:22px;font-weight:bold;margin-bottom:5px;}
@@ -1613,7 +1614,6 @@ display: none;
 }
 @media (max-width:767px) {  
     .mp_box .party{width:35px;height:35px;}
-    .candidate .pro_box .profile_box .num{width:25px;height:25px;}
     .candidate .councillor .city .box .open_box{display: block;} 
     .mp_box {
         width: 100%;
@@ -1983,7 +1983,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 }
 .ballots .party_area li{    
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
     justify-content: center;  
     align-items: center;
     margin-bottom:5px;
@@ -2003,11 +2003,16 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     justify-content:space-between;  
     align-items: center;
     background-color:#2886A2;
-    padding:5px 15px;
+    border-bottom: solid 1px #ddd;
+    padding:5px 10px 5px 15px;
 }
 .ballots .two_city .city .info_box .input select{
-   padding:3px;font-size:16px;color:#2886A2;
+   font-size:16px;color:#2886A2;
    border-radius: 5px;
+
+   border: solid 1px #2886A2;
+   font-size: 14px;    
+   padding: 4px;
 }
 
 .ballots .two_city .city .info_box .input p{
@@ -2017,7 +2022,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .ballots .two_city .city .info_box .table{width:60%;font-weight: bold;}
 .ballots .two_city .city .info_box .table img{width:25px;height:25px;}
 .ballots .two_city .city .info_box .table table{width:100%;font-size:14px;margin:0;}
-.ballots .two_city .city .info_box .table table td{padding:5px 10px;background:none;text-align:center;}
+.ballots .two_city .city .info_box .table table td{font-weight: normal;padding:7px 10px;background:none;text-align:center;}
 .ballots .two_city .city .info_box .table table tr{color: #fff;background-color: #6EAABC;}
 .ballots .two_city .city .info_box .table table tr:first-child{ background-color: #4693A5;}
 .ballots .two_city .city .info_box .two_city .map svg path{cursor: pointer;}
