@@ -299,6 +299,33 @@ nav li a:hover,nav li.act a{background-color: #2886A2;color:#fff;}
     nav::-webkit-scrollbar{width:0;height:0;}
     nav ul{width: max-content;margin: 0 auto;}
 }
+
+/* 快訊 */
+.good_box{font-size:18px;align-items: center;background-color:#2886A2;padding:10px 0;}
+.good_box .frame_box{display:flex;align-items:center;}
+.good_box .title{    
+    width: 70px;height: 27px;
+    background-color: #fff;
+    text-align: center;
+    letter-spacing: 5px;margin-right: 16px;
+    -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    display:flex;align-items:center;justify-content:center;
+}
+.good_box .title p{color:#2886A2;font-weight: bold;}
+.good_box .txt_box{width:90%;height:25px;font-size: 20px;font-weight: 500;}
+.good_box .txt{overflow: hidden;white-space:nowrap;text-overflow: ellipsis;color: #fff;}
+.good_box .txt a{color: #fff;}
+.good_box .txt a:hover{text-decoration:underline;}
+.good_box .txt_box.owl-theme .owl-controls{display:none;}
+@media (max-width:767px){
+    .good_box .frame_box{padding-left:15px;box-sizing: border-box;}
+    .good_box{font-size:16px;padding:8px 0;}
+    .good_box .txt_box{width:80%;height:25px;font-size: 20px;font-weight: 500;}
+    .good_box .title{margin-right:15px;}
+}
+/* 快訊 ed*/
+
 /*header ed*/
 /*main*/
 

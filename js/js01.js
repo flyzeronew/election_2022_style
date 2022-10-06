@@ -1,4 +1,20 @@
 $(function() {
+// 輪播-快訊
+$('.good_box .txt_box').owlCarousel({
+    URLhashListener:true,
+    startPosition:'URLHash',
+    animateIn: 'fadeInDown',
+    lazyContent:true,
+    items:1,
+    loop:true,
+    nav:false,
+    margin:0,
+    autoplay:true,
+    smartSpeed:800,
+    autoplayTimeout:3000,
+    autoplayHoverPause:false,
+    navText:['',''],
+});
 //  蓋板關閉
 $('.lightbox_ad .xx').click(function(){$('.lightbox_ad').hide();}); 
     $(window).scroll(function(){
