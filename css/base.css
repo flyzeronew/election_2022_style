@@ -2077,11 +2077,11 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 /* 雙北 ed*/
 /* 縣市長開票 */
 .ballots .mayor_box{margin-bottom:30px;}
-.ballots .mayor_box .table table{width:100%;font-size:14px;margin:0;}
-.ballots .mayor_box .table table img{width:25px;height:25px;}
-.ballots .mayor_box .table table td{font-weight: normal;padding:7px 10px;background:none;text-align:center;}
-.ballots .mayor_box .table table tr{color: #fff;background-color: #6EAABC;}
-.ballots .mayor_box .table table tr:first-child{ background-color: #4693A5;}
+.ballots .table table{width:100%;font-size:14px;margin:0;}
+.ballots .table table img{width:25px;height:25px;}
+.ballots .table table td{font-weight: normal;padding:7px 10px;background:none;text-align:center;}
+.ballots .table table tr{color: #fff;background-color: #6EAABC;}
+.ballots .table table tr:first-child{ background-color: #4693A5;}
 .ballots .mayor_box .list{}
 .ballots .mayor_box .list ul{
     display: flex;
