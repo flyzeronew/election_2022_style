@@ -313,7 +313,7 @@ nav li a:hover,nav li.act a{background-color: #2886A2;color:#fff;}
     display:flex;align-items:center;justify-content:center;
 }
 .good_box .title p{color:#2886A2;font-weight: bold;}
-.good_box .txt_box{width:90%;height:25px;font-size: 20px;font-weight: 500;}
+.good_box .txt_box{width:90%;height:25px;font-size: 18px;font-weight: 500;}
 .good_box .txt{overflow: hidden;white-space:nowrap;text-overflow: ellipsis;color: #fff;}
 .good_box .txt a{color: #fff;}
 .good_box .txt a:hover{text-decoration:underline;}
@@ -321,7 +321,7 @@ nav li a:hover,nav li.act a{background-color: #2886A2;color:#fff;}
 @media (max-width:767px){
     .good_box .frame_box{padding-left:15px;box-sizing: border-box;}
     .good_box{font-size:16px;padding:8px 0;}
-    .good_box .txt_box{width:80%;height:25px;font-size: 20px;font-weight: 500;}
+    .good_box .txt_box{width:80%;}
     .good_box .title{margin-right:15px;}
 }
 /* 快訊 ed*/
@@ -2075,5 +2075,37 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 }
 
 /* 雙北 ed*/
+/* 縣市長開票 */
+.ballots .mayor_box{}
+.ballots .mayor_box .table table{width:100%;font-size:14px;margin:0;}
+.ballots .mayor_box .table table img{width:25px;height:25px;}
+.ballots .mayor_box .table table td{font-weight: normal;padding:7px 10px;background:none;text-align:center;}
+.ballots .mayor_box .table table tr{color: #fff;background-color: #6EAABC;}
+.ballots .mayor_box .table table tr:first-child{ background-color: #4693A5;}
+.ballots .mayor_box .list{}
+.ballots .mayor_box .list ul{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 15px;
+}
+.ballots .mayor_box .list li{
+    width: calc((100% - 90px)/3);
+}
+.ballots .mayor_box .city{
+    position: relative;
+    text-align: center;
+    background-color: #2886A2;
+    border-bottom: solid 1px #ddd;
+    padding: 5px 10px 5px 15px;
+    color: #fff;
+    font-weight: bold;
+}
+.ballots .mayor_box .refresh{
+    width:20px;height:20px;position: absolute;right:10px;top:7px;
+    cursor: pointer;
+}
 
+/* 縣市長開票 ed*/
 /* 開票專區 ed*/

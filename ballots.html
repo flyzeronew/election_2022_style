@@ -58,6 +58,69 @@ $(document).ready(function(){
 
     /* Timer with Head and Foot. Countdown is over 
     --------------------------------------------------------- */
+    //跑數字變數
+    var options = {useEasing: true, useGrouping: true, separator: ',', decimal: '.', };
+    //跑數字變數 ed
+
+    //縣市長開票
+    //六都縣市長開票
+    var six_arr = ['臺北市長','新北市長','桃園市長','臺中市長','臺南市長','高雄市長'];
+    //六都候選人、政黨圖、總票數 當選戳記:1當選 0落選
+    var six_votes_data = [
+        [['陳時中','images/party02.png',123456,1],['黃珊珊','images/party01.png',23456,0],['蔣萬安','images/party03.png',3456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['鄭運鵬','images/party02.png',3456,0],['張善政','images/party01.png',323456,1],['賴香伶','images/party03.png',3456,0]],
+        [['蔡其昌','images/party02.png',13456,0],['盧秀燕','images/party01.png',423456,1],['陳美妃','images/party03.png',3456,0]],
+        [['黃偉哲','images/party02.png',123456,1],['謝龍介','images/party01.png',23456,0],['許忠信','images/party03.png',3456,0]],
+        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]]
+    ];
+    for(var i=0;i<six_arr.length;i++){       
+        $('.six_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
+        $('.six_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td style="width:15%">政黨</td><td style="width:15%">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');
+        $('.six_votes .city p').eq(i).html(six_arr[i]);
+        for(var j=0;j<six_votes_data[i].length;j++){
+            $('.six_votes tbody').eq(i).append('<tr><td><img src='+six_votes_data[i][j][1]+' alt="img"/></td><td>'+(j+1)+'</td><td><div class="peo"><div class="name">'+six_votes_data[i][j][0]+'</div><div class="elected"><img src="images/elected.png" alt="img" /></div></div></td><td style="text-align:right;"><div class="num"><div id=b1'+i+j+'>'+six_votes_data[i][j][2]+'</div></div></td></tr>');
+            //當選戳記判斷
+            if(six_votes_data[i][j][3]==1){
+                $('.six_votes tbody').eq(i).find('.elected').eq(j).show();        
+            }
+            //跑數字	
+            var demo_b1 = new CountUp('b1'+i+j, 0,six_votes_data[i][j][2], 0,1.5, options);
+            if(!demo_b1.error){demo_b1.start();}else{console.error(demo_b1.error);}	
+        }
+    }      
+    //六都縣市長開票 ed
+    
+    //其他縣市長開票  
+    var other_arr = ['基隆市長','新竹縣長','新竹市長','苗栗縣長','彰化縣長','南投縣長'];
+    //其他縣市候選人、政黨圖、總票數 當選戳記:1當選 0落選
+    var other_votes_data = [
+        [['陳時中','images/party02.png',123456,1],['黃珊珊','images/party01.png',23456,0],['蔣萬安','images/party03.png',3456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['鄭運鵬','images/party02.png',3456,0],['張善政','images/party01.png',323456,1],['賴香伶','images/party03.png',3456,0]],
+        [['蔡其昌','images/party02.png',13456,0],['盧秀燕','images/party01.png',423456,1],['陳美妃','images/party03.png',3456,0]],
+        [['黃偉哲','images/party02.png',123456,1],['謝龍介','images/party01.png',23456,0],['許忠信','images/party03.png',3456,0]],
+        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]]
+    ];
+
+    for(var i=0;i<other_arr.length;i++){    
+        $('.other_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
+        $('.other_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td style="width:15%">政黨</td><td style="width:15%">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');   
+        $('.other_votes .city p').eq(i).html(other_arr[i]);
+
+        for(var j=0;j<other_votes_data[i].length;j++){           
+            $('.other_votes tbody').eq(i).append('<tr><td><img src='+other_votes_data[i][j][1]+' alt="img"/></td><td>'+(j+1)+'</td><td><div class="peo"><div class="name">'+six_votes_data[i][j][0]+'</div><div class="elected"><img src="images/elected.png" alt="img" /></div></div></td><td style="text-align:right;"><div class="num"><div id=b2'+i+j+'>'+other_votes_data[i][j][2]+'</div></div></td></tr>');
+            //當選戳記判斷
+            if(other_votes_data[i][j][3]==1){
+                $('.other_votes tbody').eq(i).find('.elected').eq(j).show();        
+            }
+            //跑數字	
+            var demo_b2 = new CountUp('b2'+i+j, 0,other_votes_data[i][j][2], 0,1.5, options);
+            if(!demo_b2.error){demo_b2.start();}else{console.error(demo_b2.error);}	
+        }
+    }    
+    //其他縣市長開票ed
+    //縣市長開票 ed
 
     // 跟著滑鼠跑
     $(window).mousemove(function(event){DivDraw(event);});
@@ -80,10 +143,6 @@ $(document).ready(function(){
     var val = counter[key]; 
     if (key === undefined) {return counter;} return (val) === undefined ? 0 : val;}
    //計算陣列中數量 ed
-
-    //跑數字變數
-    var options = {useEasing: true, useGrouping: true, separator: ',', decimal: '.', };
-    //跑數字變數 ed
 
     // 雙北市地圖資料
     // 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨
@@ -403,7 +462,39 @@ $(document).ready(function(){
 <!-- 開票專區 -->
     <div class="ballots">        
         <div class="frame_box">
-
+            <!-- 縣市長開票 -->
+            <!-- 六都市長票數 -->
+            <div class="mayor_box">
+                <div class="six_votes">
+                    <!-- 標題 -->
+                    <div class="title_box">
+                        <h2>六都市長票數</h2>
+                    </div>
+                    <!-- 標題 ed-->
+                    <div class="list">
+                        <ul>
+                            <!-- 塞資料 -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 六都市長票數 ed-->
+                <!-- 其他縣市長票數 -->
+                <div class="other_votes">
+                    <!-- 標題 -->
+                    <div class="title_box">
+                        <h2>其他縣市長票數</h2>
+                    </div>
+                    <!-- 標題 ed-->
+                    <div class="list">
+                        <ul>
+                            <!-- 塞資料 -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 其他縣市長票數 ed-->
+            </div>
+            <!-- 縣市長開票 ed-->
+            <!-- 兩都地圖得票分佈 -->
             <div class="two_city">
                 <!-- 標題 -->
                 <div class="title_box2">
@@ -1221,7 +1312,7 @@ $(document).ready(function(){
                     </div>
                 </div>
             </div>
-
+            <!-- 兩都地圖得票分佈 ed-->
         </div>
     </div>
 <!-- 開票專區 ed-->    
