@@ -1954,7 +1954,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .ballots{
     background-color:#fff;
     border-top: 1px solid #dadada;
-    padding:30px 15px;
+    padding:30px 15px 100px;
 }
 /* 雙北 */
 /* 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨 */
@@ -2074,10 +2074,14 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
         width:100%;
     }
 }
-
+@media (max-width:359px){
+    .ballots .two_city .city .info_box .table table{font-size:12px;}
+}
 /* 雙北 ed*/
 /* 縣市長開票 */
 .ballots .table .tdwidth1{width:15%;}
+.ballots .table .tdwidth2{}
+
 .ballots .title_box h2,.ballots .title_box p{font-size:24px;}
 .ballots .ex{text-align:right;font-size:12px;width:100%;}
 .ballots .ex br{display:none;}
@@ -2206,11 +2210,16 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     .ballots .mayor_elected .list li{width: calc((100% - 120px)/3);}
 }
 @media (max-width: 767px){
+    .other_elected .table table td{padding:5px;}
     .ballots .mayor_elected .list {padding: 30px 15px;}
     .ballots .mayor_elected .list ul{column-gap:20px; row-gap: 30px; flex-wrap: wrap;}
     .ballots .mayor_elected .list li{width: calc((100% - 20px)/2);}
     .ballots .mayor_elected .list .txt_box{font-size: 18px;}
     .ballots .mayor_elected .list .vote_box{font-size: 14px;}
 }
+@media (max-width: 359px){
+    .other_elected .table table td{font-size: 12px;}
+}
+
 /* 六都市長當選名單 ed*/
 /* 開票專區 ed*/

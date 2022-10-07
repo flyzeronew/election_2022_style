@@ -425,6 +425,19 @@ $(document).ready(function(){
        $('.ballots .mayor_elected .list li').eq(i).append('<div class="txt_box"><div class="name">'+mayor_elected_arr[i][0]+'</div><div class="city">'+mayor_elected_arr[i][1]+'</div></div>');
        $('.ballots .mayor_elected .list li').eq(i).append('<div class="vote_box"><div><span class="num">'+mayor_elected_arr[i][2]+'</span><span> 票</span></div><div><span class="percent">'+mayor_elected_arr[i][3]+'</span><span> %</span></div></div>')
     }
+
+  //各縣市長當選名單 名字、縣市、票數、比例%、政黨圖、號次
+  var other_elected_arr=[
+       ['林右昌','基隆市','123456','50','images/party02.png',2],
+       ['楊文科','新竹市','123456','50','images/party01.png',1],
+       ['林志堅','新竹縣','123456','50','images/party02.png',2],
+       ['徐耀昌','苗栗縣','123456','50','images/party02.png',1],
+       ['王惠美','彰化縣','123456','50','images/party01.png',2],
+       ['林明溱','南投縣','123456','50','images/party01.png',3]
+   ];
+   for(var i=0;i<other_elected_arr.length;i++){
+    $('.other_elected tbody').append('<tr><td><img src='+other_elected_arr[i][4]+' alt="img"/></td><td>'+other_elected_arr[i][5]+'</td><td>'+other_elected_arr[i][1]+'</td><td>'+other_elected_arr[i][0]+'</td><td><span>'+other_elected_arr[i][2]+'</span></td><td>'+other_elected_arr[i][3]+' %</td></tr>');
+   }
 });
 </script>
 
@@ -1002,7 +1015,6 @@ $(document).ready(function(){
                     <h2>新北市各行政區得票分佈</h2>
                 </div>
                 <!-- 標題 ed-->
-
                 <div class="city" id="new_taipei">
                     <div class="map_box">
                         <div class="map">
@@ -1417,6 +1429,32 @@ $(document).ready(function(){
                 </div>
             </div>
             <!-- 兩都地圖得票分佈 ed-->
+
+            <!-- 其他縣市長當選名單-->
+            <div class="other_elected">
+                <!-- 標題 -->
+                <div class="title_box2">
+                    <h2>2022各縣市長當選名單</h2>
+                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                </div>
+                <!-- 標題 ed-->
+                <div class="table">
+                    <table cellpadding="1" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>政黨</td>
+                                <td>號次</td>
+                                <td>縣市</td>
+                                <td>當選人</td>
+                                <td>得票數</td>
+                                <td>得票率</td>
+                            </tr>
+                            <!-- 插入候選人資料 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 其他縣市長當選名單 ed-->
 
             <!-- 九合一投票分析 ed -->
         </div>
