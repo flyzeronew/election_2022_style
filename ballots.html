@@ -141,10 +141,11 @@ $(document).ready(function(){
     }    
 
     //錨點滑動//
-    var $el = $(scrollableElement('html', 'body'));
+    function scroll(){
+        var $el = $(scrollableElement('html', 'body'));
         var speed = 550;
   
-        $('.other_votes .city').each(function(i) {
+        $('.other_votes .list li .city').each(function(i) {
             var $scroll_top=$(this).offset().top;
             $('.other_tags a').eq(i).click(function() {
                 event.preventDefault();
@@ -170,6 +171,8 @@ $(document).ready(function(){
             }
             return []; 
         }
+    }
+    scroll();
     //錨點滑動//   
 
     //其他縣市長開票ed
@@ -334,6 +337,7 @@ $(document).ready(function(){
     mapgo();
     $(window).resize(function(){         
         mapgo();
+        scroll();
     });
 
   //插入台北市區域
