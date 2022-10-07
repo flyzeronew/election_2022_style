@@ -72,17 +72,22 @@ $(document).ready(function(){
         [['鄭運鵬','images/party02.png',3456,0],['張善政','images/party01.png',323456,1],['賴香伶','images/party03.png',3456,0]],
         [['蔡其昌','images/party02.png',13456,0],['盧秀燕','images/party01.png',423456,1],['陳美妃','images/party03.png',3456,0]],
         [['黃偉哲','images/party02.png',123456,1],['謝龍介','images/party01.png',23456,0],['許忠信','images/party03.png',3456,0]],
+        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]],
+        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]],
+        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]],
+        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]],
         [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]]
     ];
+
     for(var i=0;i<six_arr.length;i++){       
         $('.six_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
-        $('.six_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td style="width:15%">政黨</td><td style="width:15%">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');
+        $('.six_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td class="tdwidth1">政黨</td><td class="tdwidth1">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');
         $('.six_votes .city p').eq(i).html(six_arr[i]);
         for(var j=0;j<six_votes_data[i].length;j++){
             $('.six_votes tbody').eq(i).append('<tr><td><img src='+six_votes_data[i][j][1]+' alt="img"/></td><td>'+(j+1)+'</td><td><div class="peo"><div class="name">'+six_votes_data[i][j][0]+'</div><div class="elected"><img src="images/elected.png" alt="img" /></div></div></td><td style="text-align:right;"><div class="num"><div id=b1'+i+j+'>'+six_votes_data[i][j][2]+'</div></div></td></tr>');
             //當選戳記判斷
             if(six_votes_data[i][j][3]==1){
-                $('.six_votes tbody').eq(i).find('.elected').eq(j).show();        
+                $('.six_votes tbody').eq(i).find('.elected').eq(j).show();
             }
             //跑數字	
             var demo_b1 = new CountUp('b1'+i+j, 0,six_votes_data[i][j][2], 0,1.5, options);
@@ -90,26 +95,39 @@ $(document).ready(function(){
         }
     }      
     //六都縣市長開票 ed
-    
+
     //其他縣市長開票  
-    var other_arr = ['基隆市長','新竹縣長','新竹市長','苗栗縣長','彰化縣長','南投縣長'];
+    var other_arr = [
+        '基隆市長','新竹縣長','新竹市長','苗栗縣長','彰化縣長','南投縣長','雲林縣長','嘉義縣長',
+        '嘉義市長','屏東縣長','宜蘭縣長','花蓮縣長','臺東縣長','澎湖縣長','金門縣長','連江縣長'
+    ];
     //其他縣市候選人、政黨圖、總票數 當選戳記:1當選 0落選
-    var other_votes_data = [
-        [['陳時中','images/party02.png',123456,1],['黃珊珊','images/party01.png',23456,0],['蔣萬安','images/party03.png',3456,0]],
+    var other_votes_data = [        
         [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
-        [['鄭運鵬','images/party02.png',3456,0],['張善政','images/party01.png',323456,1],['賴香伶','images/party03.png',3456,0]],
-        [['蔡其昌','images/party02.png',13456,0],['盧秀燕','images/party01.png',423456,1],['陳美妃','images/party03.png',3456,0]],
-        [['黃偉哲','images/party02.png',123456,1],['謝龍介','images/party01.png',23456,0],['許忠信','images/party03.png',3456,0]],
-        [['陳其邁','images/party02.png',553456,1],['柯志恩','images/party01.png',23456,0],['曾尹儷','images/party03.png',3456,0]]
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
+        [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]]
     ];
 
     for(var i=0;i<other_arr.length;i++){    
         $('.other_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
-        $('.other_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td style="width:15%">政黨</td><td style="width:15%">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');   
+        $('.other_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td class="tdwidth1">政黨</td><td class="tdwidth1">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');   
         $('.other_votes .city p').eq(i).html(other_arr[i]);
 
-        for(var j=0;j<other_votes_data[i].length;j++){           
-            $('.other_votes tbody').eq(i).append('<tr><td><img src='+other_votes_data[i][j][1]+' alt="img"/></td><td>'+(j+1)+'</td><td><div class="peo"><div class="name">'+six_votes_data[i][j][0]+'</div><div class="elected"><img src="images/elected.png" alt="img" /></div></div></td><td style="text-align:right;"><div class="num"><div id=b2'+i+j+'>'+other_votes_data[i][j][2]+'</div></div></td></tr>');
+        for(var j=0;j<other_votes_data[i].length;j++){
+            $('.other_votes tbody').eq(i).append('<tr><td><img src='+other_votes_data[i][j][1]+' alt="img"/></td><td>'+(j+1)+'</td><td><div class="peo"><div class="name">'+other_votes_data[i][j][0]+'</div><div class="elected"><img src="images/elected.png" alt="img" /></div></div></td><td style="text-align:right;"><div class="num"><div id=b2'+i+j+'>'+other_votes_data[i][j][2]+'</div></div></td></tr>');
             //當選戳記判斷
             if(other_votes_data[i][j][3]==1){
                 $('.other_votes tbody').eq(i).find('.elected').eq(j).show();        
@@ -472,9 +490,7 @@ $(document).ready(function(){
                     </div>
                     <!-- 標題 ed-->
                     <div class="list">
-                        <ul>
-                            <!-- 塞資料 -->
-                        </ul>
+                        <ul><!-- 塞資料 --></ul>
                     </div>
                 </div>
                 <!-- 六都市長票數 ed-->
@@ -486,12 +502,16 @@ $(document).ready(function(){
                     </div>
                     <!-- 標題 ed-->
                     <div class="list">
-                        <ul>
-                            <!-- 塞資料 -->
-                        </ul>
+                        <ul><!-- 塞資料 --></ul>
                     </div>
                 </div>
                 <!-- 其他縣市長票數 ed-->
+                <!-- 更新備註 -->
+                <div class="ex">
+                    <p>最後更新時間：2022/8/25 18：01：02 ( 票數每15秒更新，網頁每5分鐘更新 )</p>
+                    <p>※票數來源:TVBS開票中心</p>
+                    <p>※最後當選名單以中選會公告為準</p>                    
+                </div>
             </div>
             <!-- 縣市長開票 ed-->
             <!-- 兩都地圖得票分佈 -->
