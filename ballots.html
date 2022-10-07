@@ -125,6 +125,8 @@ $(document).ready(function(){
         $('.other_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
         $('.other_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td class="tdwidth1">政黨</td><td class="tdwidth1">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');   
         $('.other_votes .city p').eq(i).html(other_arr[i]);
+        $('.other_tags').append('<a href="##">'+other_arr[i].replace('長', '')+'</a>');       
+  
 
         for(var j=0;j<other_votes_data[i].length;j++){
             $('.other_votes tbody').eq(i).append('<tr><td><img src='+other_votes_data[i][j][1]+' alt="img"/></td><td>'+(j+1)+'</td><td><div class="peo"><div class="name">'+other_votes_data[i][j][0]+'</div><div class="elected"><img src="images/elected.png" alt="img" /></div></div></td><td style="text-align:right;"><div class="num"><div id=b2'+i+j+'>'+other_votes_data[i][j][2]+'</div></div></td></tr>');
@@ -137,8 +139,41 @@ $(document).ready(function(){
             if(!demo_b2.error){demo_b2.start();}else{console.error(demo_b2.error);}	
         }
     }    
+
+    //錨點滑動//
+    var $el = $(scrollableElement('html', 'body'));
+        var speed = 550;
+  
+        $('.other_votes .city').each(function(i) {
+            var $scroll_top=$(this).offset().top;
+            $('.other_tags a').eq(i).click(function() {
+                event.preventDefault();
+                $el.stop().animate({ scrollTop: $scroll_top }, speed); 
+            });
+        });    
+            function scrollableElement() {
+            var i, len, el, $el, scrollable;
+            for (i = 0, len = arguments.length; i < len; i++) {
+                el = arguments[i];
+                $el = $(el);
+                if ($el.scrollTop() > 0) {
+    
+                    return el;
+                } else {
+                    $el.scrollTop(1);
+                    scrollable = $el.scrollTop() > 0;
+                    $el.scrollTop(0);
+                    if (scrollable) {
+                        return el;
+                    }
+                }
+            }
+            return []; 
+        }
+    //錨點滑動//   
+
     //其他縣市長開票ed
-    //縣市長開票 ed
+        //縣市長開票 ed
 
     // 跟著滑鼠跑
     $(window).mousemove(function(event){DivDraw(event);});
@@ -494,6 +529,7 @@ $(document).ready(function(){
                     </div>
                 </div>
                 <!-- 六都市長票數 ed-->
+
                 <!-- 其他縣市長票數 -->
                 <div class="other_votes">
                     <!-- 標題 -->
@@ -501,6 +537,10 @@ $(document).ready(function(){
                         <h2>其他縣市長票數</h2>
                     </div>
                     <!-- 標題 ed-->
+                    
+                <!-- 其他縣市長標籤 -->
+                <div class="other_tags"><!-- 塞資料 --></div>
+                <!-- 其他縣市長標籤 ed -->
                     <div class="list">
                         <ul><!-- 塞資料 --></ul>
                     </div>
@@ -508,7 +548,7 @@ $(document).ready(function(){
                 <!-- 其他縣市長票數 ed-->
                 <!-- 更新備註 -->
                 <div class="ex">
-                    <p>最後更新時間：2022/8/25 18：01：02 ( 票數每15秒更新，網頁每5分鐘更新 )</p>
+                    <p>最後更新時間：2022/8/25 18：01：02 <br>( 票數每15秒更新，網頁每5分鐘更新 )</p>
                     <p>※票數來源:TVBS開票中心</p>
                     <p>※最後當選名單以中選會公告為準</p>                    
                 </div>
