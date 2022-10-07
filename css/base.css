@@ -2223,6 +2223,18 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 
 /* 六都市長當選名單 ed*/
 /* 縣市議員開票*/
+.congressman_votes .area_select{
+background-color: #2886A2;
+padding:5px 15px;
+}
+.congressman_votes .input select{
+    font-size:16px;color:#2886A2;
+    border-radius: 5px;
+    width: 300px;
+    border: solid 1px #2886A2;
+    font-size: 14px;    
+    padding: 4px;
+ }
 .tdwidth2 {
     width: 6%;
   }

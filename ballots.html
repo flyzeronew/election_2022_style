@@ -408,6 +408,31 @@ $(document).ready(function(){
    });
    //雙北市地圖資料ed
 
+
+    //縣市陣列
+    var all_city=['臺北市','新北市','基隆市','新竹市','桃園市','新竹縣','苗栗縣','臺中市','彰化縣','南投縣','雲林縣',
+             '嘉義市','嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+    var all_city_area=[["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區","第04選區"],["第01選區","第02選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],
+    ["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"]];
+    for(var i=0;i<all_city.length;i++){
+        $('.congressman_votes .list .area_select #congressman_city').append('<option value="'+i+'">'+all_city[i]+'</option>');
+    }
+    //預設台北市 區域
+    for(var j=0;j<all_city_area[0].length;j++){
+         $('.congressman_votes .list .area_select #congressman_area').append('<option>'+all_city_area[0][j]+'</option>');
+    }
+
+    //全台縣市議員票數 選單 change
+    $('.congressman_votes .list .area_select #congressman_city').change(function(e){
+        var now_congressman_city= $('.congressman_votes .list .area_select #congressman_city').val();
+        var final="";
+        final=final+'<option>選一個區域</option>';
+        for(var k = 0 ;k<all_city_area[now_congressman_city].length;k++){
+            final=final+'<option>'+all_city_area[now_congressman_city][k]+'</option>'
+        }
+        $('.congressman_votes .list .area_select #congressman_area').html(final);
+    });
+
    //九合一投票分析
 
    //六都市長當選名單 名字、縣市、票數、比例%、照片、政黨圖 
@@ -601,8 +626,11 @@ $(document).ready(function(){
                     <div class="list">
                         <ul>
                             <li>
-                                <div class="city">
-                                    <p>基隆市</p>
+                                <div class="area_select">
+                                    <div class="input">
+                                        <select name="congressman_city" id="congressman_city"></select>
+                                        <select name="congressman_area" id="congressman_area"><option value="open">選一個區域</option></select>
+                                    </div>
                                 </div>
                                 <div class="table">
                                  <table cellpadding="1" cellspacing="0">
@@ -632,11 +660,35 @@ $(document).ready(function(){
                                               </div>
                                           </td>
                                        </tr>
+                                       <tr>
+                                        <td>
+                                            <img src="images/party02.png" alt="img">
+                                        </td>
+                                        <td>1</td>
+                                        <td>
+                                         <div class="peo">
+                                             <div class="name">林佳龍</div>
+                                             <div class="elected" style="display: block;">
+                                                 <img src="images/elected.png" alt="">
+                                             </div>
+                                         </div>
+                                       </td>
+                                       <td style="text-align:right;">
+                                           <div class="num">
+                                               <div id="b2150">123456</div>
+                                           </div>
+                                       </td>
+                                    </tr>
                                     </tbody>
                                  </table>   
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                    <div class="ex">
+                        <p>最後更新時間：2022/8/25 18：01：02 <br>( 票數每15秒更新，網頁每5分鐘更新 )</p>
+                        <p>※票數來源:TVBS開票中心</p>
+                        <p>※最後當選名單以中選會公告為準</p>                    
                     </div>
                 </div>
     
