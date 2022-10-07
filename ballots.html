@@ -406,8 +406,25 @@ $(document).ready(function(){
    $("#new_taipei").find(".party_area .num").each(function(i){
         $(this).html(par_arr2[i]);
    });
-
    //雙北市地圖資料ed
+
+   //九合一投票分析
+
+   //六都市長當選名單 名字、縣市、票數、比例%、照片、政黨圖 
+   var mayor_elected_arr=[
+       ['蔣萬安','臺北市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
+       ['林佳龍','新北市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
+       ['鄭運鵬','桃園市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
+       ['盧秀燕','臺中市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
+       ['黃偉哲','臺南市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
+       ['陳其邁','高雄市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
+   ];
+   for(var i=0;i<mayor_elected_arr.length;i++){
+       $('.ballots .mayor_elected .list ul').append('<li></li>');
+       $('.ballots .mayor_elected .list li').eq(i).append('<div class="img_box"><img src="'+mayor_elected_arr[i][4]+'" alt="img"/><div class="party"><img src="'+mayor_elected_arr[i][5]+'" alt="img"/></div></div>');
+       $('.ballots .mayor_elected .list li').eq(i).append('<div class="txt_box"><div class="name">'+mayor_elected_arr[i][0]+'</div><div class="city">'+mayor_elected_arr[i][1]+'</div></div>');
+       $('.ballots .mayor_elected .list li').eq(i).append('<div class="vote_box"><div><span class="num">'+mayor_elected_arr[i][2]+'</span><span> 票</span></div><div><span class="percent">'+mayor_elected_arr[i][3]+'</span><span> %</span></div></div>')
+    }
 });
 </script>
 
@@ -576,116 +593,7 @@ $(document).ready(function(){
                 </div>
                 <!-- 標題 ed-->
                 <div class="list">
-                    <ul>
-                        <li>
-                            <div class="img_box">
-                                <img src="images/mayor_default.jpg" alt="img"/>
-                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                            </div> 
-                            <div class="txt_box">
-                                <div class="name">蔣萬安</div>
-                                <div class="city">台北市</div>
-                            </div>
-                            <div class="vote_box">
-                                <div>
-                                    <span class="num">1,234,567</span><span> 票</span>
-                                </div>
-                                <div>
-                                    <span class="percent">50</span><span> %</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <img src="images/mayor_default.jpg" alt="img"/>
-                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                            </div> 
-                            <div class="txt_box">
-                                <div class="name">蔣萬安</div>
-                                <div class="city">台北市</div>
-                            </div>
-                            <div class="vote_box">
-                                <div>
-                                    <span class="num">1,234,567</span><span> 票</span>
-                                </div>
-                                <div>
-                                    <span class="percent">50</span><span> %</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <img src="images/mayor_default.jpg" alt="img"/>
-                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                            </div> 
-                            <div class="txt_box">
-                                <div class="name">蔣萬安</div>
-                                <div class="city">台北市</div>
-                            </div>
-                            <div class="vote_box">
-                                <div>
-                                    <span class="num">1,234,567</span><span> 票</span>
-                                </div>
-                                <div>
-                                    <span class="percent">50</span><span> %</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <img src="images/mayor_default.jpg" alt="img"/>
-                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                            </div> 
-                            <div class="txt_box">
-                                <div class="name">蔣萬安</div>
-                                <div class="city">台北市</div>
-                            </div>
-                            <div class="vote_box">
-                                <div>
-                                    <span class="num">1,234,567</span><span> 票</span>
-                                </div>
-                                <div>
-                                    <span class="percent">50</span><span> %</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <img src="images/mayor_default.jpg" alt="img"/>
-                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                            </div> 
-                            <div class="txt_box">
-                                <div class="name">蔣萬安</div>
-                                <div class="city">台北市</div>
-                            </div>
-                            <div class="vote_box">
-                                <div>
-                                    <span class="num">1,234,567</span><span> 票</span>
-                                </div>
-                                <div>
-                                    <span class="percent">50</span><span> %</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <img src="images/mayor_default.jpg" alt="img"/>
-                                <div class="party"><img src="images/party01.png" alt="img"/></div>
-                            </div> 
-                            <div class="txt_box">
-                                <div class="name">蔣萬安</div>
-                                <div class="city">台北市</div>
-                            </div>
-                            <div class="vote_box">
-                                <div>
-                                    <span class="num">1,234,567</span><span> 票</span>
-                                </div>
-                                <div>
-                                    <span class="percent">50</span><span> %</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul></ul>
                 </div>
             </div>
             <!-- 六都市長當選名單 ed-->
