@@ -3028,9 +3028,49 @@ $(document).ready(function(){
                 </div>
                 <!-- 標題 ed-->  
                 <div class="chart">
-                  
+                    <canvas id="history_chart"></canvas>
                 </div>
-
+                    <!--js-->	
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('.circlechart').circlechart();    
+                            var
+                            options = {
+                            useEasing: true, 
+                            useGrouping: true, 
+                            separator: ',', 
+                            decimal: '.', 
+                            };	
+                            /*柱狀圖*/
+                            var ctx = document.getElementById("history_chart");
+                            var myChart = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['2014','2018','2022'],
+                                    datasets: [                                            
+                                    {
+                                        label: '歷年九合一選舉投票率%',
+                                        data: [76, 70, 65],
+                                        backgroundColor: ['#2886A2'],
+                                        borderColor: ['#2886A2'],
+                                        borderWidth:0
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    scales: {
+                                        yAxes: [{                                            
+                                            ticks: {
+                                                beginAtZero:true
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        });
+                        /*柱狀圖ed*/	
+                    </script>
+                    <!--js ed--> 
             </div>
             <!-- 歷年九合一選舉投票率 ed-->
             <!-- 九合一投票分析 ed -->
