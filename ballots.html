@@ -424,7 +424,7 @@ $(document).ready(function(){
        ['王惠美','123456','images/party01.png',5,0],
        ['林明溱','123456','images/party01.png',6,0]
    ],[
-       ['林右昌','123456','images/party02.png',1,1],
+       ['林右昌','77777','images/party02.png',1,1],
        ['楊文科','123456','images/party01.png',2,0]
    ],[
        ['林右昌','123456','images/party02.png',1,1],
@@ -662,12 +662,12 @@ $(document).ready(function(){
     if(!demo_b5.error){demo_b5.start();}else{console.error(demo_b5.error);}	   
 }
 
-$('.congressman_votes .list .area_select #congressman_area').change(function(e){
-    //alert(11);
+
+    //全台縣市議員票數 選區change 
+    $('.congressman_votes .list .area_select #congressman_area').change(function(e){
     var now_congressman_city= $('.congressman_votes .list .area_select #congressman_city').val();
     var now_congressman_area= $('.congressman_votes .list .area_select #congressman_area').val();
     var now_congressman_data=all_city_area_detail[now_congressman_city][now_congressman_area];
-   // alert(now_congressman_data.length);
    var now_congressman_html='<tr><td class="tdwidth2">政黨</td><td class="tdwidth2">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr>';
      for(var i=0;i<now_congressman_data.length;i++){
 
@@ -680,17 +680,39 @@ $('.congressman_votes .list .area_select #congressman_area').change(function(e){
     now_congressman_html+='<tr><td><img src='+now_congressman_data[i][2]+'  alt="img"></td><td>'+now_congressman_data[i][3]+'</td><td><div class="peo"><div class="name">'+now_congressman_data[i][0]+'</div><div class="elected" '+is_elected+'><img src="images/elected.png" alt="elected"></div></div></td><td  style="text-align:right;"><div class="num"><div id="b5'+i+'">'+now_congressman_data[i][1]+'</div></div></td></tr>';
     $('.congressman_votes .list .table tbody').html(now_congressman_html);
 
-    // now_congressman_html=now_congressman_html+'<tr><td><img src='+now_congressman_data[i][2]+'  alt="img"></td><td>'+now_congressman_data[i][3]+'</td><td><div class="peo"><div class="name">'+now_congressman_data[i][0]+'</div><div class="elected" '+is_elected+'><img src="images/elected.png" alt="elected"></div></div></td><td  style="text-align:right;"><div class="num"><div id="b5'+i+'">'+now_congressman_data[i][1]+'</div></div></td></tr>';
-    // $('.congressman_votes .list .table tbody').html(now_congressman_html);
-
-
-
-    //跑數字
-    var demo_b5 = new CountUp('b5'+i, 0,all_city_area_detail[0][0][i][1], 0,1.5, options);
-    if(!demo_b5.error){demo_b5.start();}else{console.error(demo_b5.error);}	   
 }
- 
+  //跑數字
+  for(var i=0;i<now_congressman_data.length;i++){
+  var demo_b5 = new CountUp('b5'+i, 0,now_congressman_data[i][1], 0,1.5, options);
+    if(!demo_b5.error){demo_b5.start();}else{console.error(demo_b5.error);}	   
+  }
 });
+
+
+
+// $('.congressman_votes .list .area_select #congressman_area').change(function(e){
+//     var now_congressman_city= $('.congressman_votes .list .area_select #congressman_city').val();
+//     var now_congressman_area= $('.congressman_votes .list .area_select #congressman_area').val();
+//     var now_congressman_data=all_city_area_detail[now_congressman_city][now_congressman_area];
+//    var now_congressman_html='<tr><td class="tdwidth2">政黨</td><td class="tdwidth2">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr>';
+//      for(var i=0;i<now_congressman_data.length;i++){
+
+//     if(now_congressman_data[i][4]==1){
+//         var is_elected='style="display: block;"';
+//     }else{
+//         var is_elected='style="display: none;"';
+//     }
+    
+//     now_congressman_html+='<tr><td><img src='+now_congressman_data[i][2]+'  alt="img"></td><td>'+now_congressman_data[i][3]+'</td><td><div class="peo"><div class="name">'+now_congressman_data[i][0]+'</div><div class="elected" '+is_elected+'><img src="images/elected.png" alt="elected"></div></div></td><td  style="text-align:right;"><div class="num"><div id="b5'+i+'">'+now_congressman_data[i][1]+'</div></div></td></tr>';
+//     $('.congressman_votes .list .table tbody').html(now_congressman_html);
+
+
+//     //跑數字
+//     var demo_b5 = new CountUp('b5'+i, 0,all_city_area_detail[0][0][i][1], 0,1.5, options);
+//     if(!demo_b5.error){demo_b5.start();}else{console.error(demo_b5.error);}	   
+// }
+ 
+// });
 
 
    //九合一投票分析
