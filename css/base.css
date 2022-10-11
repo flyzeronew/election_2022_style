@@ -2013,7 +2013,6 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .ballots .party_area li{    
     display: flex;
     font-size: 14px;
-    justify-content: center;  
     align-items: center;
     margin-bottom:5px;
 }
@@ -2255,9 +2254,7 @@ padding:5px 15px;
   /* 縣市議員開票 ed*/
 
 /* 全台縣市長版圖變化 */
-.mayor_territory{
-
-}
+.mayor_territory{}
 .mayor_territory .maps{
     display: flex;
     justify-content:center;  
@@ -2265,12 +2262,43 @@ padding:5px 15px;
     padding:30px 0;
 }
 .mayor_territory .map_box{
-    width: 50%;
-    display: flex;
-    justify-content:center;  
+    width: 50%;text-align:center;
+    position: relative;
 }
 .mayor_territory .map_box .taiwan_map {
     width:80%;stroke-width:2px;stroke:#FFF;fill:#ccc;
+    margin:0 auto;
+}
+.mayor_territory .year_btn{
+    display: none;
+    justify-content:center;  
+    align-items: center;
+    column-gap:10px;
+    margin-bottom: 20px;
+}
+.mayor_territory .year_btn a{   
+    font-size:14px;border:2px solid #2886A2;
+    display:inline-block;
+    background-color:#fff;color:#2886A2;
+    padding:2px 20px 3px;border-radius:20px;
+    margin-bottom: 20px;
+}
+.mayor_territory .year_btn a.act,.mayor_territory .year_btn a:hover{
+    color:#fff;background-color:#2886A2;
+}
+.mayor_territory .map_box .year{
+    font-size:14px;
+    display:inline-block;color:#fff;background-color:#2886A2;
+    padding:2px 20px 3px;border-radius:20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .mayor_territory .year_btn{display: flex;}
+    #territor2022{display:none;}
+    .mayor_territory .maps{display:block;padding:30px 0;}
+    .mayor_territory .map_box{width:100%;}
+    .mayor_territory .map_box .year{display:none;}
+    .mayor_territory .map_box .taiwan_map {width:100%;}
 }
 /* 全台縣市長版圖變化 ed*/
 /* 開票專區 ed*/
