@@ -2254,4 +2254,24 @@ padding:5px 15px;
     }
   }
   /* 縣市議員開票 ed*/
+
+/* 全台縣市長版圖變化 */
+.mayor_territory{
+
+}
+.mayor_territory .maps{
+    display: flex;
+    justify-content:center;  
+    align-items: center;
+    padding:30px 0;
+}
+.mayor_territory .map_box{
+    width: 50%;
+    display: flex;
+    justify-content:center;  
+}
+.mayor_territory .map_box .taiwan_map {
+    width:80%;stroke-width:2px;stroke:#FFF;fill:#ccc;
+}
+/* 全台縣市長版圖變化 ed*/
 /* 開票專區 ed*/
