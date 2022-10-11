@@ -2280,7 +2280,7 @@ padding:5px 7px;
 .referendum .list .content{
     padding:15px 0px;
     width: 59%;
-    
+    font-weight: normal;
 }
 .referendum .list .result{
     /* width: 41%; */
@@ -2294,7 +2294,7 @@ padding:5px 7px;
 }
 .referendum .list .result .result_percent{
     /* text-align: right; */
-    font-size:60px;
+    font-size:56px;
 }
 .referendum .list .result .data{
     display: flex;
@@ -2303,6 +2303,7 @@ padding:5px 7px;
 .referendum .list .result .data .pass_img{
     margin-top: 15px;
     width: 40%;
+   
 }
 @media (max-width: 1023px) {
     .referendum .list{
