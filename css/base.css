@@ -2386,4 +2386,19 @@ padding:5px 7px;
     .mayor_territory .map_box .taiwan_map {width:100%;}
 }
 /* 全台縣市長版圖變化 ed*/
+
+/* 近三屆六都選舉得票率 */
+.six_percent{margin-bottom: 30px;}
+/* 近三屆六都選舉得票率 ed*/
+
+/* 近年兩黨（國民黨、民進黨）得票率走勢 */
+.party_percent{margin-bottom: 30px;}
+/* 近年兩黨（國民黨、民進黨）得票率走勢 ed*/
+
+/* 全台縣市議員政黨席次 */
+.congressman_seats{margin-bottom: 30px;}
+/* 全台縣市議員政黨席次 ed*/
+/* 歷年九合一選舉投票率 */
+.history_percent{}
+/* 歷年九合一選舉投票率 ed*/
 /* 開票專區 ed*/

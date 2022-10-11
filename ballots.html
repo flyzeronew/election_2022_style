@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="css/owlcarousel/owl.carousel.css">
 <link rel="stylesheet" href="css/owlcarousel/owl.theme.css">
 <link rel="stylesheet" href="css/owlcarousel/demo.css">
+<link rel="stylesheet" href="css/progresscircle.css">
 <!--外掛CSS Link ed-->
 
 <!--外掛 js Link-->
@@ -27,6 +28,8 @@
 <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="js/jquery.syotimer.js"></script>
 <script type="text/javascript" src="js/countUp.js"></script>
+<script type="text/javascript" src="js/progresscircle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!--外掛 js Link ed-->
 
 <!--js Link-->
@@ -754,7 +757,7 @@ $(document).ready(function(){
                     </div>
                 </div>
     
-                <!-- 縣市議員開票 ed-->
+             <!-- 縣市議員開票 ed-->
              <!-- 全民性公民投票案 -->
              <div class="referendum">
                     <!-- 標題 -->
@@ -2767,6 +2770,67 @@ $(document).ready(function(){
                 </div>
             </div>
             <!-- 2022 全台縣市長版圖變化 ed-->
+
+
+            <!-- 近三屆六都選舉得票率 -->
+            <div class="six_percent">
+                <!-- 標題 -->
+                <div class="title_box2">
+                    <h2>近三屆六都選舉得票率</h2>
+                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                </div>
+                <!-- 標題 ed-->  
+                <div class="chart">
+                    <canvas id="chart1"></canvas>
+                </div>
+
+            </div>
+            <!-- 近三屆六都選舉得票率 ed-->
+
+            <!-- 近年兩黨得票率走勢 -->
+            <div class="party_percent">
+                <!-- 標題 -->
+                <div class="title_box2">
+                    <h2>近年兩黨（國民黨、民進黨）得票率走勢</h2>
+                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                </div>
+                <!-- 標題 ed-->  
+                <div class="chart">
+                  
+                </div>
+
+            </div>
+            <!-- 近年兩黨得票率走勢 ed-->
+
+            <!-- 全台縣市議員政黨席次 -->
+            <div class="congressman_seats">
+                <!-- 標題 -->
+                <div class="title_box2">
+                    <h2>全台縣市議員政黨席次</h2>
+                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                </div>
+                <!-- 標題 ed-->  
+                <div class="chart">
+                  
+                </div>
+
+            </div>
+            <!-- 全台縣市議員政黨席次 ed -->
+
+            <!-- 歷年九合一選舉投票率 -->
+            <div class="history_percent">
+                <!-- 標題 -->
+                <div class="title_box2">
+                    <h2>歷年九合一選舉投票率</h2>
+                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                </div>
+                <!-- 標題 ed-->  
+                <div class="chart">
+                  
+                </div>
+
+            </div>
+            <!-- 歷年九合一選舉投票率 ed-->
             <!-- 九合一投票分析 ed -->
         </div>
     </div>
