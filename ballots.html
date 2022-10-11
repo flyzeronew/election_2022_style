@@ -464,8 +464,11 @@ $(document).ready(function(){
        ['林明溱','南投縣','123456','50','images/party01.png',3]
    ];
    for(var i=0;i<other_elected_arr.length;i++){
-    $('.other_elected tbody').append('<tr><td><img src='+other_elected_arr[i][4]+' alt="img"/></td><td>'+other_elected_arr[i][5]+'</td><td>'+other_elected_arr[i][1]+'</td><td>'+other_elected_arr[i][0]+'</td><td><span>'+other_elected_arr[i][2]+'</span></td><td>'+other_elected_arr[i][3]+' %</td></tr>');
-   }
+    $('.other_elected tbody').append('<tr><td><img src='+other_elected_arr[i][4]+' alt="img"/></td><td>'+other_elected_arr[i][5]+'</td><td>'+other_elected_arr[i][1]+'</td><td>'+other_elected_arr[i][0]+'</td><td><span><span id=b4'+i+'>'+other_elected_arr[i][2]+'</span></span></td><td>'+other_elected_arr[i][3]+' %</td></tr>');
+    //跑數字
+    var demo_b4 = new CountUp('b4'+i, 0,other_elected_arr[i][2], 0,1.5, options);
+    if(!demo_b4.error){demo_b4.start();}else{console.error(demo_b4.error);}	   
+}
 });
 </script>
 
