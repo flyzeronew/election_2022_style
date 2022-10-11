@@ -67,7 +67,7 @@ $(document).ready(function(){
 
     //縣市長開票
     //六都縣市長開票
-    var six_arr = ['臺北市長','新北市長','桃園市長','臺中市長','臺南市長','高雄市長'];
+    var six_arr = ['台北市長','新北市長','桃園市長','台中市長','台南市長','高雄市長'];
     //六都候選人、政黨圖、總票數 當選戳記:1當選 0落選
     var six_votes_data = [
         [['陳時中','images/party02.png',123456,1],['黃珊珊','images/party01.png',23456,0],['蔣萬安','images/party03.png',3456,0]],
@@ -83,7 +83,7 @@ $(document).ready(function(){
     ];
 
     for(var i=0;i<six_arr.length;i++){       
-        $('.six_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
+        $('.six_votes .list ul').append('<li><div class="city"><p>台北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
         $('.six_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td class="tdwidth1">政黨</td><td class="tdwidth1">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');
         $('.six_votes .city p').eq(i).html(six_arr[i]);
         for(var j=0;j<six_votes_data[i].length;j++){
@@ -102,7 +102,7 @@ $(document).ready(function(){
     //其他縣市長開票  
     var other_arr = [
         '基隆市長','新竹縣長','新竹市長','苗栗縣長','彰化縣長','南投縣長','雲林縣長','嘉義縣長',
-        '嘉義市長','屏東縣長','宜蘭縣長','花蓮縣長','臺東縣長','澎湖縣長','金門縣長','連江縣長'
+        '嘉義市長','屏東縣長','宜蘭縣長','花蓮縣長','台東縣長','澎湖縣長','金門縣長','連江縣長'
     ];
     //其他縣市候選人、政黨圖、總票數 當選戳記:1當選 0落選
     var other_votes_data = [        
@@ -125,7 +125,7 @@ $(document).ready(function(){
     ];
 
     for(var i=0;i<other_arr.length;i++){    
-        $('.other_votes .list ul').append('<li><div class="city"><p>臺北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
+        $('.other_votes .list ul').append('<li><div class="city"><p>台北市長</p><div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div></div></li>');
         $('.other_votes .list ul li').eq(i).append('<div class="table"><table cellpadding="1" cellspacing="0"><tbody><tr><td class="tdwidth1">政黨</td><td class="tdwidth1">號次</td><td style="text-align: left">候選人</td><td style="text-align: right">得票數</td></tr></tbody></table></div>');   
         $('.other_votes .city p').eq(i).html(other_arr[i]);
         $('.other_tags').append('<a href="##">'+other_arr[i].replace('長', '')+'</a>');       
@@ -408,8 +408,8 @@ $(document).ready(function(){
 
 
     //縣市陣列
-    var all_city=['臺北市','新北市','基隆市','新竹市','桃園市','新竹縣','苗栗縣','臺中市','彰化縣','南投縣','雲林縣',
-             '嘉義市','嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+    var all_city=['台北市','新北市','基隆市','新竹市','桃園市','新竹縣','苗栗縣','台中市','彰化縣','南投縣','雲林縣',
+             '嘉義市','嘉義縣','台南市','高雄市','屏東縣','宜蘭縣','花蓮縣','台東縣','澎湖縣','金門縣','連江縣'];
     //縣市選區陣列
     var all_city_area=[["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區","第04選區"],["第01選區","第02選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],
     ["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"]];
@@ -674,11 +674,11 @@ $(document).ready(function(){
 
    //六都市長當選名單 名字、縣市、票數、比例%、照片、政黨圖 
    var mayor_elected_arr=[
-       ['蔣萬安','臺北市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
+       ['蔣萬安','台北市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
        ['林佳龍','新北市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
        ['鄭運鵬','桃園市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
-       ['盧秀燕','臺中市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
-       ['黃偉哲','臺南市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
+       ['盧秀燕','台中市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
+       ['黃偉哲','台南市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
        ['陳其邁','高雄市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
    ];
    for(var i=0;i<mayor_elected_arr.length;i++){
@@ -3028,12 +3028,11 @@ $(document).ready(function(){
                 </div>
                 <!-- 標題 ed-->  
                 <div class="chart">
-                    <canvas id="history_chart"></canvas>
+                    <!-- <canvas id="history_chart"></canvas> -->
                 </div>
                     <!--js-->	
                     <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('.circlechart').circlechart();    
+                        $(document).ready(function(){               
                             var
                             options = {
                             useEasing: true, 
