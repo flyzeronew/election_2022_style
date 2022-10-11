@@ -448,7 +448,10 @@ $(document).ready(function(){
        $('.ballots .mayor_elected .list ul').append('<li></li>');
        $('.ballots .mayor_elected .list li').eq(i).append('<div class="img_box"><img src="'+mayor_elected_arr[i][4]+'" alt="img"/><div class="party"><img src="'+mayor_elected_arr[i][5]+'" alt="img"/></div></div>');
        $('.ballots .mayor_elected .list li').eq(i).append('<div class="txt_box"><div class="name">'+mayor_elected_arr[i][0]+'</div><div class="city">'+mayor_elected_arr[i][1]+'</div></div>');
-       $('.ballots .mayor_elected .list li').eq(i).append('<div class="vote_box"><div><span class="num">'+mayor_elected_arr[i][2]+'</span><span> 票</span></div><div><span class="percent">'+mayor_elected_arr[i][3]+'</span><span> %</span></div></div>')
+       $('.ballots .mayor_elected .list li').eq(i).append('<div class="vote_box"><div><span class="num"><span id=b3'+i+'>'+mayor_elected_arr[i][2]+'</span></span><span> 票</span></div><div><span class="percent">'+mayor_elected_arr[i][3]+'</span><span> %</span></div></div>')
+        //跑數字
+        var demo_b3 = new CountUp('b3'+i, 0,mayor_elected_arr[i][2], 0,1.5, options);
+        if(!demo_b3.error){demo_b3.start();}else{console.error(demo_b3.error);}	
     }
 
   //各縣市長當選名單 名字、縣市、票數、比例%、政黨圖、號次
