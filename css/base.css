@@ -2078,6 +2078,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 }
 /* 雙北 ed*/
 /* 縣市長開票 */
+.ballots .chart{padding:50px 0;}
 .ballots .table .tdwidth1{width:15%;}
 .ballots .title_box h2,.ballots .title_box p{font-size:24px;}
 .ballots .ex{text-align:right;font-size:12px;width:100%;}
@@ -2393,7 +2394,29 @@ padding:5px 7px;
 /* 全台縣市長版圖變化 ed*/
 
 /* 近三屆六都選舉得票率 */
-.six_percent{margin-bottom: 30px;}
+.six_percent{padding:30px 0;position: relative;padding-bottom:90px;}
+.six_percent .party_area{bottom:20px;}
+.six_percent .chart{}
+.six_percent .chart ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap:50px;
+    row-gap: 30px;
+}
+.six_percent .chart li{
+    text-align: center;
+    width: calc((100% - 100px)/3);     
+}
+.chart_city{
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    background-color: #2886A2;
+    padding: 2px 20px 3px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
 /* 近三屆六都選舉得票率 ed*/
 
 /* 近年兩黨（國民黨、民進黨）得票率走勢 */
@@ -2404,7 +2427,6 @@ padding:5px 7px;
 .congressman_seats{margin-bottom: 30px;}
 /* 全台縣市議員政黨席次 ed*/
 /* 歷年九合一選舉投票率 */
-.ballots .chart{padding:30px 0;}
 #history_chart{margin:0 auto;width:100%;height:300px;}
 /* 歷年九合一選舉投票率 ed*/
 /* 開票專區 ed*/

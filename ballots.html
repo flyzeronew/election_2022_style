@@ -30,6 +30,7 @@
 <script type="text/javascript" src="js/countUp.js"></script>
 <script type="text/javascript" src="js/progresscircle.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <!--外掛 js Link ed-->
 
 <!--js Link-->
@@ -204,7 +205,7 @@ $(document).ready(function(){
    //計算陣列中數量 ed
 
     // 雙北市地圖資料
-    // 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨
+    // 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨 
     var color0='#ccc',color1='#3684C5',color2='#369D4E',color3='#0893BC',color4='#6E6E6E';
     
     // 台北市
@@ -2980,12 +2981,147 @@ $(document).ready(function(){
                 <div class="title_box2">
                     <h2>近三屆六都選舉得票率</h2>
                     <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
-                </div>
+                </div>                
                 <!-- 標題 ed-->  
-                <div class="chart">
-                    <canvas id="chart1"></canvas>
-                </div>
+                <div class="party_area">
+                    <ul>
+                        <li>
+                            <div class="color_box color1"></div>
+                            <div class="seats">
+                                <span>國民黨</span>                            
+                            </div>
+                        </li>
+                        <li>
+                            <div class="color_box color2"></div>
+                            <div class="seats">
+                                <span>民進黨</span>                           
+                            </div>
+                        </li>
+                        <li>
+                            <div class="color_box color3"></div>
+                            <div class="seats">
+                                <span>民眾黨</span>                          
+                            </div>
+                        </li>
+                        <li>
+                            <div class="color_box color4"></div>
+                            <div class="seats">
+                                <span>無黨籍</span>                          
+                            </div>
+                        </li>
+                    </ul>   
+                </div>          
 
+
+                <div class="chart">
+                    <ul>
+                        <li>
+                            <div class="chart_city">台北市</div>
+                            <div id="chart1_1"></div>
+                        </li>
+                        <li>
+                            <div class="chart_city">新北市</div>
+                            <div id="chart1_2"></div>
+                        </li>
+                        <li>
+                            <div class="chart_city">桃園市</div>
+                            <div id="chart1_3"></div>
+                        </li>
+                        <li>
+                            <div class="chart_city">台中市</div>
+                            <div id="chart1_4"></div>
+                        </li>
+                        <li>
+                            <div class="chart_city">台南市</div>
+                            <div id="chart1_5"></div>
+                        </li>
+                        <li>
+                            <div class="chart_city">高雄市</div>
+                            <div id="chart1_6"></div>
+                        </li>
+                    </ul>
+                    <!-- <canvas id="chart1"></canvas> -->
+                </div>
+                <!-- JS -->
+                <script type="text/javascript">
+                    google.charts.load('current', {'packages':['bar']});
+                    google.charts.setOnLoadCallback(drawChart);
+                    function drawChart() {
+                    var data1 = google.visualization.arrayToDataTable([
+                        ['', '無黨籍', '國民黨', '民進黨'],
+                        ['2014', 80, 60, 40],
+                        ['2018', 80, 60, 40],
+                        ['2022', 80, 60, 40]
+                    ]);
+                    var data2 = google.visualization.arrayToDataTable([
+                        ['', '無黨籍', '國民黨', '民進黨'],
+                        ['2014', 80, 60, 40],
+                        ['2018', 80, 60, 40],
+                        ['2022', 80, 60, 40]
+                    ]);
+                    var data3 = google.visualization.arrayToDataTable([
+                        ['', '無黨籍', '國民黨', '民進黨'],
+                        ['2014', 80, 60, 40],
+                        ['2018', 80, 60, 40],
+                        ['2022', 80, 60, 40]
+                    ]);
+                    var data4 = google.visualization.arrayToDataTable([
+                        ['', '無黨籍', '國民黨', '民進黨'],
+                        ['2014', 80, 60, 40],
+                        ['2018', 80, 60, 40],
+                        ['2022', 80, 60, 40]
+                    ]);
+                    var data5 = google.visualization.arrayToDataTable([
+                        ['', '無黨籍', '國民黨', '民進黨'],
+                        ['2014', 80, 60, 40],
+                        ['2018', 80, 60, 40],
+                        ['2022', 80, 60, 40]
+                    ]);
+                    var data6 = google.visualization.arrayToDataTable([
+                        ['', '無黨籍', '國民黨', '民進黨'],
+                        ['2014', 80, 60, 40],
+                        ['2018', 80, 60, 40],
+                        ['2022', 80, 60, 40]
+                    ]);
+                    var options1 = {
+                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
+                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
+                    };
+                    var options2 = {
+                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
+                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
+                    };
+                    var options3 = {
+                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
+                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
+                    };
+                    var options4 = {
+                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
+                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
+                    };
+                    var options5 = {
+                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
+                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
+                    };
+                    var options6 = {
+                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
+                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
+                    };
+                    var chart1 = new google.charts.Bar(document.getElementById('chart1_1'));
+                    var chart2 = new google.charts.Bar(document.getElementById('chart1_2'));
+                    var chart3 = new google.charts.Bar(document.getElementById('chart1_3'));
+                    var chart4 = new google.charts.Bar(document.getElementById('chart1_4'));
+                    var chart5 = new google.charts.Bar(document.getElementById('chart1_5'));
+                    var chart6 = new google.charts.Bar(document.getElementById('chart1_6'));
+                    chart1.draw(data1, google.charts.Bar.convertOptions(options1));
+                    chart2.draw(data2, google.charts.Bar.convertOptions(options2));
+                    chart3.draw(data3, google.charts.Bar.convertOptions(options3));
+                    chart4.draw(data4, google.charts.Bar.convertOptions(options4));
+                    chart5.draw(data5, google.charts.Bar.convertOptions(options5));
+                    chart6.draw(data6, google.charts.Bar.convertOptions(options6));
+                    }
+                </script>
+                <!-- JS ed -->
             </div>
             <!-- 近三屆六都選舉得票率 ed-->
 
@@ -3028,47 +3164,12 @@ $(document).ready(function(){
                 </div>
                 <!-- 標題 ed-->  
                 <div class="chart">
-                    <!-- <canvas id="history_chart"></canvas> -->
+                    <!-- <div id="history_chart"></div> -->
                 </div>
                     <!--js-->	
-                    <script type="text/javascript">
-                        $(document).ready(function(){               
-                            var
-                            options = {
-                            useEasing: true, 
-                            useGrouping: true, 
-                            separator: ',', 
-                            decimal: '.', 
-                            };	
-                            /*柱狀圖*/
-                            var ctx = document.getElementById("history_chart");
-                            var myChart = new Chart(ctx, {
-                                type: 'bar',
-                                data: {
-                                    labels: ['2014','2018','2022'],
-                                    datasets: [                                            
-                                    {
-                                        label: '歷年九合一選舉投票率%',
-                                        data: [76, 70, 65],
-                                        backgroundColor: ['#2886A2'],
-                                        borderColor: ['#2886A2'],
-                                        borderWidth:0
-                                        }
-                                    ]
-                                },
-                                options: {
-                                    scales: {
-                                        yAxes: [{                                            
-                                            ticks: {
-                                                beginAtZero:true
-                                            }
-                                        }]
-                                    }
-                                }
-                            });
-                        });
-                        /*柱狀圖ed*/	
-                    </script>
+                    
+
+
                     <!--js ed--> 
             </div>
             <!-- 歷年九合一選舉投票率 ed-->
