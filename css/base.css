@@ -2099,7 +2099,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     background-color:#2886A2;color:#fff;border-radius:20px;padding:5px 0;font-size:14px;
 }
 .ballots .mayor_box{margin-bottom:30px;}
-.ballots .table table{width:100%;font-size:14px;margin:0;}
+.ballots .table table{width:100%;font-size:16px;margin:0;}
 .ballots .table table img{width:25px;height:25px;}
 .ballots .table table td{font-weight: normal;padding:7px 10px;background:none;text-align:center;}
 .ballots .table table tr{color: #fff;background-color: #6EAABC;}
@@ -2180,8 +2180,8 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     height: 35px;
     position: absolute;
     z-index: 1;
-    bottom: 15px;
-    right: 10px;
+    bottom: 12px;
+    right: 8px;
 }
 .ballots .mayor_elected .list .txt_box,
 .ballots .mayor_elected .list .vote_box
@@ -2220,6 +2220,25 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 @media (max-width: 359px){
     .other_elected .table table td{font-size: 12px;}
 }
-
+.other_elected{margin-bottom:30px;}
 /* 六都市長當選名單 ed*/
+/* 全台縣市長版圖變化 */
+.mayor_territory{
+
+}
+.mayor_territory .maps{
+    display: flex;
+    justify-content:center;  
+    align-items: center;
+    padding:30px 0;
+}
+.mayor_territory .map_box{
+    width: 50%;
+    display: flex;
+    justify-content:center;  
+}
+.mayor_territory .map_box .taiwan_map {
+    width:80%;stroke-width:2px;stroke:#FFF;fill:#ccc;
+}
+/* 全台縣市長版圖變化 ed*/
 /* 開票專區 ed*/
