@@ -407,8 +407,220 @@ $(document).ready(function(){
     //縣市陣列
     var all_city=['臺北市','新北市','基隆市','新竹市','桃園市','新竹縣','苗栗縣','臺中市','彰化縣','南投縣','雲林縣',
              '嘉義市','嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+    //縣市選區陣列
     var all_city_area=[["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區","第04選區"],["第01選區","第02選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],
     ["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"],["第01選區","第02選區","第03選區"]];
+     
+      //縣市選區議員陣列
+     //全台縣市議員票數 名字、票數、政黨圖、號次、當選1沒當選0
+     var  all_city_area_detail=[[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0],
+       ['林志堅','123456','images/party02.png',3,0],
+       ['徐耀昌','123456','images/party02.png',4,0],
+       ['王惠美','123456','images/party01.png',5,0],
+       ['林明溱','123456','images/party01.png',6,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0],
+       ['林志堅','123456','images/party02.png',3,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],
+    [[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科',,'123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]],[[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ],[
+       ['林右昌','123456','images/party02.png',1,1],
+       ['楊文科','123456','images/party01.png',2,0]
+   ]]];
+
+
+   
     for(var i=0;i<all_city.length;i++){
         $('.congressman_votes .list .area_select #congressman_city').append('<option value="'+i+'">'+all_city[i]+'</option>');
     }
@@ -427,6 +639,33 @@ $(document).ready(function(){
         }
         $('.congressman_votes .list .area_select #congressman_area').html(final);
     });
+//alert(all_city_area_detail[0][0].length);
+//alert(all_city_area_detail[0][0][0][2]);
+//$('.congressman_votes').append('1111111');
+//$('.congressman_votes .list .table tbody').append('1111111');
+// $('.congressman_votes .list .table tbody').append('<tr><td>1111111</td></tr>');
+
+ for(var i=0;i<all_city_area_detail[0][0].length;i++){
+
+    if(all_city_area_detail[0][0][i][4]==1){
+        var is_elected='style="display: block;"';
+    }else{
+        var is_elected='style="display: none;"';
+    }
+     $('.congressman_votes .list .table tbody').append('<tr><td><img src='+all_city_area_detail[0][0][i][2]+'  alt="img"></td><td>'+all_city_area_detail[0][0][i][3]+'</td><td><div class="peo"><div class="name">'+all_city_area_detail[0][0][i][0]+'</div><div class="elected" '+is_elected+'><img src="images/elected.png" alt="elected"></div></div></td><td  style="text-align:right;"><div class="num"><div id="b5'+i+'">'+all_city_area_detail[0][0][i][1]+'</div></div></td></tr>');
+    //  $('.congressman_votes .list .table tbody').append('<tr><td><img src='+all_city_area_detail[0][0][i][2]+'  alt="img"></td><td>'+all_city_area_detail[0][0][i][3]+'</td><td><div class="peo"><div class="name">'+all_city_area_detail[0][0][i][0]+'</div></div></td><td  style="text-align:right;"><div class="num"><div id="b5'+i+'">'+all_city_area_detail[0][0][i][1]+'</div></div></td></tr>');
+
+    //跑數字
+    var demo_b5 = new CountUp('b5'+i, 0,all_city_area_detail[0][0][i][1], 0,1.5, options);
+    if(!demo_b5.error){demo_b5.start();}else{console.error(demo_b5.error);}	   
+}
+
+// for(var i=0;i<other_elected_arr.length;i++){
+//     $('.other_elected tbody').append('<tr><td><img src='+other_elected_arr[i][4]+' alt="img"/></td><td>'+other_elected_arr[i][5]+'</td><td>'+other_elected_arr[i][1]+'</td><td>'+other_elected_arr[i][0]+'</td><td><span><span id=b4'+i+'>'+other_elected_arr[i][2]+'</span></span></td><td>'+other_elected_arr[i][3]+' %</td></tr>');
+//     //跑數字
+//     var demo_b4 = new CountUp('b4'+i, 0,other_elected_arr[i][2], 0,1.5, options);
+//     if(!demo_b4.error){demo_b4.start();}else{console.error(demo_b4.error);}	   
+// }
 
    //九合一投票分析
 
@@ -703,44 +942,7 @@ $(document).ready(function(){
                                            <td style="text-align: left">候選人</td>
                                            <td style="text-align: right">得票數</td>
                                        </tr> 
-                                       <tr>
-                                           <td>
-                                               <img src="images/party02.png" alt="img">
-                                           </td>
-                                           <td>1</td>
-                                           <td>
-                                            <div class="peo">
-                                                <div class="name">林佳龍</div>
-                                                <div class="elected" style="display: block;">
-                                                    <img src="images/elected.png" alt="">
-                                                </div>
-                                            </div>
-                                          </td>
-                                          <td style="text-align:right;">
-                                              <div class="num">
-                                                  <div id="b2150">123456</div>
-                                              </div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                        <td>
-                                            <img src="images/party02.png" alt="img">
-                                        </td>
-                                        <td>1</td>
-                                        <td>
-                                         <div class="peo">
-                                             <div class="name">林佳龍</div>
-                                             <div class="elected" style="display: block;">
-                                                 <img src="images/elected.png" alt="">
-                                             </div>
-                                         </div>
-                                       </td>
-                                       <td style="text-align:right;">
-                                           <div class="num">
-                                               <div id="b2150">123456</div>
-                                           </div>
-                                       </td>
-                                    </tr>
+                                    <!-- 塞資料 -->
                                     </tbody>
                                  </table>   
                                 </div>
