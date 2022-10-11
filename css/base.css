@@ -2297,11 +2297,15 @@ padding:5px 7px;
     font-size:56px;
 }
 .referendum .list .result .data{
+    margin-top: 15px;
     display: flex;
     justify-content: space-around;
 }
+.referendum .list .result .data p{
+    /* margin-top: 10px; */
+}
 .referendum .list .result .data .pass_img{
-    margin-top: 15px;
+    margin-top: 10px;
     width: 40%;
    
 }
