@@ -2080,8 +2080,6 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 /* 雙北 ed*/
 /* 縣市長開票 */
 .ballots .table .tdwidth1{width:15%;}
-.ballots .table .tdwidth2{}
-
 .ballots .title_box h2,.ballots .title_box p{font-size:24px;}
 .ballots .ex{text-align:right;font-size:12px;width:100%;}
 .ballots .ex br{display:none;}
