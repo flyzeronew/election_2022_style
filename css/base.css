@@ -2223,9 +2223,12 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 
 /* 六都市長當選名單 ed*/
 /* 縣市議員開票*/
+.congressman_votes .list{
+    margin-bottom: 15px;
+}
 .congressman_votes .area_select{
 background-color: #2886A2;
-padding:5px 15px;
+padding:5px 7px;
 }
 .congressman_votes .input select{
     font-size:16px;color:#2886A2;
@@ -2244,14 +2247,96 @@ padding:5px 15px;
     }
   }
   @media (max-width: 767px) {
+    .congressman_votes .input select{
+        width: 160px;
+    }
     .tdwidth2 {
       width: 15%;
     }
+  }
+  @media (max-width: 369px) {
+    .congressman_votes .input select{
+        width: 130px;
+    }
+
   }
   @media (max-width: 359px) {
     .tdwidth2 {
       width: auto;
     }
   }
-  /* 縣市議員開票 ed*/
+/* 縣市議員開票 ed*/
+/* 全民性公民投票案 */
+  .referendum{
+
+  }
+.referendum .list{
+    background-color: #2886A2;
+    padding: 20px 49px;
+    display: flex;
+    justify-content: space-between;
+    color:#fff;
+    font-weight: bold;
+}
+.referendum .list .content{
+    padding:15px 0px;
+    width: 59%;
+    
+}
+.referendum .list .result{
+    /* width: 41%; */
+   width: 312px;
+    
+    
+}
+.referendum .list .result .result_title{
+    /* text-align: right; */
+    font-size:24px;
+}
+.referendum .list .result .result_percent{
+    /* text-align: right; */
+    font-size:60px;
+}
+.referendum .list .result .data{
+    display: flex;
+    justify-content: space-around;
+}
+.referendum .list .result .data .pass_img{
+    margin-top: 15px;
+    width: 40%;
+}
+@media (max-width: 1023px) {
+    .referendum .list{
+        padding: 20px 15px;
+    }
+    .referendum .list .result{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    .referendum .list .result .result_title{
+        font-size:20px;
+    }
+}
+@media (max-width: 767px) {
+    .referendum .list{
+        display: block;
+    }
+    .referendum .list .content{
+        padding:0px;
+        width: auto;
+        
+    }
+    .referendum .list .result{
+       width: 260px;
+       margin: 0 auto;
+       margin-top: 40px;
+        
+    }
+}
+@media (max-width: 414px) {
+    .referendum .list .content{
+        font-size: 14px;
+    }
+}
+/* 全民性公民投票案 ed */
 /* 開票專區 ed*/
