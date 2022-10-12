@@ -909,54 +909,64 @@ function drawChart2() {
 // 全台縣市議員政黨席次
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart3);
-function drawChart3() {              
+function drawChart3() {
     var data1 = google.visualization.arrayToDataTable([
-    ['黨','席'],
-    ['國民黨(席)',394],
-    ['民進黨(席)',238],
-    ['其他(席)',234],
+        ['黨','席'],
+        ['國民黨(席)',394],
+        ['民進黨(席)',238],
+        ['其他(席)',234],
     ]);
     var data2= google.visualization.arrayToDataTable([
-    ['', ''],
-    ['國民黨(席)',0],
-    ['民進黨(席)',0],
-    ['其他(席)',0],
-    ['尚未開票',1]
+        ['', ''],
+        ['國民黨(席)',0],
+        ['民進黨(席)',0],
+        ['其他(席)',0],
+        ['尚未開票',1]
     ]);
-    var options = {                       
-    chart: {title: '',subtitle: '' },
-    legend: { position: 'none' },                   
-    slices: {
-        0: { color: color1 },
-        1: { color: color2 },
-        2: { color: color4 }       
-    },
-    height:400,
-    pieSliceBorderColor:'none',
-    pieSliceTextStyle:{fontSize:20},
-    pieSliceText:'value',
+    var options = {		
+        pieSliceText: 'none', 
+        legend: 'none',
+        height:400,
+        pieSliceBorderColor:'none',    
+        pieSliceTextStyle:{fontSize:20},
+        tooltip: {
+            trigger: 'selection',textStyle:{fontSize:14}
+        },
+        colors:[color1,color2,color4],
+        
     };
+
     var options2 = {                       
     chart: {title: '',subtitle: '' },
     legend: { position: 'none' },
     pieSliceText:'label',                   
-    slices: {
-        0: { color: color1 },
-        1: { color: color2 },
-        2: { color: color4 },
-        3: { color: color0 }
-    },
+    colors:[color1,color2,color4,color0],
     height:400,
     pieSliceBorderColor:'none',
     pieSliceTextStyle:{fontSize:20},
     pieSliceText:'label',
     tooltip:{trigger:'none'} 
     };
+
     var chart1 = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
     var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
-    chart1.draw(data1, options);
-    chart2.draw(data2, options2);
-}
+
+    google.visualization.events.addListener(chart1, 'ready', setSelection);
+    google.visualization.events.addListener(chart1, 'click', setSelection);
+    google.visualization.events.addListener(chart1, 'select', setSelection);
+		
+        chart1.draw(data1, options);
+        chart2.draw(data2, options2);
+		
+		function setSelection(){
+		  var selected_rows = [];
+		  for (var i = 0; i < 3; i++) {
+			selected_rows.push({row: i, column: null});
+		  }
+		  chart1.setSelection(selected_rows);
+		}
+      }
+
 // 全台縣市議員政黨席次 ed
 
 // 歷年九合一選舉投票率
@@ -965,7 +975,7 @@ google.charts.load('current', {'packages':['bar']});
 google.charts.setOnLoadCallback(drawChart4);                  
 function drawChart4() {
     var data = google.visualization.arrayToDataTable([
-    ['年', '投票率%'],
+    ['', '投票率%'],
     [' ',0],
     ['2014', 76],
     [' ',0],
@@ -2107,7 +2117,7 @@ function drawChart4() {
                                 <li>
                                     <div class="color_box color4"></div>
                                     <div class="seats">
-                                        <span>其他黨</span>
+                                        <span>其他</span>
                                         <span class="num">0</span>
                                         <span>席</span>                             
                                     </div>
@@ -2660,7 +2670,7 @@ function drawChart4() {
                                 <li>
                                     <div class="color_box color4"></div>
                                     <div class="seats">
-                                        <span>其他黨</span>
+                                        <span>其他</span>
                                         <span class="num">0</span>
                                         <span>席</span>                             
                                     </div>
@@ -3225,7 +3235,7 @@ function drawChart4() {
                         <li>
                             <div class="color_box color4"></div>
                             <div class="seats">
-                                <span>其他黨</span>                          
+                                <span>其他</span>                          
                             </div>
                         </li>
                     </ul>   
@@ -3306,9 +3316,7 @@ function drawChart4() {
                 <div class="title_box2">
                     <h2>全台縣市議員政黨席次</h2>                 
                 </div>
-                <!-- 標題 ed-->
-
-                
+                <!-- 標題 ed-->               
                  
                 <div class="chart">
                     <div class="pie">
@@ -3327,16 +3335,10 @@ function drawChart4() {
                                             <span>民進黨</span>                           
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="color_box color3"></div>
-                                        <div class="seats">
-                                            <span>民眾黨</span>                          
-                                        </div>
-                                    </li>
-                                    <li>
+                                     <li>
                                         <div class="color_box color4"></div>
                                         <div class="seats">
-                                            <span>其他黨</span>                          
+                                            <span>其他</span>                          
                                         </div>
                                     </li>
                                 </ul>   
@@ -3369,7 +3371,7 @@ function drawChart4() {
                                     <li>
                                         <div class="color_box color4"></div>
                                         <div class="seats">
-                                            <span>其他黨</span>                          
+                                            <span>其他</span>                          
                                         </div>
                                     </li>
                                 </ul>   

@@ -2367,20 +2367,22 @@ padding:5px 7px;
     column-gap:10px;
     margin-bottom: 20px;
 }
-.mayor_territory .year_btn a{   
-    font-size:14px;border:2px solid #2886A2;
+.mayor_territory .year_btn a{ 
+    font-family: Arial;
+    font-size:16px;border:2px solid #2886A2;
     display:inline-block;
     background-color:#fff;color:#2886A2;
-    padding:2px 20px 3px;border-radius:20px;
+    padding:3px 20px 2px;border-radius:20px;
     margin-bottom: 20px;
 }
 .mayor_territory .year_btn a.act,.mayor_territory .year_btn a:hover{
     color:#fff;background-color:#2886A2;
 }
 .mayor_territory .map_box .year{
-    font-size:14px;
+    font-family: Arial;
+    font-size:16px;
     display:inline-block;color:#fff;background-color:#2886A2;
-    padding:2px 20px 3px;border-radius:20px;
+    padding:3px 20px 2px;border-radius:20px;
     margin-bottom: 20px;
 }
 @media (max-width: 767px) {
@@ -2453,7 +2455,7 @@ padding:5px 7px;
 }
 @media (max-width: 767px) {
     .six_percent .chart{}
-    .six_percent .chart ul{display: block;overflow:hidden;height:350px;margin-bottom:20px;}
+    .six_percent .chart ul{display: block;overflow:hidden;height:450px;margin-bottom:20px;}
     .six_percent .chart li{width:100%;margin:0 auto;}
     .chart_city{display:none;}
     .six_percent .city_btn{display: flex;}
@@ -2494,22 +2496,22 @@ padding:5px 7px;
     column-gap:15px;
  }
 .congressman_seats svg{margin:0 auto;}
-.congressman_seats .party_area{z-index:1;}
+.congressman_seats .party_area{z-index:1;bottom:-10px;}
 .congressman_seats .chart_year{width:100%;position:absolute;text-align:center;z-index:1;top:20px;}
 .congressman_seats .chart_year p{    
+    font-family: Arial;
     display: inline-block;
-    font-size:14px;border:2px solid #2886A2; 
+    font-size:16px;border:2px solid #2886A2; 
     color:#fff;background-color:#2886A2;
-    padding:2px 20px 3px;border-radius:20px;  
+    padding:3px 20px 2px;border-radius:20px;  
 }
-.congressman_seats .chart{padding:0;}
+.congressman_seats .chart{padding:0 0 30px;}
 .congressman_seats .chart .pie{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .congressman_seats .chart .box{
-    overflow: hidden;
     position: relative;
     width:50%;text-align: center; 
 }
