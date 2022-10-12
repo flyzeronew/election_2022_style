@@ -879,6 +879,10 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
     city_btn();
  //近三屆六都選舉得票率 ed
 
+//近年兩黨（國民黨、民進黨）得票率走勢
+ 
+//近年兩黨（國民黨、民進黨）得票率走勢 ed
+
  //共用resize
    $(window).resize(function(){
  
@@ -1974,8 +1978,7 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
             <div class="mayor_territory">
                 <!-- 標題 -->
                 <div class="title_box2">
-                    <h2>2022全台縣市長版圖變化</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <h2>2022全台縣市長版圖變化</h2>                    
                 </div>
                 <!-- 標題 ed-->                
                 <div class="maps">
@@ -3098,8 +3101,7 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
             <div class="six_percent">
                 <!-- 標題 -->
                 <div class="title_box2">
-                    <h2>近三屆六都選舉得票率</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <h2>近三屆六都選舉得票率</h2>                    
                 </div>                
                 <!-- 標題 ed-->  
                 <div class="party_area">
@@ -3174,12 +3176,11 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
             <div class="party_percent">
                 <!-- 標題 -->
                 <div class="title_box2">
-                    <h2>近年兩黨（國民黨、民進黨）得票率走勢</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <h2>近年兩黨得票率走勢</h2>                   
                 </div>
                 <!-- 標題 ed-->  
                 <div class="chart">
-                  
+                    <div id="party_chart"></div>
                 </div>
 
             </div>
@@ -3189,14 +3190,113 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
             <div class="congressman_seats">
                 <!-- 標題 -->
                 <div class="title_box2">
-                    <h2>全台縣市議員政黨席次</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <h2>全台縣市議員政黨席次</h2>                 
                 </div>
-                <!-- 標題 ed-->  
+                <!-- 標題 ed-->
+
+                
+                 
                 <div class="chart">
-                  
+                    <div class="pie">
+                        <div class="box"> 
+                                <div class="party_area">
+                                    <ul>
+                                        <li>
+                                            <div class="color_box color1"></div>
+                                            <div class="seats">
+                                                <span>國民黨</span>                            
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color_box color2"></div>
+                                            <div class="seats">
+                                                <span>民進黨</span>                           
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color_box color3"></div>
+                                            <div class="seats">
+                                                <span>民眾黨</span>                          
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color_box color4"></div>
+                                            <div class="seats">
+                                                <span>其他黨</span>                          
+                                            </div>
+                                        </li>
+                                    </ul>   
+                                </div>  
+                                               
+                            <div class="chart_year"><p>2018</p></div>
+                            <div id="congressman_chart1"></div>
+                        </div>
+                        <div class="box">
+                            <div class="party_area">
+                                <ul>
+                                    <li>
+                                        <div class="color_box color1"></div>
+                                        <div class="seats">
+                                            <span>國民黨</span>                            
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="color_box color2"></div>
+                                        <div class="seats">
+                                            <span>民進黨</span>                           
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="color_box color3"></div>
+                                        <div class="seats">
+                                            <span>民眾黨</span>                          
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="color_box color4"></div>
+                                        <div class="seats">
+                                            <span>其他黨</span>                          
+                                        </div>
+                                    </li>
+                                </ul>   
+                            </div> 
+                            <div class="chart_year"><p>2022</p></div>
+                            <div id="congressman_chart2"></div>
+                        </div> 
+                    </div>                   
                 </div>
 
+                <script type="text/javascript">
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(drawChart);
+              
+                    function drawChart() {
+              
+                      var data = google.visualization.arrayToDataTable([
+                        ['', ''],
+                        ['國民黨',     394],
+                        ['民進黨',      238],
+                        ['其他',      234],
+                      ]);
+              
+                      var options = {                       
+                        chart: {title: '',subtitle: '' },
+                        legend: { position: 'none' },                   
+                        slices: {
+                            0: { color: '#3684C5' },
+                            1: { color: '#369D4E' },
+                            2: { color: '#6E6E6E' }
+                        },
+                        height:400,
+                      
+                      };
+              
+                      var chart = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
+                      var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
+                      chart.draw(data, options);
+                      chart2.draw(data, options);
+                    }
+                  </script>
             </div>
             <!-- 全台縣市議員政黨席次 ed -->
 
@@ -3204,8 +3304,7 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
             <div class="history_percent">
                 <!-- 標題 -->
                 <div class="title_box2">
-                    <h2>歷年九合一選舉投票率</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <h2>歷年九合一選舉投票率</h2>                    
                 </div>
                 <!-- 標題 ed-->  
                 <div class="chart">
