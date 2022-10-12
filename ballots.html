@@ -782,9 +782,9 @@ $(document).ready(function(){
 
  //近三屆六都選舉得票率
 google.charts.load('current', {'packages':['bar']});
-google.charts.setOnLoadCallback(drawChart);  
+google.charts.setOnLoadCallback(drawChart1);  
 var chart_height=350;   
-function drawChart() {
+function drawChart1() {
 var data1 = google.visualization.arrayToDataTable([
     ['', '無黨籍', '國民黨', '民進黨'],
     ['2014', 80, 60, 40],
@@ -880,12 +880,68 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
  //近三屆六都選舉得票率 ed
 
 //近年兩黨（國民黨、民進黨）得票率走勢
- 
+
 //近年兩黨（國民黨、民進黨）得票率走勢 ed
 
+// 全台縣市議員政黨席次
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart3);
+function drawChart3() {              
+    var data1 = google.visualization.arrayToDataTable([
+    ['', ''],
+    ['國民黨',     394],
+    ['民進黨',      238],
+    ['其他',      234],
+    ]);
+    var data2= google.visualization.arrayToDataTable([
+    ['', ''],
+    ['國民黨',     394],
+    ['民進黨',      238],
+    ['其他',      234],
+    ]);
+    var options = {                       
+    chart: {title: '',subtitle: '' },
+    legend: { position: 'none' },                   
+    slices: {
+        0: { color: color1 },
+        1: { color: color2 },
+        2: { color: color4 }
+    },
+    height:400,
+    
+    };
+    var chart1 = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
+    var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
+    chart1.draw(data1, options);
+    chart2.draw(data2, options);
+}
+// 全台縣市議員政黨席次 ed
+
+// 歷年九合一選舉投票率
+var chart_height2=400;
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart4);                  
+function drawChart4() {
+    var data = google.visualization.arrayToDataTable([
+    ['年', '投票率%'],
+    [' ',0],
+    ['2014', 76],
+    [' ',0],
+    ['2018', 70],
+    [' ',0],
+    ['2022', 65],
+    [' ',0]
+    ]);                  
+    var options = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height2,
+    colors: '#2886A2'
+    };                  
+    var chart = new google.charts.Bar(document.getElementById('history_chart'));                  
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+// 歷年九合一選舉投票率 ed
  //共用resize
-   $(window).resize(function(){
- 
+   $(window).resize(function(){ 
         mapgo();
         scroll();
         year_btn();
@@ -3265,38 +3321,6 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
                         </div> 
                     </div>                   
                 </div>
-
-                <script type="text/javascript">
-                    google.charts.load('current', {'packages':['corechart']});
-                    google.charts.setOnLoadCallback(drawChart);
-              
-                    function drawChart() {
-              
-                      var data = google.visualization.arrayToDataTable([
-                        ['', ''],
-                        ['國民黨',     394],
-                        ['民進黨',      238],
-                        ['其他',      234],
-                      ]);
-              
-                      var options = {                       
-                        chart: {title: '',subtitle: '' },
-                        legend: { position: 'none' },                   
-                        slices: {
-                            0: { color: '#3684C5' },
-                            1: { color: '#369D4E' },
-                            2: { color: '#6E6E6E' }
-                        },
-                        height:400,
-                      
-                      };
-              
-                      var chart = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
-                      var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
-                      chart.draw(data, options);
-                      chart2.draw(data, options);
-                    }
-                  </script>
             </div>
             <!-- 全台縣市議員政黨席次 ed -->
 
@@ -3308,15 +3332,12 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
                 </div>
                 <!-- 標題 ed-->  
                 <div class="chart">
-                    <!-- <div id="history_chart"></div> -->
+                   <div id="history_chart"></div> 
                 </div>
-                    <!--js-->	
-                    
-
-
-                    <!--js ed--> 
             </div>
             <!-- 歷年九合一選舉投票率 ed-->
+            <!-- 更新備註 -->
+            <div class="ex"><p>※以上資料請以中央選舉委員會公布為準</p></div>
             <!-- 九合一投票分析 ed -->
         </div>
     </div>
