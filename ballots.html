@@ -899,8 +899,7 @@ function drawChart2() {
     colors: ['#3684C5','#369D4E'],
     curveType: 'none',
     lineWidth:3,
-    pointSize:7,
-  
+    pointSize:7,  
     };          
     var chart = new google.visualization.LineChart(document.getElementById('party_chart'));          
     chart.draw(data, options);
@@ -912,16 +911,17 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart3);
 function drawChart3() {              
     var data1 = google.visualization.arrayToDataTable([
-    ['', ''],
-    ['國民黨',     394],
-    ['民進黨',      238],
-    ['其他',      234],
+    ['黨','席'],
+    ['國民黨(席)',394],
+    ['民進黨(席)',238],
+    ['其他(席)',234],
     ]);
     var data2= google.visualization.arrayToDataTable([
     ['', ''],
-    ['國民黨',     394],
-    ['民進黨',      238],
-    ['其他',      234],
+    ['國民黨(席)',0],
+    ['民進黨(席)',0],
+    ['其他(席)',0],
+    ['尚未開票',1]
     ]);
     var options = {                       
     chart: {title: '',subtitle: '' },
@@ -929,15 +929,33 @@ function drawChart3() {
     slices: {
         0: { color: color1 },
         1: { color: color2 },
-        2: { color: color4 }
+        2: { color: color4 }       
     },
     height:400,
-    
+    pieSliceBorderColor:'none',
+    pieSliceTextStyle:{fontSize:20},
+    pieSliceText:'value',
+    };
+    var options2 = {                       
+    chart: {title: '',subtitle: '' },
+    legend: { position: 'none' },
+    pieSliceText:'label',                   
+    slices: {
+        0: { color: color1 },
+        1: { color: color2 },
+        2: { color: color4 },
+        3: { color: color0 }
+    },
+    height:400,
+    pieSliceBorderColor:'none',
+    pieSliceTextStyle:{fontSize:20},
+    pieSliceText:'label',
+    tooltip:{trigger:'none'} 
     };
     var chart1 = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
     var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
     chart1.draw(data1, options);
-    chart2.draw(data2, options);
+    chart2.draw(data2, options2);
 }
 // 全台縣市議員政黨席次 ed
 
