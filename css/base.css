@@ -2416,17 +2416,17 @@ padding:5px 7px;
 }
 .six_percent .party_area{width:100%;bottom:20px;}
 .six_percent .party_area ul{display:flex;justify-content: center;column-gap:15px;}
-.six_percent .chart{}
+.six_percent .chart{width:90%;overflow: hidden;margin:0 auto;}
 .six_percent .chart ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap:50px;
+    column-gap:60px;
     row-gap: 30px;
 }
 .six_percent .chart li{
     text-align: center;
-    width: calc((100% - 100px)/3);     
+    width: calc((100% - 120px)/3);     
 }
 .chart_city{
     font-size: 16px;
@@ -2438,6 +2438,7 @@ padding:5px 7px;
     margin-bottom: 20px;
 }
 @media (max-width: 1023px) {
+    .six_percent .chart{width:100%;}
     .six_percent  .party_area ul{column-gap:10px;}
     .six_percent .chart ul{
         display: flex;
@@ -2467,15 +2468,22 @@ padding:5px 7px;
 /* 近三屆六都選舉得票率 ed*/
 
 /* 近年兩黨（國民黨、民進黨）得票率走勢 */
-.party_percent .chart{width:90%;padding:0;margin:0 auto;}
+.party_percent .chart{width:90%;padding:0;margin:0 auto;overflow: hidden;}
 @media (max-width: 767px) {
-    .party_percent .chart{width:100%;}    
+    .party_percent .chart{width:100%;} 
+    #party_chart{width:135%;margin-left:-65px;margin-top:-30px;}   
+}
+@media (max-width: 411px) {
+    #party_chart{width:120%;margin-left:-30px;}   
+}
+@media (max-width: 359px) {
+    #party_chart{width:130%;margin-left:-30px;}   
 }
 /* 近年兩黨（國民黨、民進黨）得票率走勢 ed*/
 
 /* 全台縣市議員政黨席次 */
 .congressman_seats{margin-bottom: 30px;}
-.congressman_seats .party_area{width:100%;bottom:5px;}
+.congressman_seats .party_area{width:100%;bottom:0px;}
 .congressman_seats .party_area ul{
     display: flex;
     justify-content: center;

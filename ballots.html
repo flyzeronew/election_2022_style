@@ -781,7 +781,7 @@ $(document).ready(function(){
  //近三屆六都選舉得票率
 google.charts.load('current', {'packages':['bar']});
 google.charts.setOnLoadCallback(drawChart1);  
-var chart_height=350;   
+var chart_height=450;   
 function drawChart1() {
 var data1 = google.visualization.arrayToDataTable([
     ['', '無黨籍', '國民黨', '民進黨'],
@@ -821,7 +821,7 @@ var data6 = google.visualization.arrayToDataTable([
 ]);
 var options1 = {
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]
+    colors: [color4, color1, color2]  
 };
 var options2 = {
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
@@ -894,7 +894,7 @@ function drawChart2() {
     ['2022 縣市長',20,50]
     ]);
     var options = {
-    title: '',height:450,
+    title: '',height:500,
     legend: { position: 'none' },
     colors: ['#3684C5','#369D4E'],
     curveType: 'none',
