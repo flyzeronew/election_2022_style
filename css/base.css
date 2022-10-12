@@ -2469,10 +2469,11 @@ padding:5px 7px;
 
 /* 近年兩黨（國民黨、民進黨）得票率走勢 */
 .party_percent{position: relative;}
-.party_percent .chart{width:90%;padding:0 0 20px;margin:0 auto;overflow: hidden;}
-.party_percent .party_area{width:100%;bottom:20px;z-index: 1;}
+.party_percent .chart{width:90%;padding:0 0 30px;margin:0 auto;overflow: hidden;}
+.party_percent .party_area{width:100%;bottom:40px;z-index: 1;}
 .party_percent .party_area ul{display:flex;justify-content: center;column-gap:15px;}
 @media (max-width: 767px) {
+    .party_percent .party_area{bottom:20px;}
     .party_percent .chart{width:100%;} 
     #party_chart{width:135%;margin-left:-65px;margin-top:-30px;}   
 }
