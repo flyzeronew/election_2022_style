@@ -39,10 +39,7 @@
 
 <!--本頁樣式-->
 <style>
-footer{
-    margin-top: 0px!important;
-}
-
+footer{margin-top: 0px!important;}
 </style>
 <!--本頁樣式ed-->
 <!--本頁js-->	
@@ -749,8 +746,7 @@ $(document).ready(function(){
         $(this).css({fill:territor2022_win[i]});
     });
 
-    function year_btn(){
-        
+    function year_btn(){        
         $('.year_btn a').each(function(i){            
             if($(window).width()<767){     
                 $('.mayor_territory .map_box').hide();
@@ -781,13 +777,117 @@ $(document).ready(function(){
    $("#territor2022").find(".party_area .num").each(function(i){
         $(this).html(par_arr4[i]);
    });
+  //版圖變化政黨區域數量 ed
 
 
+ //近三屆六都選舉得票率
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart);  
+var chart_height=350;   
+function drawChart() {
+var data1 = google.visualization.arrayToDataTable([
+    ['', '無黨籍', '國民黨', '民進黨'],
+    ['2014', 80, 60, 40],
+    ['2018', 80, 60, 40],
+    ['2022', 80, 60, 40]
+]);
+var data2 = google.visualization.arrayToDataTable([
+    ['', '無黨籍', '國民黨', '民進黨'],
+    ['2014', 60, 60, 40],
+    ['2018', 80, 60, 40],
+    ['2022', 80, 60, 40]
+]);
+var data3 = google.visualization.arrayToDataTable([
+    ['', '無黨籍', '國民黨', '民進黨'],
+    ['2014', 80, 60, 40],
+    ['2018', 80, 60, 40],
+    ['2022', 80, 60, 40]
+]);
+var data4 = google.visualization.arrayToDataTable([
+    ['', '無黨籍', '國民黨', '民進黨'],
+    ['2014', 60, 60, 40],
+    ['2018', 80, 60, 40],
+    ['2022', 80, 60, 40]
+]);
+var data5 = google.visualization.arrayToDataTable([
+    ['', '無黨籍', '國民黨', '民進黨'],
+    ['2014', 80, 60, 40],
+    ['2018', 80, 60, 40],
+    ['2022', 80, 60, 40]
+]);
+var data6 = google.visualization.arrayToDataTable([
+    ['', '無黨籍', '國民黨', '民進黨'],
+    ['2014', 60, 60, 40],
+    ['2018', 80, 60, 40],
+    ['2022', 80, 60, 40]
+]);
+var options1 = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
+    colors: [color4, color1, color2]
+};
+var options2 = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
+    colors: [color4, color1, color2]
+};
+var options3 = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
+    colors: [color4, color1, color2]
+};
+var options4 = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
+    colors: [color4, color1, color2]
+};
+var options5 = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
+    colors: [color4, color1, color2]
+};
+var options6 = {
+    chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
+    colors: [color4, color1, color2]
+};
+var chart1 = new google.charts.Bar(document.getElementById('chart1_1'));
+var chart2 = new google.charts.Bar(document.getElementById('chart1_2'));
+var chart3 = new google.charts.Bar(document.getElementById('chart1_3'));
+var chart4 = new google.charts.Bar(document.getElementById('chart1_4'));
+var chart5 = new google.charts.Bar(document.getElementById('chart1_5'));
+var chart6 = new google.charts.Bar(document.getElementById('chart1_6'));
+chart1.draw(data1, google.charts.Bar.convertOptions(options1));
+chart2.draw(data2, google.charts.Bar.convertOptions(options2));
+chart3.draw(data3, google.charts.Bar.convertOptions(options3));
+chart4.draw(data4, google.charts.Bar.convertOptions(options4));
+chart5.draw(data5, google.charts.Bar.convertOptions(options5));
+chart6.draw(data6, google.charts.Bar.convertOptions(options6));
+}
+
+ function city_btn(){        
+        $('.city_btn a').each(function(i){   
+            if($(window).width()<767){ 
+                $('.city_btn a').removeClass('act');      
+                $('.city_btn a').eq(0).addClass('act');     
+                $(this).click(function(){
+                    $('.city_btn a').removeClass('act');
+                    $('.six_percent .chart li').hide();
+                    $('.six_percent .chart li').eq(i).show();               
+                    $('.city_btn a').removeClass('act');               
+                    $(this).addClass('act');
+                });
+            }else{                
+                $('.six_percent .chart li').show();
+            }
+        });
+    }
+    city_btn();
+ //近三屆六都選舉得票率 ed
+
+ //共用resize
    $(window).resize(function(){
+ 
         mapgo();
         scroll();
         year_btn();
+        city_btn();
     });
+ //共用resize ed
 });
 </script>
 
@@ -3025,14 +3125,21 @@ $(document).ready(function(){
                         <li>
                             <div class="color_box color4"></div>
                             <div class="seats">
-                                <span>無黨籍</span>                          
+                                <span>其他黨</span>                          
                             </div>
                         </li>
                     </ul>   
-                </div>          
-
+                </div> 
 
                 <div class="chart">
+                    <div class="city_btn">
+                        <a class="act" href="##">台北市</a>
+                        <a href="##">新北市</a>
+                        <a href="##">桃園市</a>
+                        <a href="##">台中市</a>
+                        <a href="##">台南市</a>
+                        <a href="##">高雄市</a>         
+                    </div>
                     <ul>
                         <li>
                             <div class="chart_city">台北市</div>
@@ -3059,88 +3166,7 @@ $(document).ready(function(){
                             <div id="chart1_6"></div>
                         </li>
                     </ul>
-                    <!-- <canvas id="chart1"></canvas> -->
                 </div>
-                <!-- JS -->
-                <script type="text/javascript">
-                    google.charts.load('current', {'packages':['bar']});
-                    google.charts.setOnLoadCallback(drawChart);
-                    function drawChart() {
-                    var data1 = google.visualization.arrayToDataTable([
-                        ['', '無黨籍', '國民黨', '民進黨'],
-                        ['2014', 80, 60, 40],
-                        ['2018', 80, 60, 40],
-                        ['2022', 80, 60, 40]
-                    ]);
-                    var data2 = google.visualization.arrayToDataTable([
-                        ['', '無黨籍', '國民黨', '民進黨'],
-                        ['2014', 80, 60, 40],
-                        ['2018', 80, 60, 40],
-                        ['2022', 80, 60, 40]
-                    ]);
-                    var data3 = google.visualization.arrayToDataTable([
-                        ['', '無黨籍', '國民黨', '民進黨'],
-                        ['2014', 80, 60, 40],
-                        ['2018', 80, 60, 40],
-                        ['2022', 80, 60, 40]
-                    ]);
-                    var data4 = google.visualization.arrayToDataTable([
-                        ['', '無黨籍', '國民黨', '民進黨'],
-                        ['2014', 80, 60, 40],
-                        ['2018', 80, 60, 40],
-                        ['2022', 80, 60, 40]
-                    ]);
-                    var data5 = google.visualization.arrayToDataTable([
-                        ['', '無黨籍', '國民黨', '民進黨'],
-                        ['2014', 80, 60, 40],
-                        ['2018', 80, 60, 40],
-                        ['2022', 80, 60, 40]
-                    ]);
-                    var data6 = google.visualization.arrayToDataTable([
-                        ['', '無黨籍', '國民黨', '民進黨'],
-                        ['2014', 80, 60, 40],
-                        ['2018', 80, 60, 40],
-                        ['2022', 80, 60, 40]
-                    ]);
-                    var options1 = {
-                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
-                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
-                    };
-                    var options2 = {
-                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
-                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
-                    };
-                    var options3 = {
-                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
-                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
-                    };
-                    var options4 = {
-                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
-                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
-                    };
-                    var options5 = {
-                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
-                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
-                    };
-                    var options6 = {
-                        chart: {title: '',subtitle: '' },legend: { position: 'none' },height:350,
-                        colors: ['#6E6E6E', '#3684C5', '#369D4E']
-                    };
-                    var chart1 = new google.charts.Bar(document.getElementById('chart1_1'));
-                    var chart2 = new google.charts.Bar(document.getElementById('chart1_2'));
-                    var chart3 = new google.charts.Bar(document.getElementById('chart1_3'));
-                    var chart4 = new google.charts.Bar(document.getElementById('chart1_4'));
-                    var chart5 = new google.charts.Bar(document.getElementById('chart1_5'));
-                    var chart6 = new google.charts.Bar(document.getElementById('chart1_6'));
-                    chart1.draw(data1, google.charts.Bar.convertOptions(options1));
-                    chart2.draw(data2, google.charts.Bar.convertOptions(options2));
-                    chart3.draw(data3, google.charts.Bar.convertOptions(options3));
-                    chart4.draw(data4, google.charts.Bar.convertOptions(options4));
-                    chart5.draw(data5, google.charts.Bar.convertOptions(options5));
-                    chart6.draw(data6, google.charts.Bar.convertOptions(options6));
-                    }
-                </script>
-                <!-- JS ed -->
             </div>
             <!-- 近三屆六都選舉得票率 ed-->
 
