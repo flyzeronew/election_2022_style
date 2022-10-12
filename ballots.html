@@ -17,7 +17,6 @@
 <link rel="stylesheet" href="css/owlcarousel/owl.carousel.css">
 <link rel="stylesheet" href="css/owlcarousel/owl.theme.css">
 <link rel="stylesheet" href="css/owlcarousel/demo.css">
-<link rel="stylesheet" href="css/progresscircle.css">
 <!--外掛CSS Link ed-->
 
 <!--外掛 js Link-->
@@ -29,8 +28,7 @@
 <script type="text/javascript" src="js/jquery.syotimer.js"></script>
 <script type="text/javascript" src="js/countUp.js"></script>
 <script type="text/javascript" src="js/progresscircle.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="js/loader.js"></script>
 <!--外掛 js Link ed-->
 
 <!--js Link-->
@@ -880,7 +878,33 @@ chart6.draw(data6, google.charts.Bar.convertOptions(options6));
  //近三屆六都選舉得票率 ed
 
 //近年兩黨（國民黨、民進黨）得票率走勢
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart2);
 
+function drawChart2() {
+    var data = google.visualization.arrayToDataTable([
+    ['Year','國民黨','民進黨'],
+    ['2008 總統',58.4,41.55],
+    ['2010 縣市長',20,50],
+    ['2012 總統',51.60,45.63],
+    ['2014 縣市長',20,50],
+    ['2016 總統',31.04,56.12],
+    ['2018 縣市長',20,50],
+    ['2020 總統',38.61,57.13],
+    ['2022 縣市長',20,50]
+    ]);
+    var options = {
+    title: '',height:450,
+    legend: { position: 'none' },
+    colors: ['#3684C5','#369D4E'],
+    curveType: 'none',
+    lineWidth:3,
+    pointSize:7,
+  
+    };          
+    var chart = new google.visualization.LineChart(document.getElementById('party_chart'));          
+    chart.draw(data, options);
+}
 //近年兩黨（國民黨、民進黨）得票率走勢 ed
 
 // 全台縣市議員政黨席次
@@ -3238,7 +3262,6 @@ function drawChart4() {
                 <div class="chart">
                     <div id="party_chart"></div>
                 </div>
-
             </div>
             <!-- 近年兩黨得票率走勢 ed-->
 
