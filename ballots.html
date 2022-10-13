@@ -66,7 +66,7 @@ $(document).ready(function(){
     var six_arr = ['台北市長','新北市長','桃園市長','台中市長','台南市長','高雄市長'];
     //六都候選人、政黨圖、總票數 當選戳記:1當選 0落選
     var six_votes_data = [
-        [['陳時中','images/party02.png',123456,1],['黃珊珊','images/party01.png',23456,0],['蔣萬安','images/party03.png',3456,0]],
+        [['陳時中陳時中陳時中陳時中陳時中陳時中','images/party02.png',123456,1],['黃珊珊','images/party01.png',23456,0],['蔣萬安','images/party03.png',3456,0]],
         [['林佳龍','images/party02.png',123456,1],['侯友宜','images/party01.png',23456,0]],
         [['鄭運鵬','images/party02.png',3456,0],['張善政','images/party01.png',323456,1],['賴香伶','images/party03.png',3456,0]],
         [['蔡其昌','images/party02.png',13456,0],['盧秀燕','images/party01.png',423456,1],['陳美妃','images/party03.png',3456,0]],
@@ -200,8 +200,8 @@ $(document).ready(function(){
    //計算陣列中數量 ed
 
     // 雙北市地圖資料
-    // 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨 
-    var color0='#ccc',color1='#3684C5',color2='#369D4E',color3='#0893BC',color4='#6E6E6E';
+    // 顏色 color0 預設 color1 國民黨 color2 民進黨 color3 民眾黨 color4 其他黨  color5 無黨
+    var color0='#ccc',color1='#000095',color2='#1B9431',color3='#28c8c8',color4='#d4d4d4',color5='#999999';
     
     // 台北市
         var taipei_arr=['北投區','士林區','內湖區','南港區','松山區','信義區','中山區','大同區','中正區','萬華區','大安區','文山區'];
@@ -214,7 +214,7 @@ $(document).ready(function(){
             [[1,30],[1,30],[5225,30]],[[2522,30],[25,30],[2525,30]],[[2525,30],[25,30],[1,30]],[[254,20],[5,30],[6,50]]
         ];
         //各區領先政黨顏色
-        var taipei_win=[color2,color2,color3,color1,color2,color3,color1,color2,color2,color1,color2,color2];
+        var taipei_win=[color2,color2,color5,color1,color2,color5,color1,color2,color2,color1,color2,color2];
     
     //插入台北市候選人
     for(var i=0;i<taipei_peo.length;i++){   
@@ -232,6 +232,10 @@ $(document).ready(function(){
     }    
     // 台北市 ed
 
+    // $("#taipei .table table tr").each(function(i){
+    //     $(this).find('td').eq(4).show();
+    //  });
+    
     // 新北市
         var new_taipei_arr=
         ['淡水區','三芝區','石門區','八里區','五股區','泰山區','林口區','新莊區','三重區','蘆洲區',
@@ -391,7 +395,7 @@ $(document).ready(function(){
 
    //政黨區域數量
    var par_arr=[];
-   par_arr.push(collectionRepeat(taipei_win,color1),collectionRepeat(taipei_win,color2),collectionRepeat(taipei_win,color3));
+   par_arr.push(collectionRepeat(taipei_win,color1),collectionRepeat(taipei_win,color2),collectionRepeat(taipei_win,color5));
    var par_arr2=[];
    par_arr2.push(collectionRepeat(new_taipei_win,color1),collectionRepeat(new_taipei_win,color2));
    $("#taipei").find(".party_area .num").each(function(i){
@@ -690,7 +694,7 @@ $(document).ready(function(){
 
    //六都市長當選名單 名字、縣市、票數、比例%、照片、政黨圖 
    var mayor_elected_arr=[
-       ['蔣萬安','台北市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
+       ['蔣萬安','台北市','1234568','50.7','images/mayor_elected01.jpg','images/party01.png'],
        ['林佳龍','新北市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
        ['鄭運鵬','桃園市','123456','50','images/mayor_elected01.jpg','images/party02.png'],
        ['盧秀燕','台中市','123456','50','images/mayor_elected01.jpg','images/party01.png'],
@@ -766,9 +770,9 @@ $(document).ready(function(){
     year_btn();
    //版圖變化政黨區域數量
    var par_arr3=[];
-   par_arr3.push(collectionRepeat(territor2018_win,color1),collectionRepeat(territor2018_win,color2),collectionRepeat(territor2018_win,color4));
+   par_arr3.push(collectionRepeat(territor2018_win,color1),collectionRepeat(territor2018_win,color2),collectionRepeat(territor2018_win,color5),collectionRepeat(territor2018_win,color4));
    var par_arr4=[];
-   par_arr4.push(collectionRepeat(territor2022_win,color1),collectionRepeat(territor2022_win,color2),collectionRepeat(territor2022_win,color4));
+   par_arr4.push(collectionRepeat(territor2022_win,color1),collectionRepeat(territor2022_win,color2),collectionRepeat(territor2022_win,color3),collectionRepeat(territor2022_win,color5),collectionRepeat(territor2022_win,color4));
    $("#territor2018").find(".party_area .num").each(function(i){
         $(this).html(par_arr3[i]);
    });
@@ -784,64 +788,64 @@ google.charts.setOnLoadCallback(drawChart1);
 var chart_height=450;   
 function drawChart1() {
 var data1 = google.visualization.arrayToDataTable([
-    ['', '無黨籍', '國民黨', '民進黨'],
-    ['2014', 80, 60, 40],
-    ['2018', 80, 60, 40],
-    ['2022', 80, 60, 40]
+    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍 得票率%'],
+    ['2014', 80, 60, 40 , 30],
+    ['2018', 80, 60, 40 , 30],
+    ['2022', 80, 60, 40 , 30]
 ]);
 var data2 = google.visualization.arrayToDataTable([
-    ['', '無黨籍', '國民黨', '民進黨'],
-    ['2014', 60, 60, 40],
-    ['2018', 80, 60, 40],
-    ['2022', 80, 60, 40]
+    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍 得票率%'],
+    ['2014', 80, 60, 40 , 30],
+    ['2018', 80, 60, 40 , 30],
+    ['2022', 80, 60, 40 , 30]
 ]);
 var data3 = google.visualization.arrayToDataTable([
-    ['', '無黨籍', '國民黨', '民進黨'],
-    ['2014', 80, 60, 40],
-    ['2018', 80, 60, 40],
-    ['2022', 80, 60, 40]
+    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍 得票率%'],
+    ['2014', 80, 60, 40 , 30],
+    ['2018', 80, 60, 40 , 30],
+    ['2022', 80, 60, 40 , 30]
 ]);
 var data4 = google.visualization.arrayToDataTable([
-    ['', '無黨籍', '國民黨', '民進黨'],
-    ['2014', 60, 60, 40],
-    ['2018', 80, 60, 40],
-    ['2022', 80, 60, 40]
+    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍 得票率%'],
+    ['2014', 80, 60, 40 , 30],
+    ['2018', 80, 60, 40 , 30],
+    ['2022', 80, 60, 40 , 30]
 ]);
 var data5 = google.visualization.arrayToDataTable([
-    ['', '無黨籍', '國民黨', '民進黨'],
-    ['2014', 80, 60, 40],
-    ['2018', 80, 60, 40],
-    ['2022', 80, 60, 40]
+    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍 得票率%'],
+    ['2014', 80, 60, 40 , 30],
+    ['2018', 80, 60, 40 , 30],
+    ['2022', 80, 60, 40 , 30]
 ]);
 var data6 = google.visualization.arrayToDataTable([
-    ['', '無黨籍', '國民黨', '民進黨'],
-    ['2014', 60, 60, 40],
-    ['2018', 80, 60, 40],
-    ['2022', 80, 60, 40]
+    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍 得票率%'],
+    ['2014', 80, 60, 40 , 30],
+    ['2018', 80, 60, 40 , 30],
+    ['2022', 80, 60, 40 , 30]
 ]);
-var options1 = {
+var options1 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]  
+    colors: [color1, color2, color3, color5],bar: {groupWidth:"50%"}
 };
-var options2 = {
+var options2 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]
+    colors: [color1, color2, color3, color5],bar: {groupWidth:"50%"}
 };
-var options3 = {
+var options3 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]
+    colors: [color1, color2, color3, color5],bar: {groupWidth:"50%"}
 };
-var options4 = {
+var options4 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]
+    colors: [color1, color2, color3, color5],bar: {groupWidth:"50%"}
 };
-var options5 = {
+var options5 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]
+    colors: [color1, color2, color3, color5],bar: {groupWidth:"50%"}
 };
-var options6 = {
+var options6 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color4, color1, color2]
+    colors: [color1, color2, color3, color5],bar: {groupWidth:"50%"}
 };
 var chart1 = new google.charts.Bar(document.getElementById('chart1_1'));
 var chart2 = new google.charts.Bar(document.getElementById('chart1_2'));
@@ -896,10 +900,11 @@ function drawChart2() {
     var options = {
     title: '',height:500,
     legend: { position: 'none' },
-    colors: ['#3684C5','#369D4E'],
+    colors: [color1,color2],
     curveType: 'none',
     lineWidth:3,
-    pointSize:7,  
+    pointSize:7, 
+    fontSize:10
     };          
     var chart = new google.visualization.LineChart(document.getElementById('party_chart'));          
     chart.draw(data, options);
@@ -912,14 +917,17 @@ google.charts.setOnLoadCallback(drawChart3);
 function drawChart3() {
     var data1 = google.visualization.arrayToDataTable([
         ['黨','席'],
-        ['國民黨(席)',394],
-        ['民進黨(席)',238],
-        ['其他(席)',234],
+        ['國民黨(席)',175],
+        ['民進黨(席)',137],
+        ['無黨(席)',47],
+        ['其他(席)',21],
     ]);
     var data2= google.visualization.arrayToDataTable([
         ['', ''],
         ['國民黨(席)',0],
         ['民進黨(席)',0],
+        ['民眾黨(席)',0],
+        ['無黨(席)',0],
         ['其他(席)',0],
         ['尚未開票',1]
     ]);
@@ -932,7 +940,7 @@ function drawChart3() {
         tooltip: {
             trigger: 'selection',textStyle:{fontSize:14}
         },
-        colors:[color1,color2,color4],
+        colors:[color1,color2,color5,color4],
         
     };
 
@@ -940,13 +948,14 @@ function drawChart3() {
     chart: {title: '',subtitle: '' },
     legend: { position: 'none' },
     pieSliceText:'label',                   
-    colors:[color1,color2,color4,color0],
+    colors:[color1,color2,color3,color5,color4,color0],
     height:400,
     pieSliceBorderColor:'none',
     pieSliceTextStyle:{fontSize:20},
     pieSliceText:'label',
     tooltip:{trigger:'none'} 
     };
+    var data1_arr=data1.cache;
 
     var chart1 = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
     var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
@@ -960,7 +969,7 @@ function drawChart3() {
 		
 		function setSelection(){
 		  var selected_rows = [];
-		  for (var i = 0; i < 3; i++) {
+		  for (var i = 0; i < data1_arr.length; i++) {
 			selected_rows.push({row: i, column: null});
 		  }
 		  chart1.setSelection(selected_rows);
@@ -976,17 +985,13 @@ google.charts.setOnLoadCallback(drawChart4);
 function drawChart4() {
     var data = google.visualization.arrayToDataTable([
     ['', '投票率%'],
-    [' ',0],
     ['2014', 76],
-    [' ',0],
     ['2018', 70],
-    [' ',0],
     ['2022', 65],
-    [' ',0]
     ]);                  
     var options = {
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height2,
-    colors: '#2886A2'
+    colors: '#2886A2',bar: {groupWidth:"20%"}
     };                  
     var chart = new google.charts.Bar(document.getElementById('history_chart'));                  
     chart.draw(data, google.charts.Bar.convertOptions(options));
@@ -1065,7 +1070,28 @@ function drawChart4() {
             <ul class="flex">
                 <li><a href="##"><img src="images/fb.svg" alt="fb"/></a></li>
                 <li><a href="##"><img src="images/line.svg" alt="line"/></a></li>
+                <li id="search_click"><a href="##"><img src="images/search.svg" alt="search"/></a></li>
             </ul>
+
+            <div class="search_bar" style="display: none;">
+                <div class="search_detail">
+                    <div class="xx">
+                        <img src="images/icon-close2.svg">
+                    </div>
+                    <form class="search_form" action="">
+                        <div class="search_icon">
+                            <img src="images/search2.svg"> 
+                        </div>
+                    <input type="text" placeholder="請輸入搜尋關鍵字">
+                    </form>
+                    <div class="search_btn">
+                        <a href="##">搜尋</a>
+                    </div>
+                </div>
+                <div class="search_img_btn">
+                    <img src="./../images/search.svg">
+                </div>
+            </div>
         </div>
     </div>
     <div class="countdown">
@@ -1602,9 +1628,9 @@ function drawChart4() {
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="color_box color3"></div>
+                                    <div class="color_box color5"></div>
                                     <div class="seats">
-                                        <span>民眾黨</span>
+                                        <span>無黨籍</span>
                                         <span class="num">0</span>
                                         <span>區</span>                             
                                     </div>
@@ -2110,6 +2136,14 @@ function drawChart4() {
                                     <div class="color_box color2"></div>
                                     <div class="seats">
                                         <span>民進黨</span>
+                                        <span class="num">0</span>
+                                        <span>席</span>                             
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="color_box color5"></div>
+                                    <div class="seats">
+                                        <span>無黨籍</span>
                                         <span class="num">0</span>
                                         <span>席</span>                             
                                     </div>
@@ -2663,6 +2697,22 @@ function drawChart4() {
                                     <div class="color_box color2"></div>
                                     <div class="seats">
                                         <span>民進黨</span>
+                                        <span class="num">0</span>
+                                        <span>席</span>                             
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="color_box color3"></div>
+                                    <div class="seats">
+                                        <span>民眾黨</span>
+                                        <span class="num">0</span>
+                                        <span>席</span>                             
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="color_box color5"></div>
+                                    <div class="seats">
+                                        <span>無黨籍</span>
                                         <span class="num">0</span>
                                         <span>席</span>                             
                                     </div>
@@ -3233,9 +3283,9 @@ function drawChart4() {
                             </div>
                         </li>
                         <li>
-                            <div class="color_box color4"></div>
+                            <div class="color_box color5"></div>
                             <div class="seats">
-                                <span>其他</span>                          
+                                <span>無黨籍</span>                          
                             </div>
                         </li>
                     </ul>   
@@ -3335,6 +3385,12 @@ function drawChart4() {
                                             <span>民進黨</span>                           
                                         </div>
                                     </li>
+                                    <li>
+                                        <div class="color_box color5"></div>
+                                        <div class="seats">
+                                            <span>無黨籍</span>                          
+                                        </div>
+                                    </li>
                                      <li>
                                         <div class="color_box color4"></div>
                                         <div class="seats">
@@ -3366,6 +3422,12 @@ function drawChart4() {
                                         <div class="color_box color3"></div>
                                         <div class="seats">
                                             <span>民眾黨</span>                          
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="color_box color5"></div>
+                                        <div class="seats">
+                                            <span>無黨籍</span>                          
                                         </div>
                                     </li>
                                     <li>
