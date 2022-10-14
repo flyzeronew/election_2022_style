@@ -2228,6 +2228,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     .ballots .mayor_elected .list .vote_box{font-size: 14px;}
 }
 @media (max-width: 359px){
+    .ballots .mayor_elected .list .vote_box{font-size: 12px;}
     .other_elected .table table td{font-size: 12px;}
 }
 .other_elected{margin-bottom:30px;}
@@ -2240,7 +2241,9 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .congressman_votes .area_select{
 background-color: #2886A2;
 padding:5px 7px;
+position: relative;
 }
+.congressman_votes .area_select .refresh{top:8px;}
 .congressman_votes .input select{
     font-size:16px;color:#2886A2;
     border-radius: 5px;
@@ -2259,7 +2262,7 @@ padding:5px 7px;
   }
   @media (max-width: 767px) {
     .congressman_votes .input select{
-        width: 160px;
+        width: 130px;
     }
     .tdwidth2 {
       width: 15%;
@@ -2267,7 +2270,7 @@ padding:5px 7px;
   }
   @media (max-width: 369px) {
     .congressman_votes .input select{
-        width: 130px;
+        width: 100px;
     }
 
   }
@@ -2497,6 +2500,21 @@ padding:5px 7px;
 /* 近年兩黨（國民黨、民進黨）得票率走勢 ed*/
 
 /* 全台縣市議員政黨席次 */
+#congressman_chart2_1{                        
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#congressman_chart2_1 .noready{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:246px;height:246px;
+    color:#fff;border-radius: 360px;
+}
+
 .congressman_seats{margin-bottom: 30px;}
 .congressman_seats .party_area{width:100%;bottom:0px;}
 .congressman_seats .party_area ul{
@@ -2536,4 +2554,5 @@ padding:5px 7px;
     .history_percent .chart{width:90%;margin-bottom:20px;}    
 }
 /* 歷年九合一選舉投票率 ed*/
+
 /* 開票專區 ed*/
