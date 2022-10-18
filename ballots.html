@@ -788,64 +788,64 @@ google.charts.setOnLoadCallback(drawChart1);
 var chart_height=450;   
 function drawChart1() {
 var data1 = google.visualization.arrayToDataTable([
-    ['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍&其他 得票率%'],
+    ['', '國民黨 得票率%', '民進黨 得票率%','無黨籍&其他 得票率%','民眾黨 得票率%'],
     ['2014', 80, 60, 40 , 30],
     ['2018', 80, 60, 40 , 30],
     ['2022', 80, 60, 40 , 30]
 ]);
 var data2 = google.visualization.arrayToDataTable([
-['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍&其他 得票率%'],
+['', '國民黨 得票率%', '民進黨 得票率%','無黨籍&其他 得票率%','民眾黨 得票率%'],
     ['2014', 80, 60, 40 , 30 ],
     ['2018', 80, 60, 40 , 30 ],
     ['2022', 80, 60, 40 , 30]
 ]);
 var data3 = google.visualization.arrayToDataTable([
-['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍&其他 得票率%'],
+['', '國民黨 得票率%', '民進黨 得票率%','無黨籍&其他 得票率%','民眾黨 得票率%'],
     ['2014', 80, 60, 40 , 30 ],
     ['2018', 80, 60, 40 , 30 ],
     ['2022', 80, 60, 40 , 30 ]
 ]);
 var data4 = google.visualization.arrayToDataTable([
-['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍&其他 得票率%'],
+['', '國民黨 得票率%', '民進黨 得票率%','無黨籍&其他 得票率%','民眾黨 得票率%'],
     ['2014', 80, 60, 40 , 30 ],
     ['2018', 80, 60, 40 , 30 ],
     ['2022', 80, 60, 40 , 30]
 ]);
 var data5 = google.visualization.arrayToDataTable([
-['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍&其他 得票率%'],
+['', '國民黨 得票率%', '民進黨 得票率%','無黨籍&其他 得票率%','民眾黨 得票率%'],
     ['2014', 80, 60, 40 , 30 ],
     ['2018', 80, 60, 40 , 30 ],
     ['2022', 80, 60, 40 , 30 ]
 ]);
 var data6 = google.visualization.arrayToDataTable([
-['', '國民黨 得票率%', '民進黨 得票率%','民眾黨 得票率%','無黨籍&其他 得票率%'],
+['', '國民黨 得票率%', '民進黨 得票率%','無黨籍&其他 得票率%','民眾黨 得票率%'],
     ['2014', 80, 60, 40 , 30 ],
     ['2018', 80, 60, 40 , 30 ],
     ['2022', 80, 60, 40 , 30 ]
 ]);
 var options1 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color1, color2, color3, color5],bar: {groupWidth:"80%"}
+    colors: [color1, color2, color5, color3],bar: {groupWidth:"80%"}
 };
 var options2 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color1, color2, color3, color5],bar: {groupWidth:"80%"}
+    colors: [color1, color2, color5, color3],bar: {groupWidth:"80%"}
 };
 var options3 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color1, color2, color3, color5],bar: {groupWidth:"80%"}
+    colors: [color1, color2, color5, color3],bar: {groupWidth:"80%"}
 };
 var options4 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color1, color2, color3, color5],bar: {groupWidth:"80%"}
+    colors: [color1, color2, color5, color3],bar: {groupWidth:"80%"}
 };
 var options5 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors: [color1, color2, color3, color5],bar: {groupWidth:"80%"}
+    colors: [color1, color2, color5, color3],bar: {groupWidth:"80%"}
 };
 var options6 = {   
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height,
-    colors:[color1, color2, color3, color5],bar: {groupWidth:"80%"}
+    colors: [color1, color2, color5, color3],bar: {groupWidth:"80%"}
 };
 var chart1 = new google.charts.Bar(document.getElementById('chart1_1'));
 var chart2 = new google.charts.Bar(document.getElementById('chart1_2'));
@@ -920,7 +920,7 @@ function drawChart3() {
         ['國民黨(席)',175],
         ['民進黨(席)',137],
         ['無黨(席)',47],
-        ['其他(席)',21],
+        ['其他(席)',21]
     ]);
     var data2= google.visualization.arrayToDataTable([
         ['', ''],
@@ -956,7 +956,7 @@ function drawChart3() {
     tooltip:{trigger:'none'} 
     };
     var data1_arr=data1.cache;
-
+console.log(data1_arr);
     var chart1 = new google.visualization.PieChart(document.getElementById('congressman_chart1'));
     var chart2 = new google.visualization.PieChart(document.getElementById('congressman_chart2'));
 
@@ -981,13 +981,15 @@ function drawChart3() {
 // 歷年九合一選舉投票率
 var chart_height2=400;
 google.charts.load('current', {'packages':['bar']});
-google.charts.setOnLoadCallback(drawChart4);                  
+google.charts.setOnLoadCallback(drawChart4);   
+
 function drawChart4() {
     var data = google.visualization.arrayToDataTable([
     ['', '投票率%'],
-    ['2014', 67.59],
-    ['2018', 67],
-    ['2022', 0],
+    ['2014直轄市長', 66.31],
+    ['2014縣市長', 70.4],
+    ['2018直轄市長', 66.11],
+    ['2018縣市長', 68.87]
     ]);                  
     var options = {
     chart: {title: '',subtitle: '' },legend: { position: 'none' },height:chart_height2,
@@ -3278,17 +3280,18 @@ function drawChart4() {
                             </div>
                         </li>
                         <li>
-                            <div class="color_box color3"></div>
-                            <div class="seats">
-                                <span>民眾黨</span>                          
-                            </div>
-                        </li>
-                        <li>
                             <div class="color_box color5"></div>
                             <div class="seats">
                                 <span>無黨籍&其他</span>                          
                             </div>
                         </li>
+                        <li>
+                            <div class="color_box color3"></div>
+                            <div class="seats">
+                                <span>民眾黨</span>                          
+                            </div>
+                        </li>
+
                     </ul>   
                 </div> 
 
