@@ -2068,6 +2068,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     }
 }
 @media (max-width:767px){
+    .ballots .two_city .city .info_box .table table td{font-weight: normal;padding:7px 5px;background:none;text-align:center;font-size: 14px;}
     .ballots .party_area .color_box {
         width: 10px;
         height: 10px;
@@ -2220,7 +2221,7 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
     .ballots .mayor_elected .list li{width: calc((100% - 120px)/3);}
 }
 @media (max-width: 767px){
-    .other_elected .table table td{padding:5px;}
+    .other_elected .table table td{padding:5px;font-size: 14px;}
     .ballots .mayor_elected .list {padding: 30px 15px;}
     .ballots .mayor_elected .list ul{column-gap:20px; row-gap: 30px; flex-wrap: wrap;}
     .ballots .mayor_elected .list li{width: calc((100% - 20px)/2);}
