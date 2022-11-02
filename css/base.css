@@ -25,6 +25,7 @@ a:active {
 
 img {
     width: 100%;
+    height: auto;
     border: 0;
 }
 .img {
@@ -315,8 +316,8 @@ nav li a:hover,nav li.act a{background-color: #2886A2;color:#fff;}
     display:flex;align-items:center;justify-content:center;
 }
 .good_box .title p{color:#2886A2;font-weight: bold;}
-.good_box .txt_box{width:90%;height:25px;font-size: 18px;font-weight: 500;}
-.good_box .txt{overflow: hidden;white-space:nowrap;text-overflow: ellipsis;color: #fff;}
+.good_box .txt_box{width:90%;height:25px;font-size: 18px;font-weight: 500;overflow: hidden;}
+.good_box .txt{width:100%;overflow: hidden;white-space:nowrap;text-overflow: ellipsis;color: #fff;}
 .good_box .txt a{color: #fff;}
 .good_box .txt a:hover{text-decoration:underline;}
 .good_box .txt_box.owl-theme .owl-controls{display:none;}
@@ -2490,13 +2491,13 @@ position: relative;
 @media (max-width: 767px) {
     .party_percent .party_area{bottom:20px;}
     .party_percent .chart{width:100%;} 
-    #party_chart{width:135%;margin-left:-65px;margin-top:-30px;}   
+    #party_chart{width:125%;margin-left:-65px;margin-top:-30px;}   
 }
 @media (max-width: 411px) {
-    #party_chart{width:120%;margin-left:-30px;}   
+    #party_chart{width:120%;margin-left:-50px;}   
 }
 @media (max-width: 359px) {
-    #party_chart{width:130%;margin-left:-30px;}   
+    #party_chart{width:120%;margin-left:-50px;}   
 }
 /* 近年兩黨（國民黨、民進黨）得票率走勢 ed*/
 
@@ -2544,6 +2545,7 @@ position: relative;
     width:50%;text-align: center; 
 }
 @media (max-width: 767px) {
+    #congressman_chart2_1{padding:50px 0;}
     .congressman_seats .party_area ul{column-gap:10px;}
     .congressman_seats .chart .pie{display: block;}
     .congressman_seats .chart .box{width:100%;margin-bottom:50px;}

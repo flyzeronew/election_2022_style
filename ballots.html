@@ -7,7 +7,7 @@
 <meta name="Keywords" content="">
 <meta name="description" content="">
 <link rel="icon" href="" type="image/icon">
-
+<link rel="alternate" href="https://example.com/" hreflang="x-default" />
 <!--共用CSS-->
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" type="text/css" href="css/base.css" media="screen">
@@ -889,7 +889,7 @@ google.charts.setOnLoadCallback(drawChart2);
 
 function drawChart2() {
     var data = google.visualization.arrayToDataTable([
-    ["Year","國民黨","民進黨"],
+    ["Year","國民黨(%)","民進黨(%)"],
     ["2008 總統",58.44,41.55],
     ["2009 縣市長",47.88,45.32],
     ["2010 直轄市長",44.54,49.87],
@@ -901,7 +901,9 @@ function drawChart2() {
     ["2018 直轄市長",48.79,39.66],
     ["2020 總統",38.61,57.13],
     ["2022 縣市長",0,0],
-    ["2022 直轄市長",0,0]
+    ["2022 直轄市長",0,0],
+    ["2022 縣市長",33,65.56],
+
     ]);
     var options = {
     title: '',height:500,
@@ -910,11 +912,46 @@ function drawChart2() {
     curveType: 'none',
     lineWidth:3,
     pointSize:7, 
-    fontSize:10
+    fontSize:10,
+    tooltip: {textStyle: {fontSize:12}},
     };          
     var chart = new google.visualization.LineChart(document.getElementById('party_chart'));          
     chart.draw(data, options);
+
 }
+// google.charts.load('current', {'packages':['line', 'corechart']});
+// google.charts.setOnLoadCallback(drawChart2);
+// function drawChart2() {
+//     var data = google.visualization.arrayToDataTable([
+//     ["Year","國民黨(%)","民進黨(%)"],
+//     ["2008 總統",58.44,41.55],
+//     ["2009 縣市長",47.88,45.32],
+//     ["2010 直轄市長",44.54,49.87],
+//     ["2012 總統",51.6,45.63],
+//     ["2014 縣市長",40.48,46.66],
+//     ["2014 直轄市長",40.81,47.97],
+//     ["2016 總統",31.04,56.12],
+//     ["2018 縣市長",48.80,38.07],
+//     ["2018 直轄市長",48.79,39.66],
+//     ["2020 總統",38.61,57.13],
+//     ["2022 縣市長",0,0],
+//     ["2022 直轄市長",0,0],
+//     ["2022 縣市長",33,65.56],
+
+//     ]);
+//     var options = {     
+//     title: '',height:500,
+//     legend: { position: 'none' },
+//     colors: [color1,color2],
+//     curveType: 'none',
+//     lineWidth:3,
+//     pointSize:7, 
+//     fontSize:10,
+//     tooltip: {textStyle: {fontSize:12}}
+//     };          
+//     var chart = new google.charts.Line(document.getElementById('party_chart'));         
+//     chart.draw(data, google.charts.Line.convertOptions(options));
+// }
 //近年兩黨（國民黨、民進黨）得票率走勢 ed
 
 // 全台縣市議員政黨席次
@@ -1109,15 +1146,15 @@ function drawChart4() {
             <span>倒數</span><span class="day">100</span>
         </div>
     </div>
-    <div class="head_bg pc"><img src="images/election_pc2.jpg" alt="view"/></div>
-    <div class="head_bg mo"><img src="images/election_m2.jpg" alt="view"/></div>
+    <div class="head_bg pc"><img width="1920" height="598" src="images/election_pc2.jpg" alt="view"/></div>
+    <div class="head_bg mo"><img width="828" height="700" src="images/election_m2.jpg" alt="view"/></div>
 </header>
     <!-- 快訊 -->
     <div class="good_box">
         <div class="frame_box">
             <div class="title"><p>快訊</p></div>
             <div class="txt_box">
-                <div class="txt"><a href="##">追查張善政、高虹安卻輕放陳吉仲？　政院駁：均公平處理</a></div>
+                <div class="txt"><a href="##">追查張善政、高虹安卻輕放陳吉仲？政院駁：均公平處理追查張善政、高虹安卻輕放陳吉仲？　政院駁：均公平處理追查張善政、高虹安卻輕放陳吉仲？政院駁：均公平處理追查張善政、高虹安卻輕放陳吉仲？　政院駁：均公平處理</a></div>
                 <div class="txt"><a href="##">陳時中想好了！若當選北市長首做2件事　網噓爆：寫信太瞎</a></div>
                 <div class="txt"><a href="##">蘇煥智聲請假處分　要求選票把蔣萬安改回「章萬安」</a></div>                    
             </div>
@@ -1126,8 +1163,8 @@ function drawChart4() {
     <!-- 快訊 ed-->
     <!-- 廣告欄位 -->       
     <div class="ad_box top40">
-        <div class="ad970"><img src="images/970x250.jpg" alt="ad"/></div>
-        <div class="ad320"><img src="images/320x100.jpg" alt="ad"/></div>
+        <div class="ad970"><img width="970" height="250"src="images/970x250.jpg" alt="ad"/></div>
+        <div class="ad320"><img width="320" height="100"src="images/320x100.jpg" alt="ad"/></div>
     </div>
    <!-- 廣告欄位 ed-->
 <nav>
@@ -1203,7 +1240,7 @@ function drawChart4() {
                                         <select name="congressman_city" id="congressman_city"></select>
                                         <select name="congressman_area" id="congressman_area"><option value="open">選一個區域</option></select>
                                     </div>
-                                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                                    <div class="refresh"><img width="50" height="50" src="images/refresh.svg" alt="refresh"/></div>
                                 </div>
                                 <div class="table">
                                  <table cellpadding="1" cellspacing="0">
@@ -1245,7 +1282,7 @@ function drawChart4() {
                             <div class="data">
                                 <p class="result_percent">40%</p>
                                 <div class="pass_img">
-                                    <img src="images/vote_pass.svg" alt="">
+                                    <img  src="images/vote_pass.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1266,7 +1303,7 @@ function drawChart4() {
                 <!-- 標題 -->
                 <div class="title_box2">
                     <h2>2022六都市長當選名單</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <div class="refresh"><img width="50" height="50" src="images/refresh.svg" alt="refresh"/></div>
                 </div>
                 <!-- 標題 ed-->
                 <div class="list">
@@ -2099,7 +2136,7 @@ function drawChart4() {
                 <!-- 標題 -->
                 <div class="title_box2">
                     <h2>2022各縣市長當選名單</h2>
-                    <div class="refresh"><img src="images/refresh.svg" alt="refresh"/></div>
+                    <div class="refresh"><img  width="50" height="50" src="images/refresh.svg" alt="refresh"/></div>
                 </div>
                 <!-- 標題 ed-->
                 <div class="table">
