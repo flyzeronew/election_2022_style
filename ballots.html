@@ -913,13 +913,14 @@ function drawChart2() {
     lineWidth:3,
     pointSize:7, 
     fontSize:10,
-    tooltip: {textStyle: {fontSize:12}},
-    };          
+    tooltip: {textStyle: {fontSize:12}}
+    
+};
     var chart = new google.visualization.LineChart(document.getElementById('party_chart'));          
     chart.draw(data, options);
 
 }
-// google.charts.load('current', {'packages':['line', 'corechart']});
+// google.charts.load('current', {'packages':['line']});
 // google.charts.setOnLoadCallback(drawChart2);
 // function drawChart2() {
 //     var data = google.visualization.arrayToDataTable([
@@ -939,7 +940,8 @@ function drawChart2() {
 //     ["2022 縣市長",33,65.56],
 
 //     ]);
-//     var options = {     
+//     var options = {    
+
 //     title: '',height:500,
 //     legend: { position: 'none' },
 //     colors: [color1,color2],
@@ -947,7 +949,9 @@ function drawChart2() {
 //     lineWidth:3,
 //     pointSize:7, 
 //     fontSize:10,
-//     tooltip: {textStyle: {fontSize:12}}
+//     tooltip: {textStyle: {fontSize:12}},
+//     bar: {groupWidth:"3px"}
+
 //     };          
 //     var chart = new google.charts.Line(document.getElementById('party_chart'));         
 //     chart.draw(data, google.charts.Line.convertOptions(options));
