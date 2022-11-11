@@ -2301,7 +2301,7 @@ position: relative;
     font-weight: normal;
 }
 .referendum .list .result{
-   width: 312px;
+   width: 336px;
     
     
 }
@@ -2309,7 +2309,7 @@ position: relative;
     font-size:24px;
 }
 .referendum .list .result .result_percent{
-    font-size:56px;
+    font-size:40px;
 }
 .referendum .list .result .data{
     margin-top: 15px;
@@ -2346,7 +2346,7 @@ position: relative;
         
     }
     .referendum .list .result{
-       width: 260px;
+       width: 280px;
        margin: 0 auto;
        margin-top: 40px;
         
