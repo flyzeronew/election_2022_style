@@ -984,6 +984,7 @@ function drawChart3() {
         height:400,
         pieSliceBorderColor:'none',    
         pieSliceTextStyle:{fontSize:20},
+        pieStartAngle:40,
         tooltip: {
             trigger: 'selection',textStyle:{fontSize:14}
         },
@@ -993,13 +994,13 @@ function drawChart3() {
 
     var options2 = {                       
     chart: {title: '',subtitle: '' },
-    legend: { position: 'none' },
+    legend: { position: 'none' }, 
     pieSliceText:'label',                   
     colors:[color1,color2,color3,color5,color4,color0],
     height:400,
     pieSliceBorderColor:'none',
     pieSliceTextStyle:{fontSize:20},
-    pieSliceText:'label',
+    pieSliceText:'label',    
     tooltip:{trigger:'none'} 
     };
     var data1_arr=data1.cache;
