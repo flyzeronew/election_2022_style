@@ -2111,10 +2111,17 @@ footer .logo_box li:first-child{width:80px;padding-top:0;margin-right:0;}
 .ballots .mayor_box{margin-bottom:30px;}
 .ballots .table table{width:100%;font-size:16px;margin:0;}
 .ballots .table table img{width:25px;height:25px;}
-.ballots .table table td{font-weight: normal;padding:7px 10px;background:none;text-align:center;}
-.ballots .table table td .name{text-align:left;}
+.ballots .table table td{
+    font-weight:bold;
+    padding:7px 10px;
+    background:none;
+    text-align:center;
+    color: #333;
+}
+.ballots .table table td .name{text-align:left;font-weight: bold;}
 .ballots .table table tr{color: #fff;background-color: #6EAABC;}
-.ballots .table table tr:first-child{ background-color: #4693A5;}
+.ballots .table table tr:first-child{ background-color: #4693A5;font-weight:bold;}
+
 .ballots .mayor_box .list{}
 .ballots .mayor_box .list ul{
     display: flex;
